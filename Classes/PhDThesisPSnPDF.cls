@@ -780,7 +780,7 @@ wish to left align your text}
     \renewcommand{\sectionmark}[1]{\markright{\thesection\ ##1}}
     \fancyhf{}
     \fancyhead[LO]{\nouppercase \rightmark}
-    \fancyhead[LE]{\colorbox{CadetBlue}{\parbox{6em}{\color{white}\bfseries\thepage\hfill}}}
+    \fancyhead[LE]{\colorbox{CadetBlue}{\parbox{6em} {\color{white}\bfseries\thepage\hfill}}}
     \fancyhead[RO]{\colorbox{CadetBlue}{\parbox{6em}{\hfill\color{white}\bfseries\thepage}}}
     \fancyhead[RE]{\nouppercase \leftmark}
   \fi
