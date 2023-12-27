@@ -1,9 +1,9 @@
 % *************************************
-% ------- PhD Thesis Anna Cuomo -------
+% ------- PhD Thesis Somesh Sai -------
 % *************************************
 
-% \documentclass[a4paper,12pt,times,numbered,print]{Classes/PhDThesisPSnPDF}
-\documentclass[draftclassic,12pt,times,numbered,print]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,times,numbered,print]{Classes/PhDThesisPSnPDF}
+% \documentclass[draftclassic,12pt,times,numbered,print]{Classes/PhDThesisPSnPDF}
 
 % *************************************
 % **** Class Options 
@@ -75,7 +75,7 @@
 
 \input{Preamble/preamble}
 
-\include{Acronyms/acronyms}
+%\include{Acronyms/acronyms}
 
 % *************************************
 % **** Thesis Information & Meta-data 
@@ -109,12 +109,12 @@
 
 \frontmatter
 
-\maketitle
+%\maketitle
 
-\include{Dedication/dedication}
-\include{Declaration/declaration}
-\include{Acknowledgement/acknowledgement}
-\include{Abstract/abstract}
+%\include{Dedication/dedication}
+%\include{Declaration/declaration}
+%\include{Acknowledgement/acknowledgement}
+%\include{Abstract/abstract}
 
 % *************************************
 % **** Adding Table of Contents and List of Figures 
@@ -122,19 +122,22 @@
 
 % \cleardoublepage
 
-\tableofcontents
+%\tableofcontents
 
 % \cleardoublepage
 
-\listoffigures
+%\listoffigures
 
 % \cleardoublepage
 
-\listoftables
+%\listoftables
 
-\renewcommand{\glossarypreamble}{\vspace{-2cm}}
-\printglossary[type=\acronymtype, toctitle=Acronyms, title=\textcolor{CadetBlue}{\LARGE{\textbf{\textsc{Acronyms}}}}]
-\addcontentsline{toc}{chapter}{Acronyms}
+
+%\renewcommand{\glossarypreamble}{\vspace{-2cm}}
+
+%\printglossary[type=\acronymtype, toctitle=Acronyms, title=\textcolor{CadetBlue}{\LARGE{\textbf{\textsc{Acronyms}}}}]
+
+%\addcontentsline{toc}{chapter}{Acronyms}
 
 % *************************************
 % **** Main Matter
@@ -143,11 +146,11 @@
 \mainmatter
 
 \include{Chapter1/chapter1}
-\include{Chapter2/chapter2}
-\include{Chapter3/chapter3}
-\include{Chapter4/chapter4}
-\include{Chapter5/chapter5}
-\include{Chapter6/chapter6}
+%\include{Chapter2/chapter2}
+%\include{Chapter3/chapter3}
+%\include{Chapter4/chapter4}
+%\include{Chapter5/chapter5}
+%\include{Chapter6/chapter6}
 
 % *************************************
 % **** Bibliography 
@@ -159,7 +162,7 @@
 \bibliographystyle{unsrt} % Use for unsorted references  
 
 \cleardoublepage
-\bibliography{References/references} 
+\bibliography{References/Trial} 
 
 \end{spacing}
 
@@ -167,14 +170,14 @@
 % **** Appendices 
 % *************************************
 
-\begin{appendices} % Using appendices environment for more functionality
+%\begin{appendices} % Using appendices environment for more functionality
 
-\include{Appendix1/appendix1}
-\include{Appendix2/appendix2}
-\include{Appendix3/appendix3}
-\include{Appendix4/appendix4}
+%\include{Appendix1/appendix1}
+%\include{Appendix2/appendix2}
+%\include{Appendix3/appendix3}
+%\include{Appendix4/appendix4}
 
-\end{appendices}
+%\end{appendices}
 
 % *************************************
 % **** Index 
