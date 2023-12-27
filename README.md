@@ -1,4 +1,4 @@
-PhD thesis
+PhD Thesis Thesis Thesis
 ========================
 
 [![License MIT](http://img.shields.io/badge/license-MIT-brightgreen.svg)](license.md)
