@@ -72,8 +72,11 @@
 % Fancier section header
 \newcommand{\hsp}{\hspace{6pt}}
 \usepackage[explicit]{titlesec}
-\titleformat{\section}[hang]{\Large\bfseries}{\color{dark-gray}\thesection}{6pt}{\begin{tabular}[t]{@{\color{dark-gray}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
-\titleformat{\subsection}[hang]{\large\bfseries}{\color{dark-gray}\thesubsection}{6pt}{\begin{tabular}[t]{@{\color{dark-gray}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
+\titleformat{\section}[display]{\Large\bfseries}{\color{black}\thesection}{6pt}
+{\begin{tabular}[t]{@{}>{}l}#1\end{tabular}\vspace{3pt}\hrule}
+%{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
+
+\titleformat{\subsection}[hang]{\large\bfseries}{\color{black}\thesubsection}{6pt}{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
 
 
 
@@ -151,7 +154,7 @@
 
 % Nicer heading
 \renewcommand{\chaptername}{}
-\usepackage[Lenny]{fncychap}
+\usepackage[Sonny]{fncychap}
 
 
 % *****************************************************************************
