@@ -1,0 +1,228 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "thesis.tex",
+			"settings":
+			{
+				"buffer_size": 6033,
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/ssai/Downloads/git-remote/PhD-Thesis/Chapter1/chapter1.tex",
+		"/Z/Downloads/pancreas/single-cell/data/islet-mapping/SCENIC/hvfs-alphabeta/pyscenic_AB_hvf_AUC.log",
+		"/C/Users/ssai/Downloads/pancreas/single-cell/data/islet-mapping/Untitled2.R",
+		"/C/Users/ssai/Downloads/pancreas/single-cell/data/islet-mapping/Untitled1.R",
+		"/C/Users/ssai/Downloads/pancreas/single-cell/data/islet-mapping/Untitled3.R",
+		"/C/Users/ssai/Downloads/pancreas/single-cell/data/islet-mapping/non-proli-beta-human-gene-sets-scoring.R",
+		"/C/Users/ssai/Downloads/pancreas/single-cell/data/islet-mapping/CSI.R",
+		"/Z/Downloads/pancreas/single-cell/data/islet-mapping/SCENIC/hvfs-alphabeta/submit_scenic.sh",
+		"/Z/Downloads/pancreas/single-cell/data/islet-mapping/SCENIC/hvfs-alphabeta/pyscenic_AB_hvf_GRN-5.log",
+		"/Z/Downloads/pancreas/single-cell/data/islet-mapping/SCENIC/hvfs-alphabeta/pyscenic_AB_hvf_GRN-3.log",
+		"/Z/Downloads/pancreas/single-cell/data/islet-mapping/SCENIC/hvfs-alphabeta/pyscenic_AB_hvf_GRN-4.log",
+		"/Z/Downloads/pancreas/single-cell/data/islet-mapping/SCENIC/hvfs-alphabeta/pyscenic_AB_hvf_GRN.log",
+		"/C/Users/ssai/Downloads/onetab.txt"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "thesis.tex",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3452,
+								3452
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "thesis.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
