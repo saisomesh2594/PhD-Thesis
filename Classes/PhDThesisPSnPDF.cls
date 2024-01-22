@@ -933,42 +933,46 @@ wish to left align your text}
 {\usebox{\PHD@Title}} % subtitle is defined
 
 
+% Submission Text
+\vspace*{30em}
+{\usebox{\PHD@submission}}
+
+
 % Crest
 
-\ifPHD@collegeshield%
-	\vspace{.15\PHD@titlepagespacing}
-	{\usebox{\PHD@collegecrest}}
-	\vspace{.1\PHD@titlepagespacing}
-\else
-	\vspace{.25\PHD@titlepagespacing}
-	{\usebox{\PHD@crest}}
-	\vspace{.15\PHD@titlepagespacing}
-\fi
+%\ifPHD@collegeshield%
+%	\vspace{.15\PHD@titlepagespacing}
+%	{\usebox{\PHD@collegecrest}}
+%	\vspace{.1\PHD@titlepagespacing}
+%\else
+%	\vspace{.25\PHD@titlepagespacing}
+%	{\usebox{\PHD@crest}}
+%	\vspace{.15\PHD@titlepagespacing}
+%\fi
 
 
 
 % Author
+\vspace*{3em}
 {\usebox{\PHD@author}}
-\vspace*{1em}
+%\vspace*{1em}
 
 % Supervisor
-\ifPHD@supervisor%
-{\usebox{\PHD@supervisor}}
-\vspace*{0.5em}
-\fi
+%\ifPHD@supervisor%
+%{\usebox{\PHD@supervisor}}
+%\vspace*{0.5em}
+%\fi
 
 % Advisor
-\ifPHD@advisor%
-{\usebox{\PHD@advisor}}
-\vspace*{0.5em}
-\fi
+%\ifPHD@advisor%
+%{\usebox{\PHD@advisor}}
+%\vspace*{0.5em}
+%\fi
 
 % Department and University
-{\usebox{\PHD@dept}}
-\vspace{.2\PHD@titlepagespacing}
+%{\usebox{\PHD@dept}}
+%\vspace{.2\PHD@titlepagespacing}
 
-% Submission Text
-{\usebox{\PHD@submission}}
 
 % College and degree date
 \vfill
