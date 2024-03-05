@@ -618,10 +618,10 @@ supported!}
     breaklinks=true,
     linktocpage,
     colorlinks=true,
-    linkcolor=black,
-    urlcolor=black,
-    citecolor=black,
-    anchorcolor=black
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+    anchorcolor=blue
   }
   \ifsetCustomMargin
   % Margin to be define in preamble using geometry package
@@ -782,7 +782,7 @@ wish to left align your text}
     \fancyhead[LO]{\nouppercase \rightmark}
     \fancyhead[LE]{\colorbox{CadetBlue}{\parbox{6em} {\color{white}\bfseries\thepage\hfill}}}
     \fancyhead[RO]{\colorbox{CadetBlue}{\parbox{6em}{\hfill\color{white}\bfseries\thepage}}}
-    \fancyhead[RE]{\nouppercase \leftmark}
+    %\fancyhead[RE]{\nouppercase \leftmark}
   \fi
 \fi
 }
