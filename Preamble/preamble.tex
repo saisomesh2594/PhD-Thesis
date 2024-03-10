@@ -1,4 +1,19 @@
 % ******************************************************************************
+% ****************************** Watermark *********************************
+
+\usepackage{draftwatermark} % Package to add watermarks
+\usepackage{xcolor}
+
+% Define a color with transparency
+\definecolor{transparentgray}{gray}{0.5}
+\colorlet{mytranspgray}{transparentgray!30} % 30% of full color
+
+% Watermark configuration
+\SetWatermarkText{\textcolor{mytranspgray}{Incomplete Draft}}
+\SetWatermarkScale{0.4}
+
+
+% ******************************************************************************
 % ****************************** Custom Margin *********************************
 
 % Add `custommargin' in the document class options to use this section
@@ -52,6 +67,8 @@
 % *********
 % ***** Custom Packages
 \usepackage{float}
+\usepackage[leftcaption]{sidecap}
+
 
 % define header 
 \usepackage{fancyhdr}
@@ -78,8 +95,6 @@
 %{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
 
 \titleformat{\subsection}[hang]{\large\bfseries}{\color{black}\thesubsection}{6pt}{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
-
-
 
 % **** Algorithms and Pseudocode 
 
@@ -128,6 +143,28 @@
 %\usepackage{multicol}
 %\usepackage{longtable}
 %\usepackage{tabularx}
+
+\usepackage{tabularx} % For flexible table width
+\usepackage[table]{xcolor} % For cell coloring
+\usepackage{colortbl}
+\usepackage{geometry} % For page margin settings
+
+% Define the colors used in the table
+\definecolor{headerblue}{RGB}{173,216,230}
+\definecolor{rowgray}{RGB}{220,220,220}
+\definecolor{selectedrow}{RGB}{144,238,144}
+\definecolor{firstcol}{RGB}{144,238,144}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{G}{>{\columncolor{firstcol}}l}
+
+\geometry{
+  a4paper, % Paper size
+  left=25mm, % Left margin
+  right=25mm, % Right margin
+  top=25mm, % Top margin
+  bottom=25mm % Bottom margin
+}
 
 
 % *********************************** SI Units *********************************
@@ -386,3 +423,28 @@ innerbottommargin=5pt]{cBox}
 % \newenvironment{Abstract}{\begin{eBox}\begin{abstractT}}{\hfill{\color{green}\tiny\ensuremath{\blacksquare}}\end{abstractT}\end{eBox}}
 \newenvironment{Abstract}{\begin{eBox}\begin{abstractT}}{\end{abstractT}\end{eBox}}
 \newenvironment{Comment}{\begin{cBox}\begin{commentT}}{\end{commentT}\end{cBox}}	\newenvironment{Comment2}{\begin{bBox}\begin{boxT}}{\end{boxT}\end{bBox}}
+
+\usepackage{xargs,lipsum,caption,changepage,ifthen}
+
+\newcommandx{\mycaptionminipage}[3][3=c,usedefault]{%
+    \begin{minipage}[#3]{#1}%
+        \ifthenelse{\equal{#3}{b}}{\captionsetup{aboveskip=0pt}}{}
+        \ifthenelse{\equal{#3}{t}}{\captionsetup{belowskip=0pt}}{}
+        \vspace{0pt}\centering\captionsetup{width=\textwidth} %Temporarily set caption width
+        #2%
+    \end{minipage}%
+}%
+\newcommandx{\mysidecaption}[4][4=c,usedefault]{%
+    \checkoddpage%
+    \ifoddpage%
+        %CASE ODD PAGES
+        \mycaptionminipage{\dimexpr\linewidth-#1\linewidth-\intextsep\relax}{#3}[#4]%
+        \hfill%
+        \mycaptionminipage{#1\linewidth}{#2}[#4]%
+    \else%
+        %CASE EVEN PAGES
+        \mycaptionminipage{#1\linewidth}{#2}[#4]%
+        \hfill%
+        \mycaptionminipage{\dimexpr\linewidth-#1\linewidth-\intextsep\relax}{#3}[#4]%
+    \fi%
+}%
