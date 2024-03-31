@@ -5,7 +5,6 @@
 
 \section{Additional results Chapter 2}
 
-
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{1.2} % More space between rows
   \centering
@@ -51,8 +50,250 @@
     \hline
   \end{tabularx}
   \caption[]{}
-  \label{}
+  \label{tab2-1}
 \end{table}
+
+\clearpage
+
+
+\section{Additional results Chapter 3}
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{2}
+  \centering
+  \caption{Summary of datasets used in this study and their corresponding metadata}
+  \label{tab3-1}
+
+  \begin{tabularx}{\textwidth}{W{2.5cm} X W{1cm} W{1.7cm} W{1.5cm} W{1.3cm}}
+    \toprule
+    %\rowcolor{headerblue}
+    \textbf{Name} & \textbf{Description} & \textbf{\textit{N}} & \textbf{Age} & \textbf{Sex} & \textbf{Source} \\
+    \midrule
+    \RaggedRight{Maturation/Aging} &  & 2 & 3 wks \& 2 years & Male & In-house \\
+    \hline
+    %\rowcolor{rowblue}
+    Meal feeding &  & 2 & 12-14 wks & \RaggedRight{Male \& Female} & In-house \\
+    \hline
+    Diet-induced obesity &  & 4 & 10 wks \& 21 wks & Male & In-house \\
+    \hline
+    %\rowcolor{rowblue}
+    Mild genetic obesity (\textit{db/db}) &  & 4 & 6 wks \& 9 wks & Male & In-house \\
+    \hline
+    Severe genetic obesity (\textit{ob/ob}) &  & 2 & ??? & Male & External \textbf{\cite{chung_endocrine-exocrine_2020}} \\
+    \hline
+    %\rowcolor{headerblue}
+    Insulin receptor blockade (S961) &  & 2 & ??? & Male & In-house \\
+    \hline
+    \RaggedRight{Partial β-cell ablation (STZ)} &  & 2 & 8 wks & Male & External \textbf{\cite{sachs_targeted_2020}} \\
+    \bottomrule
+   
+  \end{tabularx}
+\end{table}
+\textit{N}, Number of Samples
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{2}
+  \centering
+  \caption{Number of total cells and }
+  \label{tab:3-3}
+
+  \begin{tabularx}{\textwidth}{W{2.5cm}  W{2.5cm}  C{4cm}  C{4cm}}
+    \toprule
+    %\rowcolor{headerblue}
+    \thead{Study} & \thead{Samples} & \thead{\textit{N cells}\textsuperscript{*}\\(Total)} & \thead{\textit{N cells}\textsuperscript{**}\\(β-cells)$\dagger$} \\
+    \midrule
+    \multirow{2}{*}{\makecell{Maturation/\\Aging}} & 3-wks old & 6361  & 968 (871)  \\
+     \cline{2-4}
+     & 2 years old & 14602 & 6743 (6739) \\
+     \midrule
+
+    \multirow{2}{}{\makecell{Meal Feeding}} & Fast & 1527  & 419 (419)  \\
+    \cline{2-4}
+    & Fed & 1229 & 331 (331) \\
+    \midrule
+
+    \multirow{4}{*}{\makecell{Diet-induced\\obesity}} & Chow 1wks & 10584  & 2529 (2519)  \\
+    \cline{2-4}
+    & Chow 12wks & 9154 & 2971 (2970) \\
+    \cline{2-4}
+    & WD 1wks & 12193 & 2858 (2851) \\
+    \cline{2-4}
+    & WD 12wks & 16115 & 3768 (3724) \\
+    \midrule
+    \multirow{4}{*}{\makecell{Mild genetic\\obesity}} & \textit{dbHet} 6wks & 1777  & 732 (726)  \\
+    \cline{2-4}
+    & \textit{dbHet} 9wks & 4779 & 1608 (1583) \\
+    \cline{2-4}
+    & \textit{db/db} 6wks & 6546 & 3777 (3674) \\
+    \cline{2-4}
+    & \textit{db/db} 9wks & 3644 & 2224 (2125) \\
+    \midrule
+    \multirow{2}{*}{\makecell{Severe genetic\\obesity}} & Wild type & 7827  & 6412 (6375)  \\
+    \cline{2-4}
+    & \textit{ob/ob} & 8812 & 8280 (8184) \\
+    \midrule
+    \multirow{2}{*}{\makecell{Insulin receptor\\blockade}} & Vehicle & 890  & 491 (491)  \\
+    \cline{2-4}
+    & S961 & 1022 & 779 (719) \\
+    \midrule
+    \multirow{2}{*}{\makecell{Partial β-cell\\ablation}} & Vehicle & 8338  & 5816 (5790)  \\
+    \cline{2-4}
+    & \gls{stz} & 8791 & 1324 (1307) \\
+    \bottomrule
+   \end{tabularx}
+   \vspace{0.1cm}
+   \RaggedRight{\footnotesize \\ \textsuperscript{*}After initial preprocessing and quality control\\ \textsuperscript{**}After additional quality control\\ $\dagger$ The number of non-proliferating β-cells are denoted in parentheses.\\\textbf{WD}, Western Diet; \textbf{STZ}, streptozotocin}
+\end{table}
+
+
+
+\begin{table}[htbp]
+\renewcommand{\arraystretch}{2}
+  \centering
+  \caption{Regulon Modules}
+  \label{tab3-2}
+
+  \begin{tabularx}{\textwidth}{W{2.5cm} C}
+    \toprule
+    \textbf{Module} & \textbf{Regulons} \\
+    \midrule
+    %\rowcolor{mod1green}
+    Module-1 & \cellcolor[cmyk]{0.45,0,0.7,0} \RaggedRight{\textit{\textbf{Atf5(+)},
+    Bach1(+),
+    Bhlhe41(+),
+    Creb3l1(+),
+    Dbp(+),
+    Egr1(+),
+    Elk3(+),
+    Fosb(+),
+    Foxp1(+),
+    Hlf(+),
+    Hmgb1(+),
+    Hoxb3(+),
+    \textbf{Isl1(+)},
+    \textbf{Kdm2b(+)},
+    \textbf{Klf5(+)},
+    \textbf{Mafa(+)},
+    Meox1(+),
+    Mlxipl(+),
+    Mnx1(+),
+    \textbf{Neurod1(+)},
+    Nfix(+),
+    \textbf{Nkx6-1(+)},
+    Pbx1(+),
+    \textbf{Pdx1(+)},
+    Pknox1(+),
+    Pou2f1(+),
+    Six4(+),
+    Sox4(+),
+    Tcf4(+),
+    \textbf{Tcf7l2(+)},
+    Tef(+),
+    \textbf{Vdr(+)},
+    Zfhx3(+)}} \\
+    %\hline
+    \midrule
+    Module-2 & \cellcolor[cmyk]{0.22,0.51,0,0} \RaggedRight{\textit{\textbf{Arx(+)},
+    Ascl1(+),
+    Barx2(+),
+    Bhlhe22(+),
+    Brca1(+),
+    Egr2(+),
+    Ehf(+),
+    \textbf{Fos(+)},
+    Foxp2(+),
+    Gata6(+),
+    Hmgb2(+),
+    \textbf{Jun(+)},
+    Jund(+),
+    Klf6(+),
+    Mafb(+),
+    Mef2c(+),
+    Nr1d1(+),
+    Onecut2(+),
+    Rorc(+),
+    Shox2(+),
+    Taf7(+),
+    Thrb(+),
+    Trps1(+)}} \\
+\midrule
+    Module-3 & \cellcolor[cmyk]{0,0.52,0.56,0.03} \RaggedRight{\textit{Arid5a(+),
+Atf3(+),
+Bcl3(+),
+Bhlhe40(+),
+Cebpb(+),
+Cebpd(+),
+Ddit3(+),
+Egr3(+),
+Egr4(+),
+Elf3(+),
+Irf1(+),
+Irf7(+),
+Irf8(+),
+Irf9(+),
+Junb(+),
+Klf4(+),
+Lhx1(+),
+Maff(+),
+Nfia(+),
+Nfil3(+),
+Nfkb2(+),
+Pbx4(+),
+Relb(+),
+Stat1(+),
+Stat2(+),
+Stat3(+),
+Tagln2(+),
+Zfp467(+)}} \\
+\midrule
+    Module-4 & \cellcolor[cmyk]{0,0.89,0.67,0.1} \RaggedRight{\textit{Bach2(+),
+Bhlha15(+),
+Crem(+),
+E2f1(+),
+Etv5(+),
+Gtf2b(+),
+Hoxb2(+),
+Mybl1(+),
+Nr1h3(+)}} \\
+\midrule
+    Module-5 & \cellcolor[cmyk]{0,0.35,1,0.14} \RaggedRight{\textit{Barhl1(+),
+Bcl11a(+),
+Cdx4(+),
+Chd2(+),
+Creb5(+),
+Dab2(+),
+E2f2(+),
+E2f8(+),
+Ebf1(+),
+Epas1(+),
+Ets1(+),
+Ezh2(+),
+Foxs1(+),
+Hes1(+),
+Hmgb3(+),
+Hoxb4(+),
+Irx1(+),
+Myc(+),
+Nfe2l2(+),
+Nfib(+),
+Nkx6-2(+),
+Nkx6-3(+),
+Nr1i2(+),
+Pou3f1(+),
+Pou3f4(+),
+Pou6f2(+),
+Rnaseh2c(+),
+Sox18(+),
+Sox9(+),
+Tbx1(+),
+Tff3(+)}} \\
+    
+    \bottomrule
+   
+  \end{tabularx}
+
+\end{table}
+%\textit{N}, Number of Samples
 
 
 % \begin{table}[h]

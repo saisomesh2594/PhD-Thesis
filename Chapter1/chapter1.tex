@@ -3,12 +3,25 @@
 % %****************************** First Chapter *********************************
 % %*******************************************************************************
 
-
-
 \chapter{Introduction}  %Title of the First Chapter
 \label{chapter1}
 
 \newpage
+
+% \textbf{My Notes:}
+
+% \begin{enumerate}
+%     \item I could shorten \textbf{Section \ref{sec:pancorganoendodev}} \& \textbf{Section \ref{sec:betamat}} into a single page with a 2/3 panel figure. Not sure about \textbf{Section \ref{sec:insbio}} if its absolutely needed
+%     \item IMO, \textbf{Section \ref{sec:gsis}} \& \textbf{Section \ref{sec:reggsis}} are important as I would be submitting to Dept. of Biochemistry.
+%     \item I could shorten \textbf{Section \ref{sec:insact}} to 1-2 paragraphs max?
+%     \item I am thinking of entirely excluding \textbf{Section \ref{sec:t1dm}} and \textbf{Section \ref{sec:otherdm}} as they are tangential to the thesis. I would rather focus on T2DM
+%     \item Maybe I could shorten \textbf{Section \ref{sec:scrna_intro}}
+%     \item I could exclude everything in \textbf{Section \ref{sec:scrna_modalities}} except for Single-cell Proteomics, within which I would introduce Imaging Mass Cytometry (IMC) as it was used in Chapter 2, Single-cell Multi-omics and Spatial Technologies ... ?
+%     \item In \textbf{Section \ref{sec:scrna_analysis}}, from pages 33-41, I could potentially reduce it to 2-3 pages, but reframe the part as describing \textbf{Seurat} workflow and what are steps invovled ... 
+%     \item If I implement the above point, I could re-categorize everything from pages 42 and onwards as \textbf{Downstream analyses}
+% \end{enumerate}
+
+% \clearpage
 
 %\textit{[We might have just found] “The secret of life.”}\\
 %\rightline{Francis Crick, 1953}
@@ -17,14 +30,14 @@
 \section{Endocrine Pancreas: Morphology and Physiology}  %Section - 1.1
 \label{sec:sec1-1endopanc}
 
+\colorbox{pink}{incomplete figure} \colorbox{green}{text clean-up}\\
+
 The pancreas is a glandular organ originating from the endoderm and located in the abdomen, behind the stomach \textbf{\cite{shih_pancreas_2013}}. It plays a \st{vital organ originating from the endoderm} critical role \st{with a central role} in energy homeostasis\st{. The pancreas exerts its effects} by secreting digestive enzymes and releasing metabolic hormones \textbf{\cite{kimmel_molecular_2010, baron_single-cell_2016}}. The pancreas is the only organ with \st{functions both, as an} exocrine and endocrine \st{gland} functions.  
 \\\\
 \st{The exocrine} Majority of the pancreatic mass (\textasciitilde 90\%) is comprised of the exocrine tissue, consisting of acinar, centro-acinar and ductal cells \textbf{\cite{pandiri_overview_2014}}. The acinar cells secrete digestive enzymes, which catalyze the breakdown of proteins (peptidases), carbohydrates (amylases), and lipids (lipases). These digestive enzymes are further ferried into the duodenum and the gastrointestinal (GI) tract via the ductal system \textbf{\cite{shih_pancreas_2013, baron_single-cell_2016}}.  In addition to this, the \st{ductal system} pancreatic ducts along with the centro-acinar cells, secrete large volumes of bicarbonate-rich fluid, resulting in the flushing of acinar secretions \textbf{\cite{pandiri_overview_2014, low_pancreatic_2010}}. 
 \\\\
-The endocrine component, called islets of Langerhans (short islets), comprise 1-2\%, and the interstitium with vasculature, lymphatics, nerves, and fibrous connective stroma make \st{making} up the remainder of the tissue mass \textbf{\cite{pandiri_overview_2014}}. The islets are named after Paul Langerhans, who in 1869, through exhaustive histological studies discovered that the pancreas was a heterogeneous organ comprised of different structures. The islets, embedded within the exocrine tissue and scattered throughout the whole pancreas, consist of several unique cell types, all of which secrete different hormones and peptides for regulating \st{glucose homeostasis}  blood glucose level \textbf{\cite{shih_pancreas_2013, baron_single-cell_2016}} and influencing exocrine function.  The alpha \textbf{(α)} cells release glucagon, the beta \textbf{(β)} cells produce insulin and amylin, the gamma \textbf{(γ)} or PP cells produce pancreatic polypeptide, the delta \textbf{(δ)} cells produce somatostatin and the epsilon \textbf{(ε)} cells produce ghrelin \textbf{\cite{mastracci_endocrine_2012} (Fig. \ref{fig1-1})} . 
-\\\\
-
-
+The endocrine component, called islets of Langerhans (short islets), comprise 1-2\%, and the interstitium with vasculature, lymphatics, nerves, and fibrous connective stroma make \st{making} up the remainder of the tissue mass \textbf{\cite{pandiri_overview_2014}}. The islets are named after Paul Langerhans, who in 1869, through exhaustive histological studies discovered that the pancreas was a heterogeneous organ comprised of different structures. The islets, embedded within the exocrine tissue and scattered throughout the whole pancreas, consist of several unique cell types, all of which secrete different hormones and peptides for regulating \st{glucose homeostasis}  blood glucose level \textbf{\cite{shih_pancreas_2013, baron_single-cell_2016}} and influencing exocrine function.  The alpha \textbf{(α)} cells release glucagon, the beta \textbf{(β)} cells produce insulin and amylin, the gamma \textbf{(γ)} or PP cells produce pancreatic polypeptide, the delta \textbf{(δ)} cells produce somatostatin and the epsilon \textbf{(ε)} cells produce ghrelin \textbf{\cite{mastracci_endocrine_2012}  (Fig.\ref{fig1-1})} 
+\\
 
 %\begin{figure}[htbp]
 \begin{figure}[ht]
@@ -34,252 +47,16 @@ The endocrine component, called islets of Langerhans (short islets), comprise 1-
 \label{fig1-1}
 \end{figure}
 
-
-
 The pancreatic tissue in mice is a diffused lobular organ consisting of the duodenal, the splenic, and the gastric lobes. In humans, the pancreas exhibits \st{is} a more compact and well-defined structure, comprising of \st{into three major parts:} the head, the body, and the tail. The pancreas receives a rich vascular supply and the macro-vascular network is conserved in humans and rodents \textbf{\cite{muratore_vascular_2021}}. Although the islets comprise 1-2\% of the pancreas, they receive up to 20\% of the pancreatic blood supply \textbf{\cite{muratore_vascular_2021,jansson_glucose-induced_1986}}. \st{The dense vascularization}This remarkable vascularity of islets is necessary for normal islet function and likely explains how fluctuations in blood glucose are \st{sensed} detected, \st{and lead}leading to rapid and \st{large}substantial changes in the secretion of pancreatic hormones.
 \\\\
 In rodents such as mice, the islets consist of \textasciitilde75–80\% β-cells, forming a rich “core” and \textasciitilde15–20\% α-cells and the rest is made up by the remaining endocrine cells (δ-cells and PP-cells, <10\% and ε-cells, <1\%), forming the “mantle” of the islet. In contrast, the endocrine cells in the human islets seem to be randomly distributed, and have proportionally fewer β-cells (\textasciitilde55-75\%) and more α-cells (\textasciitilde30-45\%), likely suggesting the major role of glucagon secretion in humans. The variability in cell distribution results in more heterotypic contacts between the endocrine cells in human islets \textbf{\cite{walker_human_2021}}. It has been shown in both mice and humans, that the islet architecture is size-dependent, with smaller islets displaying the core-mantle structure and larger islets with more complex organization \textbf{\cite{dolensek_structural_2015}}. Additional differences in the innervation patterns and presence of smooth muscle cells throughout the vascular network also exist between mouse and human islets \textbf{\cite{rodriguez-diaz_autonomic_2011}}. \st{It is likely that these islet architecture differences between mouse and human}These islet architecture differences between mouse and human likely contribute to physiological differences regarding islet function \textbf{\cite{cabrera_unique_2006}}.
 \\\\
 To summarize, the pancreatic islets are regarded as a coordinated mini-organ that serves as a remarkable regulator, integrating systemic and local cues to fine-tune blood glucose levels by the synthesis and appropriate secretion of several metabolic hormones by the diverse cell types in the islet microenvironment.
 
-% ********************************** % 1.1.1  **************************************
-%\subsection{Principles of (Mendelian) Inheritance} %Section - 1.1.1 
-%\label{sec:Mendel}
 
-% ********************************** % 1.1.2 **************************************
-% \subsection{Genetic Linkage and the birth of modern genetics} %Section - 1.1.2 
-% \label{sec:Morgan}
-
-
-
-
-%%%% Box on genetic terms & origin
-
-%\begin{Comment}
-%\hspace{-2.5mm}\textbf{Box 1: Genetic terms \& their origin}\label{box:genetic_terms}
-%\small
-%\begin{itemize}
-%    \item \textbf{Alleles} (originally allelomorphs) were defined by Bateson as the units of inheritance described by Mendel \cite{bateson2013mendel}.
-%    \item \textbf{Homozygote} and \textbf{heterozygote} were also used by Bateson to describe individuals carrying the same or different alleles.
-%    \item The word \textbf{gene} as a term for the Mendelian factors or units of inheritance was introduced by Danish botanist Johannsen \cite{johannsen1911genotype}. 
-%    \item Johannsen also introduced the terms \textbf{phenotype}, as the outward appearance of an individual, and \textbf{genotype}, as their genetic traits. 
-%    \item The terms \textbf{polygenetic} (today more often simply polygenic), for traits that are governed by multiple genes, and \textbf{pleiotropic}, for genes that affect multiple, seemingly unrelated, phenotypes also made their first appearance at that time. 
-%    \item A \textbf{pedigree}, from the French \textit{pied de grue} (crane's foot), is a diagram that depicts the biological relationships between related individuals.    It is often used to look at the transmission of genetic disorders.
-%\end{itemize}
-%\vspace{3mm}
-%\end{Comment}
-
-
-
-
-
-% ********************************** % 1.1.3  **************************************
-% \subsection{The double helix} %Section - 1.1.3
-% \label{sec:double_helix}
-
-% ********************************** % 1.1.4  **************************************
-% \subsection{Biometrics} %Section - 1.1.4
-% \label{sec:biometrics}
-
-% % %********************************** % 1.1.5  **************************************
-% \subsection{Towards quantitative genetics} %Section - 1.1.5
-% \label{sec:Fisher}
-
-
-
-%\newpage
-
-% % %********************************** % 1.1.6  **************************************
-% \subsection{Molecular biology and technological advances}
-% \label{sec:genetic_timeline}
-
-
-% \subsubsection{Cracking the code}
-% \label{sec:genetic_code}
-
-
-
-% \begin{figure}[htbp]
-% \centering
-% \includegraphics[width=15cm]{Chapter1/Fig/genetic_timeline_draft.png}
-% \caption[Genetic Timeline]{\textbf{150 years of genetics}.\\
-% Key scientific discoveries in genetics and corresponding technological advancements.
-% A number of scientific discoveries, in combination with key advances in technology and statistical modelling, have led to the identification of thousands of genetic variants which are associated to complex and molecular traits \cite{nhgri2003genetic}.
-% Several fundamental contributions have been made, from Mendel's peas to the structure of DNA, to large databases cataloguing genetic variation of hundreds of thousands of individuals.
-% Here, I have attempted to highlight the key events that led to today's field of quantitative genetics in the GWAS and post-GWAS era.}
-% \label{fig:genetic_timeline}
-% \end{figure}
-
-% \subsubsection{Sequencing DNA}
-% \label{sec:dna_seq}
-
-
-% \subsubsection{Understanding the genetic basis of disease}
-% \label{sec:disease_genetic}
-
-
-% \phantomsection
-% \label{sec:ld}
-% Instead, it was proposed that the combined use of \gls{ld}\footnote{LD: the nonrandom allocation of alleles at nearby variants to individual chromosomes as a result of recent mutation, genetic drift or selection, manifest as correlations between genotypes at closely linked markers \cite{mccarthy2008genome}.} and population- (rather than family-) based studies would be more suitable \cite{risch1996future, jorde2000linkage} - thus practically proposing the design for \glspl{gwas} \cite{risch1996future}.
-% However, at the time, implementation of \glspl{gwas} was not possible, for two primary reasons.
-% First of all, the technology required to genotype thousands to millions of markers in a single experiment for the larger required sample sizes was not available \cite{risch1996future, visscher2012five}.
-% Secondly, the distribution and density of genetic polymorphisms across the genome, and the \gls{ld} between genetic variants across different populations, were unknown.\\
-
-% In some sense, population-based association studies can be viewed as an extension of family-based linkage studies, in which the population studied (derived from common ancestors) acts as an extended pedigree and a much greater number of meiotic recombinations will have occurred between the analysed samples.
-% As a consequence, \gls{ld} regions are much smaller than within pedigrees of close relatives, thus requiring a more dense panel of genetic markers to be examined \cite{cordell2005genetic}.
-
-% \subsubsection{The Human Genome Project}
-% \phantomsection
-% \label{sec:hgp}
-
-% In order to study genomic variation, and therefore its role in disease, it was necessary to generate a reference genome.
-% This was the goal of the \gls{hgp}, which aimed at sequencing the entire human genome.
-% The \gls{hgp} was 
-% % perhaps the first 
-% a 
-% major breakthrough that dramatically changed the landscape of genetics, and was described by United States President Clinton as “an epic-making triumph of science and reason” \cite{clinton2000remarks} at the announcement of its completion.
-% Driven by and a driver of technological breakthroughs in \gls{dna} sequencing and genotyping, the \gls{hgp} was a massive international undertaking and a truly collaborative effort; sequencing and analysis took place across twenty centers in six different countries (USA, UK, France, Germany, Japan, China) and took 13 years to complete, costing approximately \$2.7 billion \cite{lander2011initial}.
-% Led in the US by then NIH director Francis Collins and by founder of Celera Genomics \footnote{The company Celera Genomics was formed in May 1998, with the objective of sequencing much of the human genome in three years \cite{venter1998shotgun}.} 
-% Craig Venter, and with large contributions from the UK, in particular from the Sanger Institute directed by John Sulston (who had first sequenced the genome of \textit{C. Elegans}), the \gls{hgp} was announced as a joint US-UK statement on June 26th, 2000.
-% After a first publication in 2001, the project was truly completed on April 25th, 2003, on the 50$^{th}$ anniversary of the Watson and Crick paper describing the helical structure of \gls{dna}.\\
-
-% The \gls{hgp} provided the first map (obtained from the genomes of a small number of individuals) of the $\sim$3 billion bases in the human genome \cite{lander2001initial, schmutz2004quality, hattori2005finishing}, and revealed that human \gls{dna} consists of surprisingly few exons (1.1\% of the genome), whereas introns cover 24\% of the genome \cite{venter2001sequence, lander2001initial}. 
-% Additionally, the number of genes was found to be smaller than expected, with around 30,000 being identified in 2001, and circa 21,000 genes being the latest (still debated) estimate at the time that this thesis is written \cite{pertea2018thousands}. 
-% Additional breakthroughs in sequencing technologies have expanded and refined the reference genome, which now captures more than 92\% of the genome and provides a landscape of its genes \cite{lander2011initial}.\\
-
-% With a complete map of the human genome in place, genetic variants could now be identified as those bases discovered in an individual that did not match the (reference) base annotated in the human genome map. 
-% Common variants, i.e. variants with \gls{maf}\footnote{The frequency of an
-% allele at a genetic locus is the proportion of chromosomes in the study sample that carry that allele \cite{laird2010fundamentals}. 
-% For a biallelic variant (a variant for which only two possible alleles are observed in the population), the frequency of the less common (minor) allele is called the minor allele frequency (MAF).} larger than 5\%, were called \glspl{snp}. 
-% Previous studies had estimated that approximately 0.1\% (1 base per 1,000) of an individual's genome was a polymorphism \cite{wang1998large, li1991low, cargill1999characterization}. 
-
-% These SNPs were scattered across the genome and it was now time to describe what type of variants they were, where in the genome they were located, and what (if any) effect they had on human phenotypes.
-
-% \subsubsection{The International HapMap Project}
-
-% The International HapMap Project was the first effort of its kind to systematically catalogue genomic variation. 
-% Additionally, it aimed to characterise the LD structure of the human genome, which would make GWA studies feasible. 
-% The HapMap was officially started in October 2002 as a collaboration between research groups and private companies in Canada, China, Japan, Nigeria, the United Kingdom and the United States with the goal of developing a haplotype map (HapMap) of the human genome \cite{international2003international}.
-% By genotyping individuals of African (YRI), European (CEU) and East Asian (JPT, CHB) descent, in Phase I HapMap assembled a publicly available database of common variants (\gls{maf}>5\%) in global samples \cite{international2005haplotype}. 
-% The HapMap expanded rapidly. 
-% By Phase II (2007), the database contained 2.1 million SNPs from the four original populations \cite{international2007second}.
-% Phase III (2010) added genotyping from seven additional populations, for a total of over 3 million SNPs in 11 global ancestry groups\footnote{ASW (African ancestry in Southwest USA); CEU (Utah residents with Northern and Western European ancestry from the CEPH collection); CHB (Han Chinese in Beijing, China); CHD (Chinese in Metropolitan Denver, Colorado); GIH (Gujarati Indians in Houston, Texas); JPT (Japanese in Tokyo, Japan); LWK (Luhya in Webuye, Kenya); MEX (Mexican ancestry in Los Angeles, California); MKK (Maasai in Kinyawa, Kenya); TSI (Tuscans in Italy); YRI (Yoruba in Ibadan, Nigeria).} \cite{international2010integrating}.\\ 
-
-% The growing popularity of genetic association studies in parallel with the expansion of the HapMap effort paved the way for the last needed technological breakthrough: microarrays.
-% By knowing the genetic location of thousands of variants, commercial companies were able to develop so-called `SNP chips' \cite{meaburn2006genotyping, oliphant2002beadarray}, which allowed for genotyping at specific locations across the genome.
-% In parallel, the data generated by the HapMap project enabled calculation of the LD\footnote{Pearson's correlation coefficient squared, $r^2$, is commonly used} between SNPs within the genome, effectively describing the chance that two SNPs will be inherited together \cite{bush2012genome}.
-% This enabled the identification of haplotypes and thus a minimal set of SNPs that capture the majority of the haplotype diversity within a population, called `tag SNPs' \cite{international2003international}. 
-% The collective LD information gathered by academics in those years \cite{slatkin2008linkage, pe2006evaluating, otto2002resolving} allowed companies such as Affymetrix and Illumina to develop SNP arrays that contained 
-% these tag SNPs, effectively capturing information about common variation across a large percentage of the genome while only directly genotyping a few thousand SNPs.\\
-
-%\newpage
-
-% % %********************************** % 1.1.7  **************************************
-% \subsection{Genome-wide association studies}
-% \label{sec:gwas}
-
-% The data generated by the International HapMap Project combined with development of appropriate chip-based microarray technology, which enabled simultaneous genotyping of more than one million SNPs, led to the first wave of \glspl{gwas} \cite{visscher2012five}.
-% \gls{gwas} are a hypothesis-free\footnote{bar the selection of SNPs on the chip. 
-% More recently, shallow DNA-seq has been increasingly used as an alternative, making the approach truly hypothesis-free.} approach to test for statistical association between the genotype frequency of common genetic variants (considered one by one across the genome) and a phenotype of interest \cite{mccarthy2008genome}. 
-% The development of GWAS was accompanied by great enthusiasm, and the hope that these studies could better our understanding of the genetic underpinning of human disease, leading to improvement of prognosis and acceleration of drug and diagnostics development. \\
-
-% Initially, \gls{gwas} focused on complex phenotypes with binary outcomes, using a case-control design (i.e. diseased vs healthy).
-% Then, for each SNP and binary trait, the association was evaluated using a Cochran–Armitage (trend) test, a $\chi^2$ test or a Fisher's exact test comparing the numbers of cases and controls when stratified by their alleles at the locus of interest. 
-% The first successful \gls{gwas} was published in 2002 on myocardial infarction \cite{ozaki2002functional}.
-% The same design was then applied in a landmark GWA study conducted in 2005 for age-related macular degeneration (AMD), using 96 cases and 50 healthy controls and testing for associations at $\sim$100,000 SNPs \cite{klein2005complement}. 
-% In 2007, the Wellcome Trust Case-Control Consortium (WTCCC) published a study where they performed \gls{gwas} on seven different common diseases, using 2,000 cases for each of bipolar disorder (BD), coronary artery disease (CAD), Crohn's disease (CD), hypertension (HT), rheumatoid arthritis (RA), type I and II diabetes (T1D, T2D) and a common set of 3,000 healthy controls, demonstrating the feasibility of the use of a shared set of controls across several traits \cite{wellcome2007genome}.\\
-
-% A year later, in 2008, the \gls{gwas} Catalog was founded to keep a record of all published \gls{gwas} and identified associations \cite{welter2014nhgri}.
-% As of September 2020, when I am writing this thesis, the \gls{gwas} Catalog includes 4,694 publications, describing 197,708 SNP-trait associations \cite{macarthur2017new}.\\
-
-% Over time, quantitative traits have become increasingly popular to use as phenotypes, in addition to binary traits.
-% These include continuous traits such as height, weight and blood pressure.
-% Furthermore, linear regressions and their derivations have become more popular methods to assess association, due to their flexibility to include covariates \cite{mccarthy2008genome}.
-% I describe these models in detail in the next chapter (\textbf{Chapter \ref{chapter2}}). 
-
-%\newpage
-
-% \gls{gwas} results are often visualised using a Manhattan plot \cite{mccarthy2008genome}, where the negative log p value (as a measure of significance) is plotted on the y axis, against the corresponding genomic position (ordered by chromosome and position) on the x axis (\textbf{Fig. \ref{fig:manhattan}}). 
-% Peaks on these plots represent loci (multiple variants in \gls{ld}) that display evidence of association with the analysed phenotype. 
-% Variants are deemed to be significantly associated with a trait if they exceed an appropriately chosen p value threshold. 
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=15cm]{Chapter1/Fig/Manhattan_plots_CD_WTCCC_2007.jpg}
-%\caption[Manhattan plot]{\textbf{Manhattan plot}.\\
-%Manhattan plot for Crohn's disease (CD) from the WTCCC study \cite{wellcome2007genome}.
-%On the x axis are plotted the genomic positions of the SNPs tested, one chromosome after %the next.
-%On the y axis are the association significance values.  
-%Alternating colours are used to distinguish chromosomes (odd numbered chromosomes -and chromosome X- are dark, even numbered chromosomes are light).
-%Highlighted in green are statistically significant SNPs (p value < $5 \times 10^{-8}$).}
-%\label{fig:manhattan}
-%\end{figure}
-
-%\subsubsection{From global traits to molecular traits}
-
- 
-
-% % %********************************** % 1.1.8  **************************************
-% \subsection{Expression quantitative trait loci}
-% \label{sec:eqtl}
-
-% \subsubsection{Mechanisms of the genetic regulation of gene expression}
-
-
-% \subsubsection{Mapping eQTL}
-% \label{sec:eqtl_map}
-
- 
- 
-% \subsubsection{\textit{Cis} and \textit{trans} eQTL}
-
-
-
-% \begin{figure}[h]
-% \centering
-% \includegraphics[width=15cm]{Chapter1/Fig/eqtl.png}
-% \caption[\textit{Cis} and \textit{trans} eQTL]{\textbf{\textit{Cis} and \textit{trans} eQTL}.\\
-% \textit{Cis} eQTL affect the expression of genes directly. 
-% \textit{Trans} eQTL, in contrast, affect the expression of typically more distant genes, often by first having a \textit{cis} effect on the expression of intermediate regulatory genes.
-% % On the right, the typical representation of eQTL using box plots.
-% Figure adapted from \cite{westra2014genome}.
-% }
-% \label{fig:eqtl}
-% \end{figure}
-
-
-
-% \subsubsection{From tissue-specific to cell type-specific eQTL}
-% \label{sec:eqtl_celltype_specific}
-
-
-
-% \subsubsection{Context-specific eQTL}
-
-
-% \newpage
-
-% \subsubsection{Using eQTL to link genes to disease}
-% \phantomsection
-% \label{sec:eqtl_gwas}
-
-
-
-% \subsubsection{eQTL mapping in iPSC and iPSC-derived cells}
-
-
-
-% ***********************************************************************************************************************************************************************************************************************************************************************************************************************************
-%\mathbf{\rho}
 
 \newpage
 
-% \vspace*{10px}
-
-% \textit{“It is not birth, marriage, or death, but gastrulation which is truly the most important time in your life.”}\\
-% \rightline{Lewis Wolpert, 1986}
-
-% \vspace*{5px}
 
 % ***************************************************************
 %************************ %Second Section %****************************************************************
@@ -287,41 +64,53 @@ To summarize, the pancreatic islets are regarded as a coordinated mini-organ tha
 \label{sec:human_ipscs}  
 
 % ********************************** % 1.2.1  **************************************
-\subsection{Pancreas Organogenesis} %Section - 1.2.1 
-\label{sec:pancorgano}
+\subsection{Pancreas Organogenesis \& Endocrine cell Development} %Section - 1.2.1 
+\label{sec:pancorganoendodev}
 
-Pancreas organogenesis is a \st{highly} conserved process during fetal development and comprises a tightly coordinated and regulated interplay of complex signaling events. During this step-wise program, the pancreas develops from a simple bud-like structure to a \st{final} mature, highly branched organ containing several specialized cell types. In mice, the pancreas specification begins at embryonic day 8.5 \textbf{(e8.5)} with the formation of dorsal and ventral pre-pancreatic regions in the foregut endoderm \textbf{\cite{shih_pancreas_2013, slack_developmental_1995}}. The pancreas development becomes morphologically evident at  \textbf{\textasciitilde e9.5} when the presumptive pancreatic regions in the endoderm undergo thickening and eventually result in the emergence of pancreatic buds \textbf{\cite{shih_pancreas_2013}}. Over the next 2-3 days, the pancreatic buds continue to elongate, accompanied by the stratification of the epithelium and the formation of multiple micro-lumens \textbf{\cite{pan_pancreas_2011}}. At \textbf{\textasciitilde e12.5}, as a result of both due to gut rotation and elongation of the dorsal and ventral stalks, the pancreatic buds (dorsal and ventral) come into contact and fuse into a single organ. \textbf{This early phase of pancreatic development is referred to as the “primary transition”.}
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up}\\
+
+Pancreas organogenesis is a \st{highly} conserved process during fetal development and comprises a tightly coordinated and regulated interplay of complex signaling events. During this step-wise program, the pancreas develops from a simple bud-like structure to a \st{final} mature, highly branched organ containing several specialized cell types. In mice, the pancreas specification begins at embryonic day 8.5 \textbf{(e8.5)} with the formation of dorsal and ventral pre-pancreatic regions in the foregut endoderm \textbf{\cite{shih_pancreas_2013, slack_developmental_1995}}. The pancreas development becomes morphologically evident at  \textbf{\textasciitilde e9.5} when the presumptive pancreatic regions in the endoderm undergo thickening and eventually result in the emergence of pancreatic buds \textbf{\cite{shih_pancreas_2013}}. Over the next 2-3 days, the pancreatic buds continue to elongate, accompanied by the stratification of the epithelium and the formation of multiple micro-lumens \textbf{\cite{pan_pancreas_2011}}. At \textbf{\textasciitilde e12.5}, as a result of both due to gut rotation and elongation of the dorsal and ventral stalks, the pancreatic buds (dorsal and ventral) come into contact and fuse into a single organ. This early phase of pancreatic development is referred to as the \textbf{`primary transition'}.\\
+
+% % ********************************** % 1.2.2  **************************************
+% \subsection{Endocrine Cell Development} %Section - 1.2.2 
+% \label{sec:endodev}
+
+The vast majority of the endocrine cells arise during the \textbf{`secondary transition'.} from the endocrine progenitors \textbf{\cite{pan_pancreas_2011}}. However, glucagon-containing α-cells can be seen as early as \textbf{e9} in the primordium \textbf{\cite{pictet_ultrastructural_1972,gittes_developmental_2009}}. The fate decision in the bi-potent trunk domain during the secondary transition is determined by graded \textit{Notch} activity. Lower \textit{Notch} activity leads to \textit{Sox9} expression, which is an activator of \textit{Ngn3} \textbf{\cite{shih_pancreas_2013}}, a basic-helix-loop-helix (bHLH) \gls{tf} and master regulator of endocrinogenesis \textbf{\cite{gu_direct_2002}}. Cells that do not escape \textit{Notch} signaling express both \textit{Hes1} and \textit{Sox9}, resulting in \textit{Ngn3} repression and eventual contribution to the ductal tree. \st{However, no signals have yet been identified that could account such a segregated expression pattern of Ngn3.} After \textit{Ngn3} expression, endocrine progenitors exit the cell-cycle and delaminate into surrounding stromal tissue \textbf{\cite{shih_pancreas_2013, gouzi_neurogenin3_2011, miyatsuka_neurogenin3_2011}}. These \textit{Ngn3+} cells are uni-potent and as a whole can generate the five different endocrine cell types \textbf{\cite{shih_pancreas_2013,gu_direct_2002,miyatsuka_neurogenin3_2011}}. The timing and strength of \textit{Ngn3} expression determines the efficiency of endocrine cell formation and the cell type: early \textit{Ngn3} expression results in formation of α-cells while delayed expression of \textit{Ngn3}  generates β- and δ-cells followed by γ-cells \textbf{\cite{johansson_temporal_2007}}.
+
+\clearpage
 
 % ********************************** % 1.2.2  **************************************
-\subsection{Endocrine Cell Development} %Section - 1.2.2 
-\label{sec:endodev}
-The vast majority of the endocrine cells arise during the secondary transition from the endocrine progenitors \textbf{\cite{pan_pancreas_2011}}. However, glucagon-containing α-cells can be seen as early as \textbf{e9} in the primordium \textbf{\cite{pictet_ultrastructural_1972,gittes_developmental_2009}}. The fate decision in the bi-potent trunk domain during the secondary transition is determined by graded \textit{Notch} activity. Lower \textit{Notch} activity leads to \textit{Sox9} expression, which is an activator of \textit{Ngn3} \textbf{\cite{shih_pancreas_2013}}, a basic-helix-loop-helix \textbf{(bHLH)} transcription factor \textbf{(TF)} and master regulator of endocrinogenesis \textbf{\cite{gu_direct_2002}}. Cells that do not escape \textit{Notch} signaling express both \textit{Hes1} and \textit{Sox9}, resulting in \textit{Ngn3} repression and eventual contribution to the ductal tree. \st{However, no signals have yet been identified that could account such a segregated expression pattern of Ngn3.} After \textit{Ngn3} expression, endocrine progenitors exit the cell-cycle and delaminate into surrounding stromal tissue \textbf{\cite{shih_pancreas_2013, gouzi_neurogenin3_2011, miyatsuka_neurogenin3_2011}}. These \textit{Ngn3+} cells are uni-potent and as a whole can generate the five different endocrine cell types \textbf{\cite{shih_pancreas_2013,gu_direct_2002,miyatsuka_neurogenin3_2011}}. The timing and strength of \textit{Ngn3} expression determines the efficiency of endocrine cell formation and the cell type: early \textit{Ngn3} expression results in formation of α-cells while delayed expression of \textit{Ngn3}  generates β- and δ-cells followed by γ-cells \textbf{\cite{johansson_temporal_2007}}.
-\\\\
-Critical TFs such as \textit{Pax4}, \textit{Pdx1} and \textit{Nkx6.1} control the determination of β-cell fate. On the contrary, \textit{Arx} determines α-cell identity. Both \textit{Pax4} and \textit{Arx} are targets of \textit{Ngn3} and are co-expressed, after which they begin to repress each other. In the \textit{Nkx6.1+} β-cell precursors, the switch from the TF \textit{MafB} \st{(v-Maf avian musculoaponeurotic oncogene homolog B)} to \textit{MafA} expression is an important step to activate the complete the β-cell specific program. After birth, immature β-cells undergo stepwise maturation to become fully mature cells.
-% ********************************** % 1.2.3  **************************************
-\subsection{Postnatal \( \mathbf{\upbeta} \)-cell maturation} %Section - 1.2.3
+\subsection{\( \mathbf{\upbeta} \)-cell maturation} %Section - 1.2.2
 \label{sec:betamat}
-β-cell maturation is continuation of β-cell development and occurs postnatally in mammals (https://link.springer.com/article/10.1007/s00125-022-05672-y). Most of the current understanding of β-cell maturation process is derived from neonatal rodent islets, as similar data from humans is difficult to collect \textbf{\cite{liu_all_2017, salinno_-cell_2019}}. After birth, immature β-cells undergo several steps to become fully mature and functional cells characterized by tightly controlled insulin secretion in response to glucose.
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up} \colorbox{red}{missing references}\\
+
+Critical TFs such as \textit{Pax4}, \textit{Pdx1} and \textit{Nkx6.1} control the determination of β-cell fate. On the contrary, \textit{Arx} determines α-cell identity. Both \textit{Pax4} and \textit{Arx} are targets of \textit{Ngn3} and are co-expressed, after which they begin to repress each other. In the \textit{Nkx6.1+} β-cell precursors, the switch from the TF \textit{MafB} \st{(v-Maf avian musculoaponeurotic oncogene homolog B)} to \textit{MafA} expression is an important step to activate the complete the β-cell specific program. After birth, immature β-cells undergo stepwise maturation to become fully mature cells. β-cell maturation is continuation of β-cell development and occurs postnatally in mammals (https://link.springer.com/article/10.1007/s00125-022-05672-y). Most of the current understanding of β-cell maturation process is derived from neonatal rodent islets, as similar data from humans is difficult to collect \textbf{\cite{liu_all_2017, salinno_-cell_2019}}. After birth, immature β-cells undergo several steps to become fully mature and functional cells characterized by tightly controlled insulin secretion in response to glucose.
 \\\\
 The immature β-cells are organized into clusters, forming proto-islets \textbf{\cite{salinno_-cell_2019}}, which eventually undergo structural rearrangements to form the compacted core and mantle architecture \textbf{\cite{sharon_peninsular_2019}}. The developmentally immature β-cells are characterized by a strong proliferative capacity, thereby resulting in a general increase in β-cell mass. The immature β-cells present insulin granules but display “leaky” insulin secretion wherein they have a decreased glucose threshold for stimulated insulin secretion \textbf{\cite{liu_all_2017, blum_functional_2012}} and are less glucose-responsive thereby affecting their ability to regulate insulin secretion in response to fluctuating blood glucose levels. \st{[ref]. <continue from PAI>}
 \\\\
 Immature β-cells follow a biphasic pattern of maturation \textbf{\cite{salinno_-cell_2019, stolovich-rain_weaning_2015}}.  The first wave starts right after birth and lasts until \textasciitilde 2 weeks, during which β-cells increase the expression of several key TFs and associated machinery necessary to establish adult β-cell identity. Some of the key signature genes include \textit{Pdx1}, \textit{Neurod1}, \textit{Nkx2.2} and \textit{Nkx6.1}, which are expressed by all β-cells at birth \textbf{\cite{salinno_-cell_2019}}. In addition, several other markers have also been identified which mark the early phase of functional maturation of β-cells: increased expression of \textit{Ucn3} \textbf{\cite{salinno_-cell_2019, blum_functional_2012}}, \textit{Syt4} \textbf{\cite{salinno_-cell_2019, huang_synaptotagmin_2018}}, \textit{Fltp} \textbf{\cite{salinno_-cell_2019, bader_identification_2016}}  and dramatic drop in levels of \textit{Npy} \textbf{\cite{salinno_-cell_2019, rodnoi_neuropeptide_2017}}. Among TFs, \textit{MafA} progressively substitutes \textit{MafB} expression and further regulates expression of genes involved in glucose sensing and insulin secretion, thereby characterizing the late phase of postnatal maturation.
 \\\\
-The second wave of maturation occurs from about the third week of life until the weaning period involving dietary change from high-fat maternal milk to a high-carbohydrate chow diet. During this weaning phase, β-cells begin to exhibit improved glucose-stimulated insulin secretion and glucose-induced replication, although the latter remains to be explained. This phase is characterized by β-cells differentially regulating metabolic pathways, involving a switch from mTORC1 to AMPK-dependent signaling, which defines the mature functional landscape. The dietary change associated with the weaning period also affects the secretion of incretin hormones, which enhance GSIS and modulate β-cell replication.
-\\\\
+The second wave of maturation occurs from about the third week of life until the weaning period involving dietary change from high-fat maternal milk to a high-carbohydrate chow diet. During this weaning phase, β-cells begin to exhibit improved glucose-stimulated insulin secretion and glucose-induced replication, although the latter remains to be explained. This phase is characterized by β-cells differentially regulating metabolic pathways, involving a switch from mTORC1 to AMPK-dependent signaling, which defines the mature functional landscape. The dietary change associated with the weaning period also affects the secretion of incretin hormones, which enhance GSIS and modulate β-cell replication.\\\\
+A recent review outlined emerging evidence about the developmental and homeostatic regulation of β-cell maturation and functional adaptation through collaboration between lineage-determining and signal-dependent TFs \textbf{\cite{wortham_transcriptional_2021}}.
 % ********************************** % 1.2.4  **************************************
 \subsection{Insulin Biosynthesis} %Section - 1.2.4
 \label{sec:insbio}
+
+\colorbox{yellow}{missing text} \colorbox{pink}{missing figure}
+
+
 % ********************************** % 1.2.5  **************************************
 \subsection{Glucose-Stimulated Insulin Secretion (GSIS)} %Section - 1.2.5
 \label{sec:gsis}
+
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up} \\
 
 \subsubsection{Triggering \& Amplifying Pathways}
 Insulin, secreted by pancreatic β-cells\st{ß-cells} in response to elevated blood glucose levels, is the central anabolic hormone promoting the utilization and storage of metabolic fuel \textbf{\cite{slack_developmental_1995}}. The molecular process wherein hormone release is triggered by a stimulus is called stimulus-secretion coupling.  The release of insulin by a post-prandial increase in glucose concentrations \st{This process} is termed as glucose-stimulated insulin secretion (\textbf{GSIS}), and is the most critical aspect of β-cell\st{ß-cell} identity \textbf{\cite{ashcroft_stimulussecretion_1994}}.  Impaired GSIS is an early marker of β-cell dysfunction and contributes to the pathogenesis of metabolic disorders such as obesity and T2DM \textbf{\cite{jensen_metabolic_2008}}. The canonical pathway for GSIS \st{is made up}consists of two \st{independent yet functionally }distinct components – triggering pathway and amplifying signals \textbf{\cite{henquin_triggering_2000}}. 
 \\\\
 In the triggering pathway (previously, K\textsubscript{ATP}-dependent pathway), the pancreatic β-cells act as a glucose sensing machinery with the help of glucose transporters (GLUT) embedded in their plasma membranes and respond to changes in blood glucose levels. GLUT2, encoded by \textit{Slc2a2}, is the predominant glucose transporter in rodent β-cells \textbf{\cite{mcculloch_glut2_2011,van_de_bunt_tale_2012}}   and facilitates rapid entry of glucose into the cell, owing to low affinity and high capacity nature. After transmembrane transport (via facilitated diffusion), glucose is metabolized by oxidative glycolysis\st{ via glycolysis, tricarboxylic acid cycle (TCA) and electron transport chain (ETC)}, resulting in the increase of ATP levels and cytosolic ATP / ADP ratio within the cell \textbf{\cite{henquin_triggering_2000}}. β-cells are equipped with ATP-sensitive K\textsuperscript{+} (KATP) channels that undergo closure in an ATP-dependent manner, thereby causing the accumulation of K\textsuperscript{+} ions within the cell and ultimately leading to depolarization of the plasma membrane. This, in turn, results in the opening of voltage-dependent L-type calcium channels (VDCCs), allowing entry of calcium (Ca\textsuperscript{2+}) ions into the cell down the electrochemical gradient by facilitated diffusion. In addition, Ca\textsuperscript{2+} released from intracellular stores also contribute to the rise of cytosolic Ca2+ concentration \textbf{\cite{yang_ionic_2014}}. The increase in intracellular Ca\textsuperscript{2+}, which is the indispensable signal, triggers exocytosis, wherein the insulin-containing secretory granules fuse with the plasma membrane and release insulin into the extracellular space.
 \\\\
-<SNARE COMPLEX FORMATION>
+\hl{<SNARE COMPLEX FORMATION>}
 \\\\
 While the triggering signal is sufficient to enact insulin secretion, it is poorly effective \textbf{\cite{henquin_pathways_2004}}. The metabolism of glucose generates additional signals that serve to fine-tune the action of increase in intracellular Ca\textsuperscript{2+} concentrations. This mechanism was shown to work independent of the K\textsubscript{ATP} channels \textbf{\cite{sato_dual_1992,gembal_evidence_1992}}, and was therefore termed as \textbf{K\textsubscript{ATP}-independent pathway}. It is now referred to as the \textit{`metabolic amplifying pathway'} \textbf{\cite{henquin_triggering_2000,henquin_pathways_2004,henquin_regulation_2009}}.  This pathway depends on the initial triggering signal of Ca\textsuperscript{2+} influx and increases the `release compentency' of insulin granules thereby augmenting insulin secretion in a glucose-concentration-dependent manner \textbf{\cite{henquin_triggering_2000,kalwat_mechanisms_2017}}. In addition to glucose, the amplifying pathway can optimize the secretory response to non-glucose stimuli as well \textbf{\cite{henquin_triggering_2000,kalwat_mechanisms_2017,zhao_-hydrolase_2015,tengholm_camp_2017,han_glutamate_2021}}. This amplifying pathway can also be observed in models of K\textsubscript{ATP} channel knockouts which result in constant depolarization of the β-cell \textbf{\cite{nenquin_both_2004,miki_defective_1998,ravier_glucose_2009}}. The exact mechanisms behind the amplifying pathway remain to be elucidated and several amplifying factors such as proteins, metabolites and associated pathways have been proposed \textbf{\cite{kalwat_mechanisms_2017}}.
 \\\\
@@ -329,6 +118,8 @@ GSIS follows a characteristic `biphasic' pattern – a peak-shaped first phase f
 % ********************************** % 1.2.6  **************************************
 \subsection{Regulation of GSIS} %Section - 1.2.6
 \label{sec:reggsis}
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up} \\
+
 Besides glucose, β-cells also respond to other nutrients such as amino acids and fatty acids, leading to fuel-induced insulin secretion. In addition, other hormones and neurotransmitters can also modulate insulin secretion by β-cells.\st{The following section discusses a few of these of regulators of insulin secretion:}
 
 \subsubsection{Gut Hormones}
@@ -350,13 +141,10 @@ Fatty acids (FA) can have varied effects on GSIS. Non-esterified long-chain fatt
 Apart from the above factors, insulin secretion can also be regulated by other hormones \textbf{\cite{cheng_follicle-stimulating_2023}}, neural inputs via the autonomic \textbf{\cite{thorens_brain_2011, komatsu_glucosestimulated_2013}} and central nervous systems \textbf{\cite{ruud_neuronal_2017}} and neurotransmitters \textbf{\cite{rodriguez-diaz_neurotransmitters_2014}}, reflecting a complex interplay between the various body systems in maintaining glucose homeostasis. 
 
 
-
-
-
-
 % ********************************** % 1.2.7  **************************************
 \subsection{Insulin Action and Clearance} %Section - 1.2.7
 \label{sec:insact}
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up} \\
 Insulin exerts its known physiological effects by binding to the insulin receptor (InsR) on the surface of target cells. The InsR assembles as a tetramer, consisting of two extracellular alpha subunit, which binds insulin and a two membrane-spanning beta subunit, with a tyrosine-kinase domain each. The activation of this kinase results in a metabolic signaling cascade downstream, eventually leading to the uptake of glucose, lipids and amino acids into the cells. The two principal pathways resulting from this interaction include the phosphoinositide 3-kinase (PI3K)/Akt pathway and the Ras/mitogen-activated protein kinase (MAPK) pathway. The PI3K/Akt pathway is critical for linking insulin receptor substrate (IRS) proteins to the metabolic actions of insulin whereas the Ras/MAPK pathway is primarily associated with the growth and mitogenic effects of insulin \textbf{\cite{de_meyts_insulin_2000}}. The binding of insulin to InsR in the target tissues stimulates the translocation of glucose transporter 4 (GLUT4) storage vesicles from intracellular pools to the cell surface, thereby increasing the rate of glucose uptake \textbf{\cite{shepherd_glucose_1999,saltiel_insulin_2001,leto_regulation_2012}}. In the absence of insulin, only ~5\% of GLUT4 pool can be found on the plasma membrane \textbf{\cite{leto_regulation_2012}}.\\\\
 The principal target tissues for insulin action include the liver, skeletal muscles and white adipose tissue (WAT), although InsR have been found in several other tissues \textbf{\cite{spencer_identification_2018}}.
 
@@ -369,169 +157,49 @@ Muscle insulin action accounts for ~75-90\% of the systemic glucose uptake \st{a
 \subsubsection{White Adipose Tissues (WAT)}
 Insulin stimulates glucose transport in adipocytes, although this accounts for only a small portion of the systemic glucose uptake \textbf{\cite{leto_regulation_2012}}. Insulin is a potent anti-lipolytic hormone and controls the levels of non-esterified fatty acids (NEFA) in plasma by suppression of lipolysis, which is critical for the maintenance of euglycemia \textbf{\cite{dimitriadis_insulin_2011}}. It has been proposed that insulin plays a part in the esterification of fatty acids in adipocytes, which is the predominant lipogenic pathway \textbf{\cite{lewis_disordered_2002}}. Insulin also increases the uptake of FFAs from blood thereby promoting triglyceride esterification and storage \textbf{\cite{czech_insulin_2013}}.\\\\ 
 
-\clearpage
+%\clearpage
 
 The above actions of insulin on the principal target tissues can be together termed as `direct effects’. \st{These direct effects along with a strong emphasis on downstream signal transduction events are reviewed herehave been the subject of several reviews 73}. In addition to these, insulin is also known to exert important indirect effects, which are less well understood due to the inherent difficulty in modeling these in cell cultures. Islet β-cells express all isoforms of InsR and the downstream signaling components thereby making it a possibility that insulin itself can trigger the insulin-signaling pathway in β-cells and serve an autocrine role. However, whether it serves a stimulatory or inhibitory role and the physiological relevance of this action is still a subject of ongoing research \textbf{\cite{rhodes_direct_2013,rachdaoui_insulin_2020}}.\\\\
-Insulin clearance is a crucial process in maintaining the homeostatic level of insulin required to reach the target tissues. The liver is plays a significant role in the clearance of the endogenously secreted hormone, accounting for up to 80\% of insulin degradation, during the first passage through the tissue \textbf{\cite{najjar_hepatic_2019,zaharia_reduced_2023}}. Thus, the liver regulates the flow of insulin into the systemic circulation and insulin action, thereby acting as a gatekeeper \textbf{\cite{cherrington_direct_1998}}. After the first passage, the insulin that is not degraded exits through the hepatic vein and reaches the heart, wherein it is pumped into arterial circulation and delivered to target tissues \textbf{\cite{tokarz_cell_2018}}. The circulating insulin is also subject to peripheral clearance by kidneys (via the glomerulus and proximal tubule) and other target tissues to a limited extent \textbf{\cite{najjar_hepatic_2019,polidori_hepatic_2016}}. After circulation, insulin returns to the liver and undergoes a second passage of clearance. The primary protease responsible for degrading insulin in tissues is known as insulin-degrading enzyme (IDE), and is ubiquitously expressed in tissues and has multiple cellular functions \textbf{\cite{duckworth_insulin_1998}}.  
+%Insulin clearance is a crucial process in maintaining the homeostatic level of insulin required to reach the target tissues. The liver is plays a significant role in the clearance of the endogenously secreted hormone, accounting for up to 80\% of insulin degradation, during the first passage through the tissue \textbf{\cite{najjar_hepatic_2019,zaharia_reduced_2023}}. Thus, the liver regulates the flow of insulin into the systemic circulation and insulin action, thereby acting as a gatekeeper \textbf{\cite{cherrington_direct_1998}}. After the first passage, the insulin that is not degraded exits through the hepatic vein and reaches the heart, wherein it is pumped into arterial circulation and delivered to target tissues \textbf{\cite{tokarz_cell_2018}}. The circulating insulin is also subject to peripheral clearance by kidneys (via the glomerulus and proximal tubule) and other target tissues to a limited extent \textbf{\cite{najjar_hepatic_2019,polidori_hepatic_2016}}. After circulation, insulin returns to the liver and undergoes a second passage of clearance. The primary protease responsible for degrading insulin in tissues is known as insulin-degrading enzyme (IDE), and is ubiquitously expressed in tissues and has multiple cellular functions \textbf{\cite{duckworth_insulin_1998}}.  
+Insulin-degrading enzyme (IDE) plays a major role in regulating the process of insulin clearance, is ubiquitously expressed in tissues and has multiple cellular functions \textbf{\cite{duckworth_insulin_1998}}. Up to 80\% of insulin degradation occurs in the liver through two separate passes, and additional peripheral clearance also occurs in the kidneys and other target tissues.
 
 
 \clearpage
 
-% %********************************** % 1.2.1  **************************************
-% \newpage
-
-% \subsection{From homunculi to developmental biology}
-% \label{sec:history_developmental_biology}
 
 
 
-% \begin{wrapfigure}{r}{0.6\textwidth}
-% \includegraphics[width=9.5cm]{Chapter1/Fig/Early_theories_development.png}
-% \caption[Early theories of development]{\textbf{Early theories of development}.\\
-% Illustration of the two leading theories on human embryology before the 19$^{th}$ century.
-% Left, Illustration of Preformation: 
-% A tiny person (homunculus) growing inside a sperm, as drawn by Nicolaas Hartsoeker in 1695.
-% Right, Epigenesis: study of foetus deveopment by Leonardo Da Vinci, c. 1510.}
-% \label{fig:early_embryology}
-% \end{wrapfigure}
+% %********************************** %Fourth Section  **************************************
+\section{\( \mathbf{\upbeta} \)-cell heterogeneity and adaptation in response to stress}
 
+In any given multicellular biological system, cellular heterogeneity  can arise from developmental programs establishing cellular subtypes, from changes in cellular state due to altered environments or cell-intrinsic fluctuations, and from stochastic variation in gene expression. Cellular heterogeneity has been shown to be involved in development, adaptation to dynamic environmental conditions, repair and regeneration, as well as disease.
+While it has long been apparent that not all β-cells in adult islets are identical, recent technological advances have shed further light on β-cell heterogeneity in terms of their morphology, identity and function. Although GSIS is the key function of mature β-cells, some β-cells may also retain non-secretory roles, necessary for overall islet function \textbf{\cite{liu_all_2017}}. This heterogeneity in β-cells is driven by topography and developmental origin \textbf{\cite{puri_plasticity_2015,roscioni_impact_2016}}, maturation state \textbf{\cite{salinno_-cell_2019}}, and stress response \textbf{\cite{xin_pseudotime_2018}}. Recent advances in characterization of β-cell heterogeneity have raised several important questions about the physiological significance of the prevalence of different β-cell sub-populations, , their role in diabetes pathogenesis, and the plasticity of individual β-cells.
 
+\subsection{Previously established \( \mathbf{\upbeta} \)-cell heterogeneity}
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up} \colorbox{orange}{incomplete text} \\
+\subsubsection{Historical Perspective}
+In a study from 1960, Hellerström \textit{et. al.} identified regional differences in nuclear sizes and the position of nucleoli within the nuclei, depending on whether the β-cells were located centrally or peripherally in large or small islets in rat. The authors further suggested that these cytological differences could be interpreted as corresponding differences in functional states of β-cells, as lower activity in centrally located β-cells in large islets could be due to cells being older or due to lower concentrations of glucose and/or insulin, compared to the cells in the periphery or in small islets \textbf{\cite{hellerstrom_properties_1960}}. In 1986, Salomon and Meda demonstrated that β-cells in rat islets were heterogeneous in their ability to release insulin \textbf{\cite{salomon_heterogeneity_1986}}. In particular, the group of Daniel G. Pipeleers carried out pioneering work in characterizing and describing β-cell heterogeneity in rodents; they identified distinct β-cell sub-populations differing in glucose responsiveness, insulin secretion and NADPH levels \textbf{\cite{kiekens_differences_1992,schuit_glucose_1988,van_de_winkel_autofluorescence-activated_1983}}.
 
+\subsubsection{\( \mathbf{\upbeta} \)-cell diversity: Insights from single-cell RNA sequencing (scRNA-seq)}
+The field of single-cell biology has revolutionized the characterization of cells and led to the identification of novel cell-types, cell states and a better understanding of mechanisms in health and diseases. This topic has been discussed in detail in \textbf{\hyperref[sec:scrna]{Section 1.5}}. Single-cell analyses have recapitulated the previously described idea concept of functional β-cell heterogeneity and \hl{....}  Another study identified that mature and immature and/or proliferative β-cells co-exist in healthy mouse islets. The immature β-cell cluster was characterized by downregulation of genes involved in insulin secretion, oxidative phosphorylation (OxPhos) and cell-cycle inhibition, as well as upregulation of genes involved in \textit{cAMP} and \textit{WNT} signaling. Further, trajectory inference %(see \hyperref[sec:sc_tpi]{TI methods}) 
+suggested a continuum of transition between the immature and mature states, rather than discrete phenotypes \textbf{\cite{sachs_targeted_2020}}. In another study employing mouse models, the authors defined β-cell maturity using arbitrarily defined levels of \textit{Pdx1} and \textit{Mafa}, and showed that adult islets are composed of mature (\textit{Pdx1}\textsuperscript{\textit{high}} \textit{Mafa}\textsuperscript{\textit{high}}) and immature (\textit{Pdx1}\textsuperscript{\textit{low}} \textit{Mafa}\textsuperscript{\textit{low}}) β-cells and the balanced proportion of these sub-populations might contribute to proper islet function and insulin release \textbf{\cite{nasteska_pdx1low_2021}}. Another study demonstrated the adaptive plasticity of β-cells to reversible chronic ER stress wherein β-cells undergo a reprogramming of their transcriptome and proteome. More than half of the genes involved in ER protein processing as well as markers of β-cell identity were compromised due to chronic stress whereas upon alleviation, β-cells regained their mature identity. The authors postulated that the heterogeneity in the maturity of β-cells in the islets might be a physiological response to cycles of ER stress and recovery in vivo \textbf{\cite{chen_adaptation_2022}}.\\\\
+With recent advances in the throughput of single-cell experiments, accumulating single-cell data and multiple scRNA-seq data analysis and integration approaches, large reference atlases, which comprise of millions of cells across several tissues, organs, developmental stages and/or conditions are now routinely generated \textbf{\cite{regev_human_nodate}}. These atlases help understand cellular heterogeneity, and provide an opportunity to learn from several single-cell datasets simultaneously, allowing for automatic annotation of new datasets and easy comparative analyses across several conditions \textbf{\cite{rood_impact_,lotfollahi_mapping_2021}}. The integrated Mouse Islet Atlas (MIA) by Hrovatin \textit{et. al.} \textbf{\cite{hrovatin_delineating_2023}}, represents a comprehensive scRNA-seq atlas of mouse pancreatic islets, integrating over 300,000 cells across multiple developmental stages and disease conditions. The study also provided insights into the heterogeneity and dynamic states of β-cells during development, aging, and under diabetic conditions and revealed an intermediate β-cell state between healthy controls and the different diabetes models, depicted heterogeneous expression of known β-cell maturity and dysfunction markers across β-cell states and described pathways indicative of the different  β-cell dysfunction phenotypes. Overall, the MIA complemented the growing body of research on islet β-cell biology and highlighted the critical role of high-resolution single-cell atlases. 
 
-%\newpage
+\subsection{\( \mathbf{\upbeta} \)-cell adaptation and response to stress}
+\colorbox{pink}{missing figure} \colorbox{yellow}{missing text} \\
 
-% \subsection{}}
-% \label{sec:human_embryogenesis}
-
-
-
-
-% \begin{figure}[h]
-% \centering
-% \includegraphics[width=14.5cm]{Chapter1/Fig/embryogenesis_til_gastrulation.png}
-% \caption[Human Embryogenesis]{\textbf{Human Embryogenesis}.\\
-% Early stages of human embryogenesis.
-% (a) From zygote to morula: stages of clevage.
-% (b) The blastocyst.
-% Cells divide and form an outer layer, the trophoblasts.
-% Inner cells also called embryoblasts get compacted and move to a side forming the inner cell mass (ICM), leaving a fluid filled cavity called the blastocoel.
-% (c) The formation of the bilaminar disk.
-% The ICM splits into the epiblast and hypoblast which distribute along the surface and result into two more cavities, the amniotic cavity and the primitive yolk sac, respectively.
-% (d) Gastrulation: from bilaminar to trilaminar disk.
-% The primitive streak forms and cells start to migrate moving down in between the epiblast and the hypoblast.
-% The endoderm, mesoderm and ectoderm form and are called the trilaminar disk.}
-% \label{fig:embryogenesis}
-% \end{figure}
-
- 
-
-% \subsection{Human Stem Cells}
-% \label{sec:escs} 
-
-
-% \begin{figure}[htbp]
-% \centering
-% \includegraphics[width=16cm]{Chapter1/Fig/stem_cell_potency.png}
-% \caption[Stem Cells]{\textbf{The potency tree of stem cells}.\\
-% The spectrum of potency along human development: from the totipotent zygote to terminally differentiated cells.}
-% \label{fig:stem_cells}
-% \end{figure}
-
-% \subsubsection{Embryonic stem cells}
-% \label{sec:esc_induction}
-
-
-
-
-% %********************************** % 1.2.3  **************************************
-% \subsection{Nuclear cloning of somatic cells}
-% \label{sec:cloning} 
-
-
-% %********************************** % 1.2.1  **************************************
-% \subsection{Induced pluripotent stem cells}
-% \label{sec:ipsc}
-   
-
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=15cm]{Chapter1/Fig%/ipsc_timeline.png}
-%\caption[iPSCs timeline]{\textbf{Historical timeline of key events leading to the development of iPS cells}.\\
-%Key events including somatic cloning and isolation of ES cells that eventually led Shinya Yamanaka and colleagues to generate iPSCs in 2006 and Yamanaka to win the 2012 Nobel Prize for Physiology and Medicine alongside Sir John Gurdon.}
-%\label{fig:ipsc_timeline}
-%\end{figure}
-
-% \newpage
-
-% \subsubsection{Inducing pluripotency}
-
-% \subsubsection{Challenges in the use of iPSCs}
-% \subsubsection{Reprogramming factors}
-% \subsubsection{Mechanisms of iPSC induction}
-
-
-
-%\begin{figure}[htbp]
-%\centering
-%\includegraphics[width=14cm]{Chapter1/Fig/ipscs.png}
-%\caption[iPS cells]{\textbf{iPS cells - derivation and applications}.\\
-%The generation of iPSCs starts with a biopsy from, for example, the skin of an adult donor.
-%Adult cells, in the example fibroblasts, are then isolated and pluripotency is induced through four reprogramming factors, for example the Yamanaka factors: Oct4, Sox2, Klf4 and c-Myc (OSKM).
-%The factors can be delivered using a number of systems, see \textbf{page \pageref{sec:ipsc_delivery}}.
-%The resulting induced pluripotent stem cells (iPSCs) are self-renewing and are virtually indistinguishable from ESCs.
-%They can be subsequently differentiated towards other cell types, including disease relevant cell types, for example dopaminergic neurons for Parkinson's disease, or pancreatic beta cells for diabetes.
-%In the future, iPSC-derived cells might be used for cell therapy, i.e. they could be transplanted into the patient, with no risk of allogenic rejection.
-%In the meantime, iPSCs and iPSC-derived differentiations can be used to model development and disease, and to do compound screening and drug testing.
-%Figure created with BioRender.com.}
-%%\label{fig:ipsc}
-%\end{figure}
-
-
-% \subsubsection{Delivery methods}
-% \label{sec:ipsc_delivery}
-
-
-
-
-% \subsubsection{Somatic cell of origin}
-% \label{sec:ipsc_somatic_cell}
-
-
-
-% \subsubsection{Characterising iPSCs}
-% \label{sec:ipsc_characterise}
-
-
-
-% \subsubsection{Heterogeneity of iPSCs and between cell line variation}
-
-
-% \subsection{Applications of human iPSCs in genetics}
-% \label{sec:ips_genetics}
-
-
-
-
-
-% \subsubsection{HipSci and other human iPSC consortia}
-% \label{sec:HipSci}
-
-
-% \subsubsection{eQTL mapping using iPSCs and iPSC-derived cells}
-
-
-% \newpage
-
+\clearpage
 % %********************************** %Third Section  **************************************
 \section{Diabetes Mellitus}
+
+\colorbox{green}{text clean-up} \\
 
 Diabetes Mellitus (DM), commonly referred to as diabetes, is a group of complex metabolic disorders that has reached pandemic proportions, and poses a significant global health challenge. \st{As of 2019, approximately 463 million adults aged 20-79 were diabetic and this number is projected to rise to ~700-800 million by 2045.} The International Diabetes Federation (IDF) reported that 10.5\% of the adult population (20-79 years) had diabetes in 2021, and projected that this proportion would increase to 13.7\% by 2045 (\textbf{Fig. \ref{fig:idf}}) \textbf{\cite{home_idf_nodate}}. In Germany, an estimated 7\% of the adult population was diabetic in the year 2021 \textbf{\cite{noauthor_germany_nodate}}. Diabetes is associated with several long-term complications such as kidney failure, cardiovascular diseases and is a major risk factor for blindness, lower limb amputation, \st{stroke} and stroke and nerve damage \textbf{\cite{ashcroft_diabetes_2012,emerging_risk_factors_collaboration_diabetes_2010,leon_diabetes_2015}}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm]{Chapter1/Fig/F1-3-01.png}
-\caption[]{\textbf{IDF Atlas 2021}.\\
-Percentages of diabetes cases around the world and projected increases by 2045}
+\caption[fig:idf]{\textbf{IDF Atlas 2021}\\Percentages of diabetes cases around the world and projected increases by 2045}
 \label{fig:idf}
 \end{figure}
 
@@ -543,6 +211,8 @@ Consequently, diabetes stands as one of the foremost causes of global mortality 
 % ********************************** % 1.3.1  **************************************
 \subsection{Forms of Diabetes} %Section - 1.3.1 
 \label{sec:forsmDiabets}
+
+\colorbox{green}{text clean-up} \\
 
 DM \st{Diabetes mellitus (short - diabetes)} is \st{a group of complex metabolic disorders} characterized by sustained high blood glucose concentrations (hyperglycemia) \st{because of insufficient supply of insulin} resulting from inadequate insulin production, impaired insulin action, or a combination of both. Diabetes is broadly classified into two main types: Type 1 and Type 2  The current classification relies both disease etiology and pathogenesis \textbf{\cite{banday_pathophysiology_2020}}, serving as a valuable tool in clinical disease assessment and therapy determination. Based on this, diabetes can be divided into four main categories:\\
 \begin{enumerate}
@@ -557,6 +227,8 @@ DM \st{Diabetes mellitus (short - diabetes)} is \st{a group of complex metabolic
 
 
 \subsection{Type-1 Diabetes Mellitus (T1DM)}
+\label{sec:t1dm}
+\colorbox{red}{missing references} \colorbox{green}{text clean-up} \colorbox{cyan}{might exclude from final draft} \\
 
 Type-1 DM (T1DM) is a chronic, autoimmune disorder in which the insulin-secreting \textbeta-cells are progressively lost, and immune cell infiltration into the pancreatic islets play a crucial role in this process. The destruction of \textbeta-cells, caused by auto-reactive CD4 and CD8 T-cells results in little to no insulin production causing hyperglycaemia. As the disease progresses, auto-antibodies targeting \textbeta-cell proteins, especially native insulin, manifest and are subsequently joined by auto-antibodies against other proteins (glutamic acid decarboxylase or zinc transporter 8), leading to an expansion of auto-reactivity and eventual development of overt clinical disease (marked by destruction of 85-90\% of \textbeta-cells).
 \newpage
@@ -572,15 +244,20 @@ Adapted from several manuscripts that still need to be referenced here \textbf{\
 
 
 \subsection{Type-2 Diabetes Mellitus (T2DM)}
+\label{sec:t2dm}
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up} \\
 
 Type-2 DM (T2DM) develops from high insulin demand due to insulin resistance in peripheral target tissues. The insulin resistant state manifests several years prior to T2DM diagnosis. Functional β-cells can match the increased metabolic demand by secreting more insulin in order to maintain normal glucose levels. However, sustained demand over chronic periods leads to progressive β-cell dysfunction, resulting in glucose intolerance and overt disease. \textbf{Insulin resistance and β-cell dysfunction are considered as major hallmarks of T2DM \cite{banday_pathophysiology_2020}}. 
 \\\\
 While, genome-wide association studies (GWAS) have been able to identify the genetic susceptibility to T2D \textbf{\cite{grarup_genetic_2014, wang_genetic_2016}}, other factors, particularly obesity have demonstrated a strong link to insulin resistance and T2DM pathogenesis. Excessive obesity causes a metabolic overload of the adipose tissue, resulting in chronic inflammation via secretion of pro-inflammatory cytokines such as TNF-a, IL-6, IL-1B and MCP-1 \textbf{\cite{guilherme_adipocyte_2008}}. The macrophages recruited into the adipose tissue create a chronically inflamed state and reduce the uptake of fatty acids by skeletal muscle. The elevated levels of these free fatty acids impair signaling and insulin-stimulated glucose transport leading to the development of insulin resistance \textbf{\cite{unger_lipotoxicity_1995,uysal_protection_1997,kanda_mcp-1_2006}}. However, the critical determinant for T2D is β-cell dysfunction \textbf{\cite{tahrani_glycaemic_2010, khin_pancreatic_2023}}, which is more severe than insulin resistance. The interplay between β-cell dysfunction and insulin resistance is highly complex; however, they likely influence each other and synergistically worsen T2DM.  Several factors are thought to contribute to β-cell dysfunction – chronic nutrient overload (glucotoxicity and glucolipotoxicity) \textbf{\cite{prentki_nutrient-induced_2020}}, insulin secretory defects \textbf{\cite{kahn_mechanisms_2006}}, reduced β-cell mass, amyloid deposition \textbf{\cite{prentki_islet_2006}} and/or islet inflammation and oxidative stresses. \st{The role of islet inflammation in T2D and its involvement in β-cell dysfunction is discussed at length in Chapter 2.}
 \\\\
 T2DM accounts for 90-95\% of all diagnosed diabetic cases \textbf{\cite{home_idf_nodate,banday_pathophysiology_2020,elsayed_2_2022}}. Due to the multi-faceted and progressive nature, the treatment for T2D follows a step-wise approach. The very first recommended therapeutic intervention is the adoption of a healthier life style: more healthy diet, increased physical activity and maintaining a healthy body weight. The first anti-diabetic drug to be usually prescribed is Metformin, which works by reducing hepatic gluconeogenesis, delaying intestinal absorption and improving the overall insulin sensitivity \textbf{\cite{kaneto_multifaceted_2021}}, although accumulating evidence points to possible new mechanisms of actions \textbf{\cite{foretz_metformin_2023}}. The persistence of T2DM further requires a additional medications as monotherapy is insufficient to maintain normal blood glucose levels \textbf{\cite{home_idf_nodate,nathan_medical_2009}}. Other available anti-diabetic drugs include sulphonylureas, GLP-1 agonists, thiazolidinediones, sodium-glucose cotransporter 2 (SGLT2) inhibitors or dipeptidyl peptidase 4 (DPP-4) inhibitors \textbf{\cite{home_idf_nodate,nathan_medical_2009,american_diabetes_association_8_2017}}. Upon failure of these antidiabetic drugs, intensive insulin therapy via exogenous administration becomes necessary in order to maintain the target range of blood glucose levels in T2DM patients and avoid health complications \textbf{\cite{home_idf_nodate}}.
-\\\\
+
+\clearpage
 
 \subsection{Other forms of Diabetes}
+\label{sec:otherdm}
+\colorbox{pink}{missing figure} \colorbox{cyan}{might exclude from final draft} \\\\
 T1DM and T2DM together account for most of the diabetes cases. Besides these two, there are also less common forms of diabetes:
 
 \subsubsection{Gestational Diabetes Mellitus (GDM)}
@@ -616,65 +293,231 @@ In summary, DM is a complex and heterogeneous metabolic disorder characterized b
 % ***************************************************************
 %************************ %Fourth Section %****************************************************************
 \section{scRNA-seq}  %Section - 1.4
-\label{sec:scrna} 
+\label{sec:scrna}
 
 \subsection{Introduction}
-\label{sec:141}
+\label{sec:scrna_intro}
 
+\colorbox{pink}{missing figure} \colorbox{orange}{incomplete text} \colorbox{red}{missing references} \\\\
+
+The cell is the most basic structural and functional unit of living organisms \textbf{\cite{regev_human_nodate}}, and is able to divide, multiply, grow and respond to signals from the environment. The human body is estimated to contain ~ 37 trillion cells \textbf{\cite{wen_recent_2022}}, each in theory, sharing the same set of DNA, yet with distinct characteristics and functional roles. The genomic information is transcribed into mRNA molecules, which itself is translated into proteins [CENTRAL DOGMA]. The abundance of mRNA in any given cell is therefore indicative of cell function, and is termed as gene expression. \st{Regulation by specific gene subsets related to function main cellular identity. [ref]}. The gene expression is tightly controlled by several mechanisms such as epigenetic modifications and transcriptional regulation. The study of gene expression in different species, tissues, cell-types, conditions, etc. is known as the field of \textit{\textbf{transcriptomics}}.\\\\
+The transcriptome of a sample can be measured by quantifying the abundance of mRNA at any given point of time. Initially, hybridization-based methods, such as \textit{microarrays}, allowed for the comparison of the gene expression levels in two samples, thereby enabling researchers to simultaneously profile thousands of genes. However, these methods suffered from low-throughput and the requirement to know the sequences of the mRNA samples beforehand. The advent of \textit{Sanger sequencing} in 1977 paved a new way for reading the nucleotide sequences and conducting detailed gene expression studies. The eventual automation of \textit{Sanger sequencing} significantly increased the speed and accuracy of the sequencing process and enabled high-throughput genomic studies. This was crucial for the first major breakthrough, in the form of completion of the Human Genome Project in 2003.\\\\
+With, \textbf{\textit{next-generation sequencing}} (NGS), the costs plummeted and ushered in a new-era of massively parallel, high-throughput sequencing capabilities for genome as well as transcriptome. Soon, after its implementation, bulk RNA-sequencing (bulk RNA-seq) became a very popular technique for gene expression profiling due to its high sensitivity, accuracy and dynamic range. Bulk RNA-seq has been most often used for analyzing differential gene expression (DGE), and in addition to that, broader applications include studying splicing events and regulation of gene expression by non-coding and enhancer RNAs \textbf{\cite{stark_rna_2019}}. However, ultimately, bulk RNA-seq provides an average gene expression level across all the cells in a sample, which can mask differences between individual cells making it difficult to identify subtle transcriptional differences. It is important to note that even cells within the same cell-type can differ in terms of their gene expression patterns, leading to phenotypic changes. The average expression profile from bulk RNA-seq can obscure the true signal from rare cell populations that might be driving tumorigenesis or therapeutic resistance. Another limitation of bulk RNA-seq is the requirement of large amounts of starting material which can not be always feasible.\\\\
+Therefore, there has always been great interest in detailing the transcriptional profile at a single-cell level, thereby identifying previously unknown or rare cell populations and studying their frequency compositions as well as investigating the dynamic gene expression patterns and understand the regulatory relationships between genes. With the development of single-cell RNA sequencing (scRNA-seq), this was finally feasible, and this method revolutionized the field of biology, and is now routinely applied ... \\\\
+The very first examples of bona fide single-cell transcriptomics was the study of few mouse primordial germ cells \textbf{\cite{tang_mrna-seq_2009}}. Since then, the field of single-cell biology has developed at breakneck pace, moving from manual collection of few dozens of individual cells to hundreds or thousands of cells automatically. This exponential scaling in cell numbers that can be analyzed simultaneously has almost followed a “Moore’s Law” of single-cell genomics \textbf{\cite{aldridge_single_2020}}, and recent studies have been able to sequence up to 4 million single cells ... 
+
+
+ \subsection{A typical scRNA-seq experiment}
+ \colorbox{pink}{missing figure} \colorbox{red}{missing references}\\
+\label{sec:scrna_typical}
+A typical experiment to generate single-cell gene expression data from a biological sample involves several key steps designed to capture and analyze the transcriptomic information: 
+\begin{enumerate}
+\item Tissue dissociation
+\item Single-cell isolation
+\item Library construction and 
+\item Sequencing 
+\end{enumerate}
+
+The first step involves collecting the biological sample(s) of interest (e.g., blood, tissues, cell-cultures) and dissociating into individual cells to obtain a single-cell suspension. This can be done by enzymatic digestion and/or mechanical shearing \textbf{\cite{vieira_braga_tissue_2019}}. Additionally, the suspension can be purified to exclude dead cells or debris and can be further enriched for cell-types of interest \textbf{\cite{kalisky_brief_2018}}. Individual cells are then isolated and sorted into separated containers or wells by manual ‘picking’ \textbf{\cite{tang_mrna-seq_2009,kalisky_brief_2018,guo_resolution_2010}}, flow cytometry \textbf{\cite{hayashi_single-cell_2010,jaitin_massively_2014}}, using microfluidic traps \textbf{\cite{kalisky_brief_2018,treutlein_reconstructing_2014,streets_microfluidic_2014}} or encapsulating cells into droplets \textbf{\cite{kalisky_brief_2018,klein_droplet_2015,macosko_highly_2015}}, depending on the desired specificity and/or throughput. In this step, errors often lead to the capture of multiple cells in the same partition or the capture of non-viable cells or no cell being captured at all. Once captured, cells are lysed in order to release their RNA content. This step enables the cell-specific barcoding of transcripts thereby allowing for sample multiplexing and simultaneous sequencing of all cells. In addition, the transcripts are reverse transcribed into complementary DNA (cDNA). Since, the starting amount of material is low, the generated cDNA is amplified to prepare sufficient material for subsequent sequencing. Herein, to improve quantification accuracy, unique molecular identifier (UMI) is incorporated to distinguish between the amplified copies of the same mRNA molecule and reads from separated mRNA molecules from the same gene. The cDNA is then fragmented, ligated with sequencing adapters and indices to prepare a sequencing library, which can then be sequenced on high-throughput sequencing platforms.
+
+ \subsection{10x Genomics}
+ \colorbox{pink}{missing figure} \colorbox{orange}{incomplete text} \colorbox{red}{missing references}\\
+\label{sec:scrna_10x}
+The commercially available 10x Genomics Single Cell 3’ v3 protocol is a sensitive, microfluidic-droplet based approach, wherein dissociated cells are encapsulated with oil, reverse transcription (RT) reagents and gel beads containing barcodes into individual reaction vesicles called “Gel Bead in Emulsion” (GEM). Each barcode consists of a sequencing adapter and primer; a 16bp barcode sequence and a 12bp UMI, together forming the 28bp Read1; and the poly(dT) oligotide to capture the poly(A) mRNA. The GEMs are fused with the cells in the microfluidic channels of the chip, thereby capturing thousands of cells in a short period of time. The cells are loaded at a low concentration to maximize the number of GEMs containing single cells, thereby ensuring a low multiplet rate. Once captured, the lysis of cells begins instantaneously and the mRNA molecules of the cell are released and captured by the polydT barcode. After RT, each cDNA molecule contains the transcript-specific UMI and GEM-specific barcode, allowing for subsequent demultiplexing. The cDNA is pre-amplified to prepare the libraries for sequencing. The gene expression profiling by 10x Genomics Chromium sequences only the 3’ end of the transcript thereby allowing for efficient mRNA quantification at the cost of lower sequencing depth.\\\\
+The sequencing model for 10x libraries is based on sequencing both ends of a fragment. This is also known as paired-end sequencing, and it produces twice the amount of reads as single-end sequencing, and allows for the accurate alignment of reads \textbf{\cite{noauthor_paired-end_nodate}}. As mentioned before, the first read (R1) consists of the 10x GEM-specific barcode and the transcript-specific UMI and the second read (R2) consists the actual transcript fragment of ~100bp. Additionally, the sample index (I1) is sequenced separately and is 8bp long.
 
 \subsection{Other Modalities}
-\label{sec:142}
+\label{sec:scrna_modalities}
 
 Besides single-cell transcriptomics, a range of other technologies aims to profile the distinct layers contributing to the overall molecular make-up of a cell. Collectively, these single-cell methodologies enable us to uncover cellular diversity from novel perspectives, offering comprehensive and impartial analyses of individual cells \textbf{\cite{stein_single-cell_2021}}. Some of these modalities are:
 
+\subsubsection{Single-nuclei RNA sequencing (snRNA-seq)}
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up}\\
+	snRNA-seq is an alternative to scRNA-seq and is used to profile gene expression in cells that are difficult to isolate due to their size/fragility such as neurons, adipocytes, epithelial cells and multi-nucleated cells \textbf{\cite{kim_perspectives_2023}}. Instead of profiling the cytoplasmic transcriptome, cell-membrane lysis allows for the capture of nuclear transcriptome, which are then processed with scRNA-seq workflows. snRNA-seq is also less susceptible to perturbations in gene expression during cell isolation. The downstream data analysis pipelines for snRNA-seq are similar to those of scRNA-seq as well. Of note, during gene counting, both exonic and intronic reads are used, as more than 50\% of nuclear RNAs in mouse are typically intronic \textbf{\cite{bakken_single-nucleus_2018}}. \st{As mentioned earlier, capturing a fraction of cell’s total mRNA may lead to an underrepresentation of certain transcripts.} In addition, both snRNA-seq and scRNA-seq may be prone to biases in detecting specific cell-types \textbf{\cite{kim_perspectives_2023,oh_comparison_2022}}  and low sequencing depth resulting in misidentified differentially expressed genes \textbf{\cite{quatredeniers_meta-analysis_2023}}.
+
+\subsubsection{Single-cell Genomics}
+\colorbox{pink}{missing figure} \colorbox{green}{text clean-up}\\
+	Single-cell genomics (SCG) or single-cell DNA sequencing is used to interrogate DNA at the level of individual cells. It enables researchers to better comprehend intercellular variation and heterogeneity by studying single nucleotide variants (SNVs), copy number variations (CNVs) and microsatellite variations \textbf{\cite{stein_single-cell_2021,luquette_identification_2019,mallory_methods_2020,woodworth_building_2017}}. As single cells contain only two copies of genomic DNA, several whole genome amplification methods have been developed in order to obtain enough material for subsequent library preparation \textbf{\cite{stein_single-cell_2021,gawad_single-cell_2016,kashima_single-cell_2020}}. \st{In this technology, the genomic DNA is amplified using whole-genome amplification methods146,147. This step is necessary because only two copies of genomic DNA are present in single cells138,147}. Other challenges include isolation techniques, allelic dropout events and variable sequencing depth due to amplification bias which require to be constantly addressed \textbf{\cite{stein_single-cell_2021,gawad_single-cell_2016,kashima_single-cell_2020}}. Despite these challenges, SGP has been extensively used in cancer biology to trace clonal evolution \textbf{\cite{stein_single-cell_2021,kashima_single-cell_2020}}, resolve intra-tumour heterogeneity \textbf{\cite{gawad_single-cell_2016}}, enabled genome assembly of new phyla thereby providing insights into “microbial dark matter” \textbf{\cite{gawad_single-cell_2016}}  and and reconstruct cell lineages in tumour tissues, characterize rare cell types \textbf{\cite{stein_single-cell_2021,liu_current_2017}}. The further development of robust and scalable technologies associated with SCG and improvements in genome coverage, throughput and integration with other -omics approaches will enable more comprehensive analyses of cellular heterogeneity providing insights into cancer evolution, developmental biology and genetic disorders.
+
+\subsubsection{Single-cell Proteomics}
+\colorbox{pink}{missing figure} \colorbox{red}{missing references} \colorbox{orange}{incomplete text}\\
+Proteins are the most important functional macromolecules within cells, carrying out a vast array of tasks such as regulation of gene expression, catalysing metabolic reactions, ferrying molecules and controlling signalling \textbf{\cite{labib_single-cell_2020,proteomics}}. Therefore, surveying the protein landscape of a cell at single-cell resolution is essential to capturing the full functional heterogeneity of the cell and discovering new biological regulators.\\\\
+Single-cell proteomics (SCP) is an emerging field, aiming to generate hypothesis-free protein expression from individual cells \textbf{\cite{ctortecka_rise_2021,}}. In addition to the high-resolution proteome data, SCP allows provides insights into post-translational modifications, which is completely inaccessible at the transcriptomic level \textbf{\cite{labib_single-cell_2020,ctortecka_rise_2021,petrosius_recent_2022}}. Further, the availability of SCP data facilitates the characterization of cellular processes and states independent of the corresponding mRNA levels, with accumulating evidence pointing to a discordance between the two for most genes, at both, population and single-cell \textbf{\cite{ctortecka_rise_2021,petrosius_recent_2022,bennett_single-cell_2023}}. Several strategies have been developed to study the proteome at single-cell resolution: mass-spectrometry (MS) based methods \textbf{\cite{petrosius_recent_2022,budnik_scope-ms_2018,zhu_nanodroplet_2018}}; antibody-based methods; imaging-based methods to provide spatial context \textbf{\cite{paul_imaging_2021,chang_imaging_2017,keren_mibi-tof_2019}}; and single-molecule sequencing methods \textbf{\cite{alfaro_emerging_2021}}.    \hl{......}\\\\
+However, comprehensive analysis of proteins at single-cell resolution has remained a challenge. Although, still in a more nascent state compared to single-cell genomic or transcriptomic technologies, recent advancements in mass spectrometry (MS)-based proteomics such as instrumentation, sample preparation workflows, chromatography and ion mobility have facilitated the progress of this field \textbf{\cite{ctortecka_rise_2021,petrosius_recent_2022}}.\\\\
+The organization and interaction of cells within any given tissue is crucial to understand how biological processes occur in health and diseases. Tissue architecture can therefore reveal the mechanisms of disease progression, for e.g., how can cancer cells can invade surrounding tissues or how immune cells infiltrate and organize in response to infection or injury. Traditional staining and imaging techniques such as Hematoxylin and Eosin (H\&E) staining, Immunohistochemistry (IHC), and Immunofluorescence (IF) have been routinely used for histopathology, and have been instrumental in the advancement of cellular biology. However, these techniques have inherent limitations with multiplexing, quantification, spatial resolution, spectral overlap or throughput thereby hindering in-depth characterization or phenotyping of tissues. Therefore, there was need for a highly multiplexed histology technique capable of quantifying several markers simultaneously, that can be applied to routinely collected tissues, that provides single-cell resolution and is high-throughput.\\\\
+Imaging Mass Cytometry (IMC) represents a significant advancement in the field of cytometry by time-of-flight (CyTOF), by combining the fluorescence-based imaging techniques with laser ablation and detection by mass cytometry to generate multiplexed images. In brief, tissue sections (either frozen or FFPE) are stained with a user-determined panel of probes conjugated with stable metal isotopes. The stained sections are then ablated by a focused laser beam with 1-microm spot size. The laser ablation releases plumes of ions which are carried by an inert gas to the coupled mass spectrometer to be detected and analysed. This allows for tracing back the signals for multiple probes from each spot back to the respective coordinates in the scanned area.  
+
+
+\subsubsection{Single-cell Epigenomics}
+\colorbox{pink}{missing figure} \colorbox{orange}{incomplete text}\\
+The advent of single-cell epigenomic technologies have enabled researchers to gain unprecedented resolution and insights into cellular diversity, modes of gene regulation, TF dynamics, and 3D genome organization at single-cell level. In recent years, there has been rapid development in single-cell methods to assay features such as DNA methylation ( scBS-seq \textbf{\cite{smallwood_single-cell_2014}}, scWGBS \textbf{\cite{farlik_single-cell_2015}}, scRRBS \textbf{\cite{guo_single-cell_2013}} ), histone modifications ( scChIP-seq \textbf{\cite{grosselin_high-throughput_2019}}, scCUT\&Tag \textbf{\cite{kaya-okur_cuttag_2019,wu_single-cell_2021}} ), chromatin accessibility ( scATAC-seq \textbf{\cite{chen_rapid_2018,xu_plate-based_2021,buenrostro_single-cell_2015,satpathy_massively_2019}} )  and chromosome conformation \textbf{\cite{stevens_3d_2017,dekker_capturing_2002}}, which the researchers have extensively used to survey the epigenetic landscape of cells. For example, DNA methylation data has been used to predict biological age from ’epigenetic clocks’ \textbf{\cite{horvath_dna_2018}}. On the other hand, patterns of chromatin accessibility can provide significant understanding of biological function by identifying key responsive TFs across variable TF binding between cells \textbf{\cite{buenrostro_single-cell_2015}}. Moreover, single-cell chromosome conformation studies combined with co-accessibility patterns can provide unprecedented detail of 3D genome organization \textbf{\cite{mazan-mamczarz_single-cell_2022}}.\\\\
+These epigenetic modifications play a crucial role in regulating gene expression and cellular identity and single-cell epigenomics data are a valuable addition to transcriptomic and proteomic profiles of cells and further enrich our understanding of multi-layered regulatory networks that dictate cellular fate and responses. The analysis of single-cell epigenomics data presents unique challenges. Extensive reviews providing a comprehensive overview of single-cell epigenomics, associated data-analysis strategies as well discussions on current outlook and futures perspective are referred here \textbf{\cite{preissl_characterizing_2023}}.
+
+
+%\subsubsection{Single-cell Metabolomics}
+
 \subsubsection{Single-cell multi-omics}
+\colorbox{pink}{missing figure}
 
 As discussed in the previous sections, the various single-cell ‘single-omics’ methods have generated a vast array of data from individual modalities, thereby allowing the examination of cellular properties and the dissection of the mechanisms of gene regulation at a single-cell level. While these single modalities provide important insights, the combination of data across these modalities results in much finer insights about individual cells and provides information about the interaction between the various layers for any given cell-type or cell-state. In addition, multi-modal analyses can provide complementary information between layers due to the inherent differences between them and improve our ability to identify cell-types and cell-states \textbf{\cite{flynn_single-cell_2023}}. \st{Multi-omics analyses has been applied on tumours at a bulk level and provided a comprehensive understanding of cellular processes through integration of data on mutations, mRNA, proteins and metabolites} \textbf{\cite{lee_single-cell_2020}}.
 \\\\
 This has prompted the development of single-cell multi-omics technologies which allow for simultaneous profiling of genome, epigenome, transcriptome, proteome and other modalities. Further, single-cell multi-omics technologies have seen continuous improvements in multiplexing, throughput, resolution and accuracy. Several multi-omics methods utilize the transcriptome profiling as an ‘anchor’ to facilitate downstream integration of the several layers \textbf{\cite{baysoy_technological_2023}}. The transcriptome profiling can be combined with genomics (G\&T-seq \textbf{\cite{macaulay_gt-seq_2015}}), epigenome (scM\&T-seq \textbf{\cite{angermueller_parallel_2016}}, scNMT-seq \textbf{\cite{clark_scnmt-seq_2018}}), proteomics (CITE-seq \textbf{\cite{stoeckius_simultaneous_2017}}) or other modalities \textbf{\cite{dixit_perturb-seq_2016,singh_high-throughput_2019}}, offering a multi-layered approach to single-cell analysis. Alongside the development of these technologies, computational strategies to deal with the challenges of combining diverse datasets from various omics layers have also advanced significantly, with current methods employing regression or association techniques, unsupervised integration, data-ensemble, model-ensemble \textbf{\cite{vahabi_unsupervised_2022, stanojevic_computational_2022}} or deep-learning algorithms \textbf{\cite{baysoy_technological_2023,athaya_multimodal_2023}}. The complexity and high-dimensionality of single-cell multi-omics data presents several challenges for computational approaches such as a lack of harmonized data format across modalities, the non-alignment of modalities in case of unpaired datasets, the multiplication of technical noise across several layers, all of which require continuous development and refinement of these methods.
 \\\\
-In summary, single-cell multi-omics technologies offer immense potential in elucidating complex biological processes in health and diseases by simultaneously capturing complementary information from various biological layers. These techniques and their corresponding computational methods require improvement and benchmarking in order to enhance their accuracy, scalability, and usability, ultimately empowering researchers to gain deeper insights into cellular heterogeneity, regulatory networks, and disease mechanisms. For further reading, interested readers can refer to several reviews summarizing the various technologies and their applications, computational tools to analyze multi-modal data as well as discussions on current challengers and future perspectives in this field \textbf{\cite{flynn_single-cell_2023,lee_single-cell_2020,baysoy_technological_2023, miao_multi-omics_2021, dimitriu_single-cell_2022}}. 
+In summary, single-cell multi-omics technologies offer immense potential in elucidating complex biological processes in health and diseases by simultaneously capturing complementary information from various biological layers. These techniques and their corresponding computational methods require improvement and benchmarking in order to enhance their accuracy, scalability, and usability, ultimately empowering researchers to gain deeper insights into cellular heterogeneity, regulatory networks, and disease mechanisms. For further reading, interested readers can refer to several reviews summarizing the various technologies and their applications, computational tools to analyze multi-modal data as well as discussions on current challengers and future perspectives in this field \textbf{\cite{flynn_single-cell_2023,lee_single-cell_2020,baysoy_technological_2023, miao_multi-omics_2021, dimitriu_single-cell_2022}}.
+\subsubsection{Spatial Technologies}
+\colorbox{pink}{missing figure} \colorbox{red}{missing references} \colorbox{orange}{incomplete text}\\
+While the \textit{-omics} technology have revolutionized our ability to characterize cells and led to the identification of novel cell-types, cell states and a better understanding of mechanisms in health and diseases, the inability to apply these methods \textit{in-situ} results in loss of spatial information. Spatial technologies for single-cell \textit{omics} studies have emerged as powerful tools to enhance our understanding of cellular heterogeneity, complex tissue organization and the dynamic interplay of cells within their microenvironments.\\\\
+	A notable example is the emerging field of spatial transcriptomics (ST), which enables the simultaneous assessment of gene expression and visualization of mRNA distribution in tissue sections. In the past decade, several high-throughput technologies to quantify gene expression in space and corresponding computational methods have been applied to elucidate the cell-type composition of several tissues, the cellular interactions underlying spatial patterns and molecular interactions at spatial proximities in cases of tumors, immune infiltrates and development. This field has been the subject of many extensive reviews and I direct the readers to extensive reviews for detailed comparisons of different technologies in ST, their applications and future advancements \textbf{\cite{rao_exploring_2021,moses_museum_2022,duan_spatially_2022,tian_expanding_2023,cheng_spatially_2023}}
+
+
 \clearpage
 \subsection{Single-cell \textit{-omics} in pancreas}
 \label{sec:143}
+\colorbox{green}{text cleanup}\\
 The rapid growth and development of single-cell transcriptomics and other \textit{–omics} assays have greatly advanced our understanding of pancreatic physiology, including development, cellular heterogeneity (including rare cell-types) and disease mechanisms. For a greater overview of findings from multiple studies in this space, the readers can refer here \textbf{\cite{wang_single-cell_2019,avrahami_beta_2017,carrano_interrogating_2017}}. A major outcome from the application of scRNA-seq is the refinement of cell-type specific gene signatures, including the identification of rare ghrelin-producing ε cells in the human pancreas \textbf{\cite{segerstolpe_single-cell_2016}}. Several scRNA-seq studies have identified heterogeneity of beta-cells within islets, with subtypes \textbf{\cite{segerstolpe_single-cell_2016}} or cell states exhibiting differential markers for endoplasmic reticulum (ER) stress \textbf{\cite{baron_single-cell_2016,muraro_single-cell_2016}} and oxidative response \textbf{\cite{muraro_single-cell_2016}} as well as groups with expression of maturation markers.\\\\
-In recent years, researchers have utilized scRNA-seq to investigate both endocrine and exocrine pancreatic lineages, developmental trajectories and regulatory mechanisms of intermediate progenitor populations along the developmental pathway. One such study identified multiple stages of endocrine precursor cell differentiation before the allocation of islet lineage in several reporter mouse strains \textbf{\cite{yu_defining_2019}}. In a more recent single-cell spatio-temporal study, the authors depicted that the islet morphology and endocrine differentiation are closely related and that the islets form as budding ‘peninsulas’ as opposed to aggregation of dispersed cells \textbf{\cite{sharon_peninsular_2019}}. In this peninsular morphology, α-cells develop first in the outer layer and β-cells develop later, beneath them, thereby reflecting eventual mature islet architecture. Another study involving human fetal pancreas in second trimester identified an uncommitted multipotent progenitor cells directing self-renewal and pancreatic organogenesis \textbf{\cite{villani_sox9ptf1a_2019}}.\\\\ 
+In recent years, researchers have utilized scRNA-seq to investigate both endocrine and exocrine pancreatic lineages, developmental trajectories and regulatory mechanisms of intermediate progenitor populations along the developmental pathway. One such study identified multiple stages of endocrine precursor cell differentiation before the allocation of islet lineage in several reporter mouse strains \textbf{\cite{yu_defining_2019}}. A more recent scRNA-seq and scATAC-seq study of first trimester human embryonic pancretic tissues identified differential gene expression between dorsal and ventral multipotent progenitor cells, and identified endocrine progenitor subclusters with different differentiation potentials. The authors also noted distinct gene expression patterns between human and mouse developmental trajectories \textbf{\cite{ma_deciphering_2023}}. In another single-cell spatio-temporal study, the authors depicted that the islet morphology and endocrine differentiation are closely related and that the islets form as budding ‘peninsulas’ as opposed to aggregation of dispersed cells \textbf{\cite{sharon_peninsular_2019}}. In this peninsular morphology, α-cells develop first in the outer layer and β-cells develop later, beneath them, thereby reflecting eventual mature islet architecture. Another study involving human fetal pancreas in second trimester identified an uncommitted multipotent progenitor cells directing self-renewal and pancreatic organogenesis \textbf{\cite{villani_sox9ptf1a_2019}}. A comparative study between transcriptomes and chromatin profiles of endocrine cells during \textit{in vitro} differentiation and childhood and adult pancreas, described spatio-temporal gene regulatory relationships between TFs and observed insufficient activation of signal-dependent TFs during \textit{in vitro} β-cell maturation \textbf{\cite{zhu_understanding_2023}}.\\\\ 
 By mapping individual β-cells from mouse pancreata along an ‘inferred’ maturation trajectory, two studies identified signatures of immature β-cells \textbf{\cite{qiu_deciphering_2017,zeng_pseudotemporal_2017}}. The pseudotemporal analysis of postpartum β-cell development depicted a crucial role for ROS and amino acids, with the algorithm proclaiming significant changes in β-cell metabolism during early postnatal period. A similar analysis of β-cells from human non-diabetic deceased donors suggested that β-cells are separated by states of high insulin biosynthesis followed by recovery from the ensuing ER stress by activation of unfolded protein response (UPR) pathway \textbf{\cite{xin_pseudotime_2018}}.  Interestingly, the algorithm revealed a branching pattern among the β-cell states indicating potential β-cell subpopulations, similar to previous studies.\\\\
-As discussed in the earlier section, the two major types of diabetes are associated with autoimmune destruction (T1DM) of β-cells or with the dysfunction and loss (T2DM) of β-cells, leading to insulin resistance. Therefore, a major goal of diabetes research is the replenishment of missing or abnormal β-cells. A single-cell mRNA and CRISPR screen study identified several genes at obesity loci and T2DM loci associated with β-cells. Obesity is a major risk factor in the development of T2DM and the study identified various genetic commonalities between the two diseases \textbf{\cite{fang_single-cell_2019}}. In another study, the authors utilized snATAC-seq assay to uncover heterogeneity in regulatory programs of β-cell states and that the genetic risk of T2D is likely mediated through a state of high insulin production and other functional states related to stress and signaling responses \textbf{\cite{chiou_single-cell_2021}}. Moreover, the study also implicated other endocrine cell types, particularly δ-cells, with the genetic risk of T2DM. A comparative study of three single-cell transcriptomic datasets of T2DM donors using machine-learning classifiers found that in T2DM, β-cells normally express insulin under low cellular stress and exhibit abnormal functionality upon high stress conditions \textbf{\cite{ma_single-cell_2018}}. In addition, correlation analysis depicted that oxidative stress could represent a crucial factor in influencing insulin expression in T2DM patients and that expression is also individual-specific. 
+As discussed in the earlier section, the two major types of diabetes are associated with autoimmune destruction (T1DM) of β-cells or with the dysfunction and loss (T2DM) of β-cells, leading to insulin resistance. Therefore, a major goal of diabetes research is the replenishment of missing or abnormal β-cells. A single-cell mRNA and CRISPR screen study identified several genes at obesity loci and T2DM loci associated with β-cells. Obesity is a major risk factor in the development of T2DM and the study identified various genetic commonalities between the two diseases \textbf{\cite{fang_single-cell_2019}}. In another study, the authors utilized snATAC-seq assay to uncover heterogeneity in regulatory programs of β-cell states and that the genetic risk of T2D is likely mediated through a state of high insulin production and other functional states related to stress and signaling responses \textbf{\cite{chiou_single-cell_2021}}. Moreover, the study also implicated other endocrine cell types, particularly δ-cells, with the genetic risk of T2DM. A comparative study of three single-cell transcriptomic datasets of T2DM donors using machine-learning classifiers found that, in T2DM, β-cells normally express insulin under low cellular stress and exhibit abnormal functionality upon high stress conditions \textbf{\cite{ma_single-cell_2018}}. In addition, correlation analysis depicted that oxidative stress could represent a crucial factor in influencing insulin expression in T2DM patients and that expression is also individual-specific. 
 \\\\
-<NEED 1 more PARAGRAPH TO ROUND OUT THE SECTION>
+\hl{<NEED 1 more PARAGRAPH TO ROUND OUT THE SECTION>}\\
+In a study, authors integrated scRNA-seq and spatial transcriptomics data of fetal human pancreas to reveal distinct spatio-temporal gene cascades. In addition, spatial differentiation trajectories co-localized Schwann cells with endocrine progenitors, and also identified heterogeneity and multiple lineage dynamics within the pancreas which contributed to the exocrine acinar state \textbf{\cite{olaniru_single-cell_2023}}.
+
+A recent review summarized that the exocrine pancreas's depicts greater-than-expected epithelial heterogeneity under normal conditions; pancreatic acinar cells show significant plasticity that can influence disease progression through transdifferentiation during injury or oncogenesis. The review also emphasizes how advanced techniques such as scRNA-seq and spatial profiling are crucial in tracing cellular and molecular changes from metaplasia to cancer, shedding light on resistance mechanisms and identifying potential therapeutic targets \textbf{\cite{cephas_it_2023}}.
+
+scRNA-seq has been extensively applied to the study of pancreatic ductal adenocarcinoma (PDAC), which is a complex disease and has one of the lowest 5-year survival rate of all tumor entities. A recent review highlighted the multitude of biological insights into heterogeneity, plasticity and response to therapy. The review also outlines that future efforts will focus on integrating scRNA-seq with spatial transcriptomics and advanced screening techniques to better understand PDAC's spatial organization, genetic vulnerabilities, and resistance mechanisms, thereby advancing subtype-specific treatments and targeting strategies \textbf{\cite{barthel_single-cell_2023}}.
 
 \clearpage
-\subsection{Data analysis methods}
-\label{sec:144}
 
-\subsubsection{Ambient mRNA contamination}
-During library preparation in droplet-based single-cell technologies, cells that are stressed or undergoing apoptosis, may release their mRNA content into the cell suspension. These freely floating transcripts in the background are referred to as \textbf{‘ambient mRNA’} and can cross-contaminate the endogenous gene expression profiles of cells, thereby complicating downstream analysis steps, such as cell-type annotation \textbf{\cite{yang_decontamination_2020}}. Apart from this, high background mRNA counts could also occur when working with specific tissues \textbf{\cite{10x_genomics_introduction_nodate,madissoon_scrna-seq_2019}}; while employing nuclei isolation protocols which typically release cytoplasmic RNA into the solution \textbf{\cite{10x_genomics_introduction_nodate}}; from abundant cell-types whose RNA can contaminate the less abundant cell-types \textbf{\cite{10x_genomics_introduction_nodate,caglayan_neuronal_2022}} or from other exogeneous sources of contamination \textbf{\cite{10x_genomics_introduction_nodate}}. Therefore, accounting for background RNA profiles in scRNA-seq data is necessary to ensure the reliability and accuracy of results of downstream data analysis. Several computational tools have been developed to identify and remove ambient mRNA \textbf{\cite{yang_decontamination_2020,young_soupx_2020,fleming_unsupervised_2023,yan_emptynn_2021,alvarez_enhancing_2020,muskovic_dropletqc_2021}}. These tools work to either remove entire droplets based on their corresponding expression profiles or remove the ambient mRNA associated with barcodes.\footnote{Ultimately, the use of background correction tools depend on the extent of the contamination as well as the overall goals of the experiment. It is recommended to carefully inspect the data beforehand as not every dataset might require ambient mRNA correction.\\}
-\vspace{3mm}
+\subsection{Data analysis methods}
+\label{sec:scrna_analysis}
+The application of scRNA-seq clearly represents a transformative approach in genomics to dissect the complex heterogeneity of biological tissues at unprecedented resolution. These novel insights into cellular functions, states, interactions and dynamics has been made possible by  a plethora of computational tools and algorithms, developed for the analysis of single-cell data. Currently there are over 1500 tools available in over 30 analysis categories \textbf{\cite{noauthor_scrna-tools_nodate}}, and new tools are being published constantly. These analysis tools are developed in mostly R and Python programming languages, with cross-environment support becoming increasingly commonplace. This allows researchers to seamlessly perform analysis using recommended (or desired) tools, which might only be available in a particular environment. Nevertheless, it is extremely difficult for researchers and beginners to navigate this complex space due to the rapidly expanding number of methods and the rapidly growing sizes of data. Therefore, several reviews are available that summarize the many tools available for a variety of analysis tasks based on the biological question of interest and provide recommendations on best practices of scRNA-seq data analysis whilst discussing existing challenges and outlining future developments in this field \textbf{\cite{lueckenmalte_d_current_2019,zappia_exploring_2018,wu_tools_2020,balzer_how_2021,su_data_2022,ke_single_2022,heumos_best_2023}}.
+\vspace{1cm}
+
 \begin{Abstract}
 \vspace{3mm}
-The following section provides a descriptive explanation of SoupX \textbf{\cite{young_soupx_2020}}, which is one of the several aforementioned computational tools for the estimation and correction of ambient mRNA. In \textbf{Chapter 2} and \textbf{Chapter 3}, I have used SoupX as part of the pre-processing workflow in order to account for background contamination. 
+In the following sections, I have attempted to guide the reader through various steps of a typical scRNA-seq analysis pipeline. I have exclusively focused on the description of tasks which I have utilized to analyze the scRNA-seq data in Chapters 2 and 3. Wherever necessary, I have outlined the motivation to perform the step in question and have provided a brief explanation of how a particular tool or method approaches the problem. When available, references to existing reviews which compare various methods for that particular task have been provided. I have mostly referred to the guidelines presented in \textit{Current best practices in single-cell RNA-seq analysis: a tutorial} by Luecken et al., 2019 \textbf{\cite{lueckenmalte_d_current_2019}} and \textit{Best practices for single-cell analysis across modalities} by Heumos et al., 2023 \textbf{\cite{heumos_best_2023}}.
 \vspace{3mm}
 \end{Abstract}
-\vspace{3mm}
-SoupX is a computational method that quantifies the extent of ambient mRNA contamination and recovers true, cell-specific signal. The authors refer to the input solution with the floating cell free mRNAs as \textbf{‘the soup’}. The method consists of three steps:
+
+\clearpage
+
+Broadly, the computational algorithms and frameworks for the analysis of scRNA-seq data can be classified into: \textit{\textbf{preprocessing}} pipeline which deals with raw sequencing data and associated clean-up in order to ensure comparability across samples and \textbf{\textit{downstream analyses}} which are then applied onto the subsequent pre-processed data.
+
+\subsubsection{From Basecalls to Sequencing Reads}
+\colorbox{pink}{missing figure} \colorbox{red}{missing references}\\
+The base-calls from a completed sequencing run are converted to text-based sequencing data. This format, called FASTQ, contains the raw sequences in FASTA format and a quality score for each called base. In addition to conversion, a demultiplexing step ensures that the reads are assigned to cells using the barcodes and their respective samples using the sample indices. For a standard 10x experiment, these steps can be accomplished with \textbf{Cell Ranger} \textit{mkfastq} pipeline, which wraps around the \textbf{Illumina} \textit{bcl2fastq} software. Additional evaluation of the sequence quality can be performed in order to ensure that no issues occurred during sequencing \textbf{\cite{andrews_fastqc_2012}}.
+
+\subsubsection{Alignment of Reads}
+\colorbox{pink}{missing figure} \colorbox{red}{missing references}\\
+The sorted sequencing reads are first trimmed and then aligned or mapped to a reference genome (mouse/human), wherein the reads are associated with functional genomic elements such as exons, introns or intergenic regions. This is the first step in \textbf{Cell Ranger} \textit{count} pipeline, which uses the STAR aligner to perform splicing-aware alignment of reads. The functional annotation of reads is achieved with the help of a transcript annotation gene transfer format (GTF) file. Cell Ranger performs an additional transcriptome alignment step to determine sense and anti-sense alignments of the confidently mapped exonic and intronic reads. Only the reads which map in the sense orientation are carried forward to the next step – UMI counting.
+
+\subsubsection{UMI Counting \& Cell Calling}
+\colorbox{pink}{missing figure} \colorbox{red}{missing references}\\
+Following mapping, Cell Ranger performs barcode correction by comparing the 10x barcodes to a barcode whitelist file for the given chemistry and then correcting the barcodes, which are not in the whitelist and are at the most different from whitelist barcodes by one base. Next, Cell Ranger employs two filtering steps to correct for sequencing errors in the UMI sequences before generating an unfiltered feature-barcode matrix containing all the observed 10x barcodes and the UMI counts for genes. As a note, the current versions of Cell Ranger includes both exonic and intronic reads into UMI counts to maximize sensitivity, whereas previous versions only included exonic reads into UMI counting. In the cell-calling step, Cell Ranger discerns cells with high RNA content by using a cutoff based on the total UMI counts of each barcode. Following this, the RNA profile of the remaining barcodes is used to determine cells with low RNA content or even empty GEMs.
+
+\subsubsection{Quality Control (QC)}
+\colorbox{pink}{missing figure} \colorbox{red}{missing references}\\
+To ensure sufficient data quality for downstream analysis of scRNA-seq datasets, additional quality control (QC) steps are required. The most commonly used cell QC criteria include:
 \begin{enumerate}
-    \item Estimate the composition of the soup.
-    \item Compute the \st{cell-specific} contamination fraction ($\mathbf{\rho}$) and
-    \item Generate a corrected count matrix after removing the soup-based expression.
+    \item \textbf{Library Size} – the total number of transcripts / counts per cell or barcode.
+    \item \textbf{Number of Expressed Genes} – the total number of unique genes detected per cell or barcode and
+    \item \textbf{Fraction of counts from mitochondrial genes } - cells with unusually high fraction of mitochondrial reads could be `dying cells’ where the cytoplasmic mRNA has leaked out due to broken membrane.
 \end{enumerate}
-SoupX estimates the profile the the soup from the empty droplets in the scRNA-seq data. In an 10x Chromium experiment, this corresponds to the \textbf{‘unfiltered feature-barcode’} matrix file. The expression profile of the soup is automatically estimated from the empty droplets and the counts data. In cases, when the empty droplets file might be unavailable, the profile of the soup can be estimated manually. An important intermediate step is to provide the clustering information for each sample which renders the subsequent correction step more robust. Next, the level of background contamination ($\mathbf{\rho}$) in each sample is estimated and can be accomplished in two ways: \textbf{the automatic method to estimate the contamination fraction} or \textbf{the manual method, by providing a list of ‘non-expressed’ genes}. Skipping these methods, the contamination fraction can also be set directly at a fixed value.\footnote{As SoupX is designed to be conservative, manually setting a global contamination fraction can remove a greater proportion of the background with a low risk of losing true biological signals.}
-\newpage
-For the automatic estimation, SoupX makes use of highly-expressed cluster-specific markers to estimate $\mathbf{\rho}$ for every gene, against the clusters in which it can be confidently said to not be expressed. Using the estimates of these gene-cluster pairs, SoupX calculates a posterior distribution, using a Poisson-likelihood, of the contamination fraction and determines its best estimate. Therefore, to get a better estimate of $\mathbf{\rho}$, it is imperative to have, for every set of cells, a list of genes that is known to not be expressed in that set and by measuring the expression of those genes, the global contamination fraction can be estimated. 
+\textit{Firstly}, It is important to note that if the distribution of these QC covariates are different across samples (in case of a multi-sample study), it is recommended to perform individual QC and determine thresholds independently for each sample, in order to account for quality differences across samples. \textit{Secondly}, the above covariates should not be considered in isolation, as this could lead to misinterpretation of biological signals. Cells with low number of transcripts or counts could represent smaller or quiescent cells, whereas cells with high counts may be larger in size. Therefore, the thresholds for these QC metrics should be set as permissive as possible to avoid losing true cell populations. Cells with unusually high counts and a large number of genes could represent potential doublets or multiplets. These can be filtered out using high thresholds or with doublet detection tools such as Scrublet or DoubletFinder (see \hyperref[sec:suppnote1]{\textbf{Supplementary Note 1}}). \textit{Thirdly}, different cell-types exhibit specific QC covariate peaks which might require iterative QC steps with a particular consideration for lower thresholding values. In addition to cell filtering, it might be necessary to perform gene filtering in order to exclude genes that are not expressed in more than few cells.\\\\The popular scRNA-seq data analysis packages such as Seurat \textbf{\cite{butler_integrating_2018,stuart_comprehensive_2019,hao_integrated_2021}} or Scanpy \textbf{\cite{wolf_scanpy_2018}}, by default, exclude cells with less than 200 genes detected and exclude genes not expressed in at least 3 cells. Additional QC can be performed in case of background `ambient mRNA’ contamination by freely floating transcripts that could contaminate endogenous expression profiles of cells. These effects can be corrected in droplet-based scRNA-seq datasets using empty droplets to model the ambient mRNA contamination rate, using methods such as SoupX \textbf{\cite{young_soupx_2020}} or CellBender \textbf{\cite{fleming_cellbender_2019}} (see \hyperref[sec:suppnote2]{\textbf{Supplementary Note 2}}).
+\clearpage
+\subsubsection{Normalization \& Scaling}
+\colorbox{pink}{missing figure}\\
+Compared to bulk RNA-seq, data from scRNA-seq is embedded with technical noise as a result of capture inefficiency (leading to zero-inflated datasets) and amplification bias or varying sequencing depths across cells or samples. Therefore, to allow for gene expression comparison between cells or samples, normalization of scRNA-seq data is performed, which addresses technical variations such as dropout events or zero-inflation. While normalization methods available for bulk RNA-seq data have been applied to scRNA-seq, the specific sources of variation have encouraged the development of scRNA-seq specific normalization-methods. Popular analysis packages such as Seurat \textbf{\cite{butler_integrating_2018,stuart_comprehensive_2019,hao_integrated_2021}} or Scanpy \textbf{\cite{wolf_scanpy_2018}} normalize each cell by dividing the feature counts by total counts for that cell. Following this, the values are multiplied by a cell-specific normalization factor (termed scale factor) to adjust the raw gene expression and further account for any technical variations. Finally, the normalized data is \textit{log} transformed, \begin{math}log(x+1)\end{math}, in order to stabilize the variance transform the data to represent log fold changes and to reduced the data skewness. The use of ‘1’ as a pseudo-count addresses the zero counts in the dataset. The updated approach to normalization involve the use of pearson residuals by modelling the ‘true nature’ of scRNA-seq data using a regularized negative binomial regression model \textbf{\cite{hafemeister_normalization_2019}}.  Similar to normalizing cellular counts, gene counts across all the cells can be normalized or scaled to have zero mean and unit variance (z-scores). Currently, there is no consensus on whether to perform scaling over genes or not. While, Seurat \textbf{\cite{stuart_comprehensive_2019,hao_integrated_2021}} applies gene scaling, Scanpy \textbf{\cite{wolf_scanpy_2018}} refrains from doing so in order to retain as much biological information from the data as possible.
+
+\subsubsection{Feature Selection}
+\colorbox{pink}{missing figure} \colorbox{red}{missing references}\\
+As previously discussed, scRNA-seq data are subject to inherent noise due to stochastic nature of gene expression being captured in conjunction with low mRNA capture efficiency. To reduce this intrinsic noise, it is necessary to exclude non-informative parts of the data from downstream analysis. This is achieved via feature selection, and is one of the most crucial steps in scRNA-seq data analysis. The underlying theme of this step is to select the most biologically `informative' genes in the dataset. The selection of the genes is performed by fitting a gene-wise model using the coefficient-of-variation versus the mean expression, and identifying the genes which violate the assumption of constant expression across all cells. The genes that disperse the most around the mean (with the highest variance-to-mean ratio) are selected and are termed as \glspl{hvg} or \glspl{hvf}.The feature selection is also the first time when the dimensionality of the scRNA-seq dataset is reduced from all measured genes to only \glspl{hvg}. Depending on the biological question being investigated and the complexity of the dataset, usually 1000-5000 \glspl{hvg} are selected. While,Seurat \textbf{\cite{butler_integrating_2018,stuart_comprehensive_2019,hao_integrated_2021}}, by default, selects 2000 \glspl{hvg}, this is not fixed in Scanpy \textbf{\cite{wolf_scanpy_2018}} and is dependent on parameter values for dispersion and mean cut-offs, thereby allowing for additional flexibility in \glspl{hvg} selection.
+
+\subsubsection{Batch Correction \& Data Integration} \colorbox{pink}{missing figure} \colorbox{orange}{incomplete text} \colorbox{red}{missing references}\\
+A normalized scRNA-seq dataset might still contain additional variability which can confound the true biological signal. Additional data correction of technical and/or biological covariates can significantly improve the accuracy of intended downstream analyses and facilitate a clear understanding of underlying cellular processes. Data correction is usually performed in the form of linear regression to remove confounding effects. The most commonly performed biological regression is to remove the effects of cell cycle on the transcriptome. The linear regression is usually performed against cell-cycle score, which is based on a list of marker genes available from literature \textbf{\cite{macosko_highly_2015}}. Apart from cell-cycle, other biological covariates such as expression of mitochondrial genes or ribosomal genes can also be regressed out. In addition to biological effects, technical covariates such as counts per cell can also be regressed out in order to make the cells more comparable to each other. This simple linear regression is implemented in Seurat \textbf{\cite{butler_integrating_2018,stuart_comprehensive_2019,hao_integrated_2021}} and Scanpy \textbf{\cite{wolf_scanpy_2018}} and can be easily applied to remove unwanted variation.\\\\
+Data integration is a fundamental step in scRNA-seq analysis workflow. The two primary goals of data integration are: (i) \textit{to minimize the batch effects across the samples or datasets that would be integrated}, and (ii) \textit{to analyze data from different conditions, experiments or batches in an unified framework}. By harmonizing data from diverse sources, data integration techniques ensure that downstream analyses reflect true biological variation, facilitating discoveries that would not be possible from isolated datasets. Batch effects present a central challenge in most scRNA-seq analysis and systematic differences between batches can confound biological signals of interest and provide misleading conclusions. Therefore, in order to eliminate or minimize such technical (sample handling, experimental protocols or sequencing depths) or biological (donor variation, tissue or sampling location) confounders while preserving true biological variability, efficient removal of batch effects is fundamental. However, as batch effects can arise at various levels, the choice of batch covariate would determine which level of variation would be retained and which would be removed. This, ultimately depends on the goal of the integration task and the intended downstream analyses to be performed.\\\\
+Several data integration (or batch correction) methods have been developed and depending on the complexity of the integration task \hl{....}
+
+\subsubsection{Dimensionality Reduction (DR) \& Visualization}
+ \colorbox{pink}{missing figure} \colorbox{green}{text cleanup}\\
+Dimensionality reduction (DR) is a crucial step in every scRNA-seq data analysis in order to simplify the complex, high-dimensional gene expression data. After the selection of HVGs (which constitutes the first DR step), the dimensions of single-cell expression data can be further reduced by DR-algorithms. These algorithms project the data onto a low-dimensional space while preserving the most significant information and the essential structures in the dataset. These algorithms also make the computational analysis more tractable \textbf{\cite{lueckenmalte_d_current_2019}}.\\\\
+The most frequently used DR method is principal component analysis (PCA) \textbf{\cite{pearson_liii_1901}} which is a linear, summarization approach to DR \textbf{\cite{lueckenmalte_d_current_2019,heumos_best_2023}}. PCA assumes linear relationships between genes and decomposes the data into orthogonal vectors or components, thereby compressing and summarizing to maximize the residual variance. Typically, PCA reduces a dataset to its top N components, wherein the variance of the data decreases with successive components. The “N” can be determined either by an “elbow-plot” or by using the jackstraw method \textbf{\cite{macosko_highly_2015,lueckenmalte_d_current_2019,chung_statistical_2015}}. It is important to note that the variation explained by PCA might not necessarily be biologically meaningful and the components might correlate with technical factor(s) \textbf{\cite{finak_mast_2015}}. Therefore, the components should be scrutinized for any unwanted correlation and discarded when necessary. PCA is computationally efficient and is primarily used as a pre-processing step for visualization, clustering or other downstream analysis tasks \textbf{\cite{lueckenmalte_d_current_2019}}. \st{Other DR methods include ICA and diffusion maps, and offer additional valuable perspectives.}\\\\
+Complementing PCA, non-linear DR methods such as t-distributed stochastic neighbour embedding (t-SNE) \textbf{\cite{maaten_visualizing_2008}} or uniform manifold approximation and projection (UMAP) \textbf{\cite{mcinnes_umap_2020}} are utilized for the visualization of scRNA-seq datasets \textbf{\cite{lueckenmalte_d_current_2019,heumos_best_2023}}. tSNE and UMAP work in similar way by making similar data-points (cells) attract each other and push dissimilar points away from each other. The loss functions in both algorithms are minimized using gradient descent. UMAP differs from tSNE in the use of Laplacian eigenmaps (LE) for its initialization step, whereas tSNE algorithm performs random initialization. While, it is perceived that UMAP is able to offer a more faithful representation of the global structure, this can be attributed to the choice of initialization. tSNE with informative initialization, such as PCA, performs as well as UMAP with LE initialization \textbf{\cite{kobak_initialization_2021}}. However, UMAP is computationally efficient and can easily be scaled to large datasets and has therefore become the preferred method of DR and visualization in the single-cell community \textbf{\cite{kobak_initialization_2021,becht_dimensionality_2018}}. In addition to the above methods, partition-based graph abstraction (PAGA) \textbf{\cite{wolf_paga_2019}} provides an interpretable graph-like map which can adequately approximate the topology of the data and provide coarse visualization of clusters in the single-cell data.
+
+\subsubsection{Clustering \& Cell-type annotation}
+ \colorbox{pink}{missing figure}  \colorbox{red}{missing references}  \colorbox{green}{text cleanup}\\
+One of the primary results of scRNA-seq analysis is the grouping of single-cells into clusters based on similar transcriptomic profiles that explain the heterogeneity of the data. However, clustering of scRNA-seq data is a complex and challenging task due to the high-dimensionality and sparsity of the data combined with little to no knowledge about the number of the clusters. Several different clustering results can be obtained for the same dataset based upon the choice of the clustering method or the underlying parameters (e.g., resolution)\footnote{The resolution parameter controls the number of clusters obtained}. The two major classes of methods for generating single-cell clusters include : (i) \textit{clustering algorithms based on distance metrics} such as Euclidean, cosine-similarity or correlation-based distances, and (ii) \textit{community detection algorithms} based on partitioning the kNN graph representation of a single-cell data.\\\\
+The Louvain algorithm, a community detection method, has been shown to outperform other clustering methods for scRNA-seq data and is used as the default method in Seurat and Scanpy analysis workflows \textbf{\cite{lueckenmalte_d_current_2019,heumos_best_2023,duo_systematic_2020,freytag_comparison_2018}}. The algorithm works by iteratively moving nodes from one community to other in order to increase the modularity of the network. After this, every community is aggregated into a single node and the process is repeated all over again until the modularity cannot be increased any further. However, this can lead to arbitrarily poorly connected communities \textbf{\cite{heumos_best_2023,traag_louvain_2019}}. The Leiden algorithm \textbf{\cite{traag_louvain_2019}} circumvents this issue and is computationally more efficient than Louvain method. Thus, the choice of clustering method for scRNA-seq data is crucial and should be tailored to the specific characteristics of the dataset and the biological questions being investigated.\\\\
+Once, cell clusters are identified, the next step entails annotating the clusters to obtain biological interpretation. \st{While, it may seem reasonable to equate clusters to cell-types, it is important to note that cellular identity can be captured along several axes of variation and therefore assigning a single cell-type to a cluster might oversimplify the complex nature of biological diversity in the dataset.} On a simplistic level, the clusters are annotated by examining the transcriptomic signatures (marker genes) of individual clusters. The marker genes are identified by comparing two clusters and extracting the upregulated or downregulated genes in the clusters of interest. A statistical test, e.g. \textit{Wilcoxon rank-sum} test, is applied to this comparison and further adjusted for multiple testing %\footnote{In marker gene detection, it's important to note two things: First, the accuracy of P-values relies on the assumption that cell clusters truly reflect biological groups, which can be problematic since clustering and marker gene identification both use the same gene expression data, potentially leading to inflated P-values. A permutation test can help adjust for this. Second, the identification of marker genes is influenced by the dataset's composition, meaning results may be biased if the dataset lacks diversity. Despite these challenges, top-ranked marker genes remain valuable for identifying cellular identities, but caution is advised, especially in datasets with limited cell variety}
+. These data-driven marker genes can then be compared against known marker genes from literature, thereby assigning cellular identities to the cluster. To perform this step at scale for the increasingly huge and complex dataset and in the interest of speed, automated annotation methods are now available. With this, the dataset in question (\textit{query}) can be mapped to existing, related, well-annotated single-cell datasets or large atlases (\textit{reference}) and the annotations can be transferred from reference to query. This is also known as \textit{transfer learning} and such query-to-reference mapping can be performed by several tools such as Azimuth \textbf{\cite{hao_integrated_2021}} or scArches \textbf{\cite{lotfollahi_mapping_2021}}. Automatic annotation can also be performed with classifier-based methods, which make use of pre-trained classifiers \textbf{\cite{dominguez_conde_cross-tissue_2022,fu_clustifyr_2020}}. In both cases, the quality of annotation is dependent on the quality of the reference data and the model employed.\\\\
+Hence, cluster annotation is a crucial step for obtaining biologically meaningful insights from scRNA-seq datasets and to understand the composition of the annotated clusters, their functional roles, and ultimately their potential roles in health and disease.
+
+
+\subsubsection{Cell composition \& Cell abundances}
+ \colorbox{pink}{missing figure}\\
+At a cellular level, the clustered and annotated scRNA-seq dataset can be used to address conditional changes in the relative proportions of cell-types or clusters in response of biological processes such as development or disease. However, due to several technical and methodological limitations of scRNA-seq such as lack of or low number of experimental replicates and the limited number of cells sequenced from a sample, the cell type count data represents relative abundances of all cell-types of a sample or tissue, and is known as compositional data \textbf{\cite{noauthor_compositional_nodate}}. Univariate methods such as Wilcoxon rank-sum tests ignore the compositionality of the data leading to elevated false discovery rates (FDRs) and falsely perceiving statistically sound cell-type shifts \textbf{\cite{heumos_best_2023,noauthor_compositional_nodate}}. Single-cell specific methods such as scCODA \textbf{\cite{heumos_best_2023,buttner_sccoda_2021}} uses a Bayesian model to derive changes in cell-type composition. Another approach, MILO \textbf{\cite{heumos_best_2023,dann_differential_2022}} uses kNN-based graphs to detect changes in composition of cell populations. Conversely, visual comparison of compositional data can be useful to infer cell-type composition shifts between conditions \textbf{\cite{lueckenmalte_d_current_2019}}. An interesting application is the use cell-type specific gene expression signatures in single-cell data to deconvolute mixed cell populations in bulk RNA-seq data and infer cell-type abundances \textbf{\cite{newman_robust_2015,newman_determining_2019,chu_cell_2022}}. These deconvolution methods are poised to play major roles in analyses based on large scale single-cell datasets \textbf{\cite{cobos_effective_2023}}. 
+
+\subsubsection{Differential Gene Expression analysis}
+ \colorbox{pink}{missing figure}\\
+The most commonly performed downstream analysis on scRNA-seq data is \gls{dge} analysis \textbf{\cite{das_comprehensive_2021}}. Such analysis can be used to test for genes that are \gls{de} to identify marker genes for clusters or cell-types or genes that are upregulated or downregulated in specific conditions \textbf{\cite{lueckenmalte_d_current_2019,heumos_best_2023,das_comprehensive_2021}}. The \gls{de} genes can then be used as further input for secondary analyses such as gene set or pathway enrichment and \gls{grn} inference \textbf{\cite{das_comprehensive_2021}}. The cells from a same cluster or condition differ across each other on account of the technical noise unique to scRNA-seq protocols. Therefore, \gls{dge} analysis methods model this cell-to-cell variability accordingly \textbf{\cite{lueckenmalte_d_current_2019,das_comprehensive_2021}}. An example is MAST \textbf{\cite{finak_mast_2015}}, which models individual cells using generalized mixed effects models. An alternative to this approach, is the use of ‘pseudo-bulks’, by aggregating counts across samples and/or conditions and then perform differential testing using packages designed for bulk RNA-seq \textbf{\cite{lueckenmalte_d_current_2019,heumos_best_2023}}, such as edgeR \textbf{\cite{robinson_edger_2009}} or DEseq2 \textbf{\cite{love_moderated_2014}}. In fact, bulk analysis tools perform favourably on scRNA-seq data compared to differential testing methods developed specifically for scRNA-seq \textbf{\cite{das_comprehensive_2021,squair_confronting_2021,van_den_berge_observation_2018,soneson_bias_2018}}. Additionally, conventional statistical tests for comparison of distributions, such as the Wilcoxon rank sum test, Student's t-test or comparison of ROC curves, are also commonly used to perform DGE analysis \textbf{\cite{butler_integrating_2018}}.\\\\
+The design or setup of differential testing for a scRNA-seq dataset should be done carefully, ensuring the confounding covariates do not output unintended results. After testing, each gene is assigned with a p-value as a measure of significance. These p-values must be corrected for multiple testing in order to control the false discovery rate and maintain statistical rigor. However, in certain cases, even after multiple testing, significance values far below the threshold can be obtained, leading to majority of genes being considered differentially expressed in absence of biological significance. Thus, there is still a trade-off between the number of false positives and high precision with current DGE analysis methods. Apart from the cluster-specific methods, clustering-independent differential testing methods are also available \textbf{\cite{vandenbon_clustering-independent_2020,kim_marcopolo_2022,vlot_cluster-independent_2022}}. An extensive review and comparison of several DGE analysis methods for scRNA-seq data can be found here \textbf{\cite{das_comprehensive_2021,squair_confronting_2021,wang_comparative_2019,das_differential_2022,nguyen_benchmarking_2023}}.
+
+\subsubsection{Gene set analysis}
+\colorbox{pink}{missing figure}\\
+The previously described \gls{dge} analysis can provide a long list of genes that are differentially up- or down-regulated in specific conditions. Interpreting individual gene is a challenging task and therefore genes could be grouped into sets defined by shared characteristics and subsequently testing whether these characteristics are over-represented in candidate lists \textbf{\cite{lueckenmalte_d_current_2019}}, thereby providing insights into cellular heterogeneity and molecular mechanisms driving biological processes. These processes are stored in curated databases such as \gls{go} \textbf{\cite{ashburner_gene_2000}}, MSigDB \textbf{\cite{subramanian_gene_2005,liberzon_molecular_2011,castanza_extending_2023}}, KEGG \textbf{\cite{kanehisa_kegg_2017}} or Reactome \textbf{\cite{gillespie_reactome_2022}}. A common method for enrichment analysis is called gene set enrichment analysis (GSEA) \textbf{\cite{heumos_best_2023,subramanian_gene_2005,korotkevich_fast_2021}}, which ranks all genes in a dataset by their differential expression between the two conditions and then evaluates whether the members of a gene set are predominantly concentrated at the top or bottom of this ranked list, indicating coordinated upregulation or downregulation of the gene set as a whole. Additionally, there are several web-based or R/Python packages available to perform gene set analysis, with one such example being EnrichR \textbf{\cite{chen_enrichr_2013,kuleshov_enrichr_2016}}. 
+
+
+\subsubsection{Inference of gene regulatory networks}
+\colorbox{pink}{missing figure}\\
+Within individual cells, gene regulation is a tightly controlled process which controls cell growth, development and response to external conditions. At the heart of this complex, non-linear regulation lie \glspl{tf} which act as regulators of cellular identity and control gene expression changes. The connections between one or more TFs and target genes form a transcriptional \gls{grn}, which can be represented as a directed graph \textbf{\cite{skok_gibbs_high-performance_2022}}. Inferring the topology and dynamics of the underlying \glspl{grn} has been a key problem in biology and is fundamental in understanding cellular processes and identifying key regulators and pathways, studying gene dysregulation in complex diseases and enabling synthetic biology and genetic engineering \textbf{\cite{lueckenmalte_d_current_2019,skok_gibbs_high-performance_2022,huang_scgrn_2024}}. With the advancement of scRNA-seq methods, computational
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+\centering
+\includegraphics[width=6cm,height=11cm,]{Chapter1/Fig/F3-8-01.png}
+\caption[sec1-4tgrn]{Gene Regulatory Network Inference using SCENIC}
+\label{fig:grn_workflow}
+\end{wrapfigure}
+
+
+ \gls{grn} inference has rapidly advanced due to the unrivalled resolution of transcriptomics dynamics \textbf{\cite{kim_review_2024}} compared to bulk RNA-seq, thereby offering a more nuanced understanding of cellular function and regulation. Despite the technical limitations of scRNA-seq, \gls{grn} inference methods are routinely applied in the analysis of scRNA-seq datasets and new methods, which take into account complementary information, such as pseudotime or other modalities are developed \textbf{\cite{akers_gene_2021}}. Several comprehensive reviews and benchmarks of various \gls{grn} inference methods are available \textbf{\cite{kim_review_2024,akers_gene_2021,nguyen_comprehensive_2020,pratapa_benchmarking_2020,mccalla_identifying_2023}}.\\
+
+
+One of the widely used computational methods for \gls{grn} inference is SCENIC (single-cell regulatory network inference and clustering) \textbf{\cite{aibar_scenic_2017,van_de_sande_scalable_2020}} which simultaneously constructs \gls{grn} and identifies cell states from scRNA-seq data. SCENIC works by first identifying a set of genes that are co-expressed with a given TF, using GENIE3 \textbf{\cite{huynh-thu_inferring_2010}} or GRNBoost2 \textbf{\cite{moerman_grnboost2_2019}} and cis-regulatory TF databases. In the second step, SCENIC performs cis-regulatory motif analysis, using RCisTarget \textbf{\cite{aibar_scenic_2017,noauthor_rcistarget_nodate}}, to identify putative binding targets of the co-expressed modules. The list of modules are filtered for those with significant motif enrichment and are further pruned to remove any indirect targets. These modules are henceforth termed as `regulons'. The regulons are then scored and evaluated for TF activation in each cell, in a binary fashion (0 = “OFF” and 1 = “ON”),using AUCell \textbf{\cite{aibar_scenic_2017,noauthor_aucell_nodate}}, to identify cells or clusters with high subnetwork activity. The result is a list of regulons and their activity scores for all the cells in the data. Implementations of this \gls{grn} inference workflow exists both in R and Python (\textit{pySCENIC}) \textbf{\cite{kumar_inference_2021}} languages. The recent update, SCENIC+ \textbf{\cite{bravo_gonzalez-blas_scenic_2023}} allows the incorporation of single-cell chromatin accessibility data with motif discovery to infer enhancer-driven \glspl{grn} (eGRNs).
+
+%\clearpage
+
+\subsubsection{Trajectory Inference}
+\label{sec:scrna_analysis_grn}
+\colorbox{green}{text clean-up}\\
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\includegraphics[width=8cm]{Chapter1/Fig/F1-4-01.png}
+\caption[sec1-4tpi]{\textbf{Trajectory Inference in scRNA-seq analyis} \textbf{(A)} Schematic depicting a typical analysis pipeline for a exemplary scRNA-seq data, visualized in a 2D plot. The data consists of six different hypothetical clusters . \textbf{(B)} Schematic depicting a tree-based TI method applied onto the exemplary scRNA-seq data in panel \textbf{(A)}. Based on the observed hypothetical branching, three hypothetical lineages are determined. \textbf{(C)} Examples of downstream analysis steps that can be performed once a trajectory is inferred on the data. \textbf{(D)} Panel depicting some of the common visualization strategies applied to depict the gene expression changes across trajectories or pseudotime.}
+\label{fig1-4}
+\end{wrapfigure}
+
+scRNA-seq data (which are collected at a single interval or time-point) represent only a snapshot of a continuous biological process (e.g., cell differentiation, cell development or cell fate decisions). During this process, cells traverse their cellular states as a result of transient or dynamic gene expression in response to any given stimuli \textbf{\cite{zeng_what_2022}}. However, understanding the continuous cellular processes with scRNA-seq data is challenging, and a key analysis step is linking the cells (or cell-types/states) within or across time-points \textbf{\cite{heumos_best_2023}}. The class of methods which model these continuous spectra of cell states and order cells along a trajectory based on their transcriptomic similarity are known as \textit{`trajectory inference’} (TI) methods \textbf{\cite{heumos_best_2023,weiler_guide_2022}}. The cells along this pseudotemporal trajectory have progressively changing transcriptome, thereby reconstructing the dynamic gene expression and recapitulating the underlying biological process \textbf{\cite{hou_statistical_2023}}. Each cell is assigned a continuous abstract value, called \textit{`pseudotime'}, which represents a cells’ position along this spectrum \textbf{\cite{lueckenmalte_d_current_2019,heumos_best_2023}}.\\
+
+TI methods are typically applied on processed, high-quality scRNA-seq data. Therefore, the inherent assumption is that, the data is rid of any noise such as ambient mRNA or empty droplets, doublets or multiplets as well as any low-quality cells. Additionally, accounting for major sources of technical (e.g., sequencing depth) and/or biological variation (e.g., cell-cycle) may be useful to isolate the expected trajectory. TI methods typically consist of two main steps. In the first step, dimensionality reduction (using PCA, ICA or diffusion maps) is performed on the high-dimensional data to convert it into a more simplified representation. In case of a dataset with several thousands of cells, this simplified data can be further projected onto two or three dimensions using tSNE or UMAP (for ease of visualization). In the second step, the graph structure (a trajectory tree) is modelled on this low dimensional manifold of cells. This makes the modelling of the trajectory itself easier in the second step. Therefore, a trajectory is constructed through this reduced space, aiming to identify different cellular states and the trajectory that traverses through them. The trajectory itself could be linear, bifurcating or branching, however, complex trajectories such as cycles or disconnected graphs are also possible. This is dependent on the data or biological question being analysed and requires additional prior biological knowledge to aid in the choosing of appropriate TI method. After this, cells can themselves can be ordered based on their estimated pseudotime values \hyperref[fig1-4]{\textbf{Fig. 1.4}} \\ %\textbf{(Fig. \ref{fig1-4})}.\\\\
+
+
+Since 2014, when two computational methods: Monocle and Wanderlust, established the TI field \textbf{\cite{lueckenmalte_d_current_2019}}, over 150 tools have been developed to infer trajectories from single-cell data. The pioneer tool, Monocle \textbf{\cite{trapnell_pseudo-temporal_2014}}, uses ICA for dimensionality reduction and infers a trajectory by constructing a minimal spanning tree (MST). The most recent update (Monocle v3 \textbf{\cite{cao_single-cell_2019}}) involves the use of principal graph algorithm and computing the pseudotime of cells as a geodesic distance from a user-selected ‘root’ or starting cells. Other methods such as partition-based graph abstraction (PAGA) \textbf{\cite{wolf_paga_2019}} construct a knn-graph based representation of cell clusters and allowing for the modelling of more complex trajectories. Overall, these TI methods apply different mathematical models and assumptions, from distance metrics to dimensionality reduction techniques to incorporation of prior knowledge to best capture the underlying biological process. \st{These tools vary in several aspects such as the kind of topology that could be estimated, the dimensionality reduction method employed, the overall modelling approach, the extent of prior biological information required or the computational efficiency of the methods}. Additionally, tools also vary in their ease of use and the available documentation and resources. A more detailed description of several of these tools along with their advantages and pitfalls can be found elsewhere \textbf{\cite{ding_temporal_2022,deconinck_recent_2021,cannoodt_computational_2016,saelens_comparison_2019}}. A comprehensive benchmarking, along with a practical guideline to assist with the choice of TI method is also available \textbf{\cite{saelens_comparison_2019}}.\\\\
+It is clear that TI methods are a powerful feature of downstream scRNA-seq data analysis and therefore have been widely applied to study cell differentiation and development \textbf{\cite{cao_single-cell_2019,sun_time-course_2021,herault_single-cell_2021,li_single-cell_2021,meistermann_integrated_2021,liang_temporal_2022,anderson_single-cell_2023}}, immune responses \textbf{\cite{xu_differential_2020,carpen_single-cell_2022,nguyen_trajectory_2022,luo_multidimensional_2022,xiang_single-cell_2023}}, cellular dynamics and disease progression \textbf{\cite{xin_pseudotime_2018,pang_single-cell_2019,pagliaro_single-cell_2020,bao_pseudotime_2021,dong_single-cell_2021,jansky_single-cell_2021,bazyari_deciphering_2023}}. However, it is important to note that these TI methods work under several general as well as method-specific assumptions. Therefore, a recommended practice is to  confirm the modelled trajectory with alternative methods to avoid method bias and to ensure the robustness of the trajectory present within the data \textbf{\cite{lueckenmalte_d_current_2019}}.
+\label{sec:sc_tpi}
+
+\subsubsection{RNA Velocity}
+ \colorbox{pink}{missing figure} \colorbox{orange}{incomplete text} \colorbox{red}{missing references}\\
+As scRNA-seq data only provides static snapshots of cellular measurements, it is inherently challenging to study cellular dynamics over time. However, this information can be gleaned by inferring the kinetics of mRNA lifecycle or splicing dynamics %\footnote{During transcription, DNA is synthesized into precursor messenger RNA (pre-mRNA). Pre-mRNA contains both expressed regions (exons), as well as non-coding regions (introns) which are redundant for translation. Consequently, introns are removed through splicing. This leaves only exons forming mature mRNA. Finally, the process is completed with the eventual degradation of mRNA.}
+. By examining the ratio of unspliced pre-mRNA to mature (spliced) mRNA, the temporal change in mRNA can be inferred. This is termed as \textit{RNA velocity} and represents a powerful computational method in scRNA-seq data analysis to predict the future state of individual cells. The concept of RNA velocity has unlocked new ways of inferring the direction and speed of movement in the transcriptomic space, thereby enabling predictive models of cellular dynamics. The two main steps in RNA velocity analysis are:
+\begin{enumerate}
+    \item estimation of the unspliced and spliced transcript counts from the raw data and
+    \item calculation of RNA velocity by computing the ratio of unspliced to spliced transcript counts and estimating a velocity vector for each cell
+\end{enumerate}
+These high-dimensional velocities can then be visualized as a vector field on a low-dimensional embedding such as UMAP or tSNE.\\\\
+The concept of RNA velocity was first implemented as a steady-state model and then extended to a dynamical model. Recent advances to velocity inference involve the use of deep learning frameworks, bayesian probabilistic inference or ensemble learning pipeline. Several underlying assumptions are made during RNA velocity inference and corresponding methods provide tools such as phase portraits to check for these assumptions. As an extension to RNA velocity, the obtained velocity fields can be used as input for CellRank, in order to determine cellular fates. Overall, RNA velocity can be used to pinpoint cells undergoing rapid changes and identify critical regulatory genes involved in the transition. Several reviews which explain, summary \hl{...}
 
 
 \subsubsection{Cell-Cell Interactions}
-Cells, that make up the tissues, constantly coordinate with each other and their microenvironment. This allows cells to maintain homeostasis, respond to internal and external perturbations, thereby allowing the tissue to function properly. In the absence of proper interactions and coordination, disease ensues. This complex coordination is a result of \textbf{cell-cell interactions (CCIs)} \textbf{\cite{armingol_deciphering_2021}} whereby cells can send or received biochemical and physical signals, that ultimately influence phenotype and function. Cells can interact and influence via specific signalling molecules such as ligands (growth factors, chemokines, cytokines), receptors, metabolites, ions, and structural or secreted proteins from the extracellular matrix \textbf{\cite{armingol_deciphering_2021,armingol_diversification_2024}}. In particular, interactions mediated through ligands from sender cells and the corresponding cognate receptors on receiver cells are also known as \textbf{cell-cell communication (CCC)}, which culminates in altered gene expression \textbf{\cite{armingol_deciphering_2021,armingol_diversification_2024}}. Therefore, it is crucial to understand how cells interact and communicate, in order to shed light on potential mechanisms underlying biological processes such as development and disease progression. The combination of single-cell transcriptomics and high-confidence \textbf{ligand-receptor interaction (LRI)} databases, has made it possible to infer putative intercellular communications by examining the co-expression of genes corresponding to the ligand-receptor pairs \textbf{\cite{wilk_comparative_2023}}. A plethora of computational tools have been developed to infer CCIs from transcriptomics data. These tools have been reviewed in-depth and extensively bench-marked, and I direct the readers to these publications for further reading \textbf{\cite{armingol_deciphering_2021,armingol_diversification_2024,liu_evaluation_2022,xie_comparison_2023,cheng_review_2023}}
-\vspace{3mm}
-\begin{Abstract}
-\vspace{3mm}
-In the following section, I will briefly describe and summarize CellChat \textbf{\cite{jin_inference_2021}}, a computational tool, designed to infer CCIs from scRNA-seq data. CellChat is considered as a ‘core’ tool	which established a set of methods and is widely used by the scRNA-seq community \textbf{\cite{armingol_diversification_2024}}.
-\vspace{3mm}
-\end{Abstract}
-\vspace{3mm}
-To infer CCIs from scRNA-seq data, CellChat makes use of \textbf{CellChatDB}, a database of literature supported LRIs, in both mouse and human. CellChatDB is specific as it contains LRIs involving multimeric receptors, cofactor molecules as well as co-stimulatory or co-inhibitory membrane bound receptors, and is grouped into several signalling pathway families. In addition, CellChatDB allows for updating of the database by adding user-defined ligand-receptor pairs. Next, to infer intercellular communications from scRNA-seq data, CellChat first identifies differential signalling genes across all cell-types in the data using the Wilcoxon rank sum test, and for these differential genes, computes the \textbf{“ensemble average expression”} in the cell-type. Following this, a communication probability value for every LRI pair is modelled based on the \textbf{Law of Mass Action} and a \textbf{Hill function}. By using the expression levels of ligands and receptors as “proxies” for their concentration and modelling interactions with expression-based Hill functions \footnote{In CellChat, the Hill function is used to incorporate the effects of positive and negative effectors into the framework, thereby providing a more nuanced and accurate model of cell-cell communication}. In addition, the frequencies of the cell-types are also accounted for in the probability calculation. Finally, significant interactions between two cell-types are identified on the basis of a random permutation test <add footnote here>   . Using centrality metrics from graph theory, CellChat identifies higher order information from a weighted-directed network, wherein the computed communication probabilities are used as weights. This allows for the identification of dominant signalling sources as well as mediators and influencers within the network. CellChat can also predict key outgoing and incoming signals for specific cell-types as well as coordinated responses amongst different cell-types by pattern recognition approaches based on non-negative matrix factorization. An important application of CellChat is the joint analyses of two or more datasets by constructing a shared manifold space using a shared nearest neighbour (SNN) similarity network. This enables the identification of conserved as well as context-specific interactions between the datasets being compared.    
+\colorbox{pink}{missing figure}\\
+Cells, that make up the tissues, constantly coordinate with each other and their microenvironment. This allows cells to maintain homeostasis, respond to internal and external perturbations, thereby allowing the tissue to function properly. In the absence of proper interactions and coordination, disease ensues. This complex coordination is a result of \textbf{cell-cell interactions (CCIs)} \textbf{\cite{armingol_deciphering_2021}} whereby cells can send or received biochemical and physical signals, that ultimately influence phenotype and function. Cells can interact and influence via specific signalling molecules such as ligands (growth factors, chemokines, cytokines), receptors, metabolites, ions, and structural or secreted proteins from the extracellular matrix \textbf{\cite{armingol_deciphering_2021,armingol_diversification_2024}}. In particular, interactions mediated through ligands from sender cells and the corresponding cognate receptors on receiver cells are also known as \textbf{cell-cell communication (CCC)}, which culminates in altered gene expression \textbf{\cite{armingol_deciphering_2021,armingol_diversification_2024}}. Therefore, it is crucial to understand how cells interact and communicate, in order to shed light on potential mechanisms underlying biological processes such as development and disease progression. The combination of single-cell transcriptomics and high-confidence \textbf{ligand-receptor interaction (LRI)} databases, has made it possible to infer putative intercellular communications by examining the co-expression of genes corresponding to the ligand-receptor pairs \textbf{\cite{wilk_comparative_2023}}. A plethora of computational tools have been developed to infer CCIs from transcriptomics data. These tools have been reviewed in-depth and extensively bench-marked, and I direct the readers to these publications for further reading \textbf{\cite{armingol_deciphering_2021,armingol_diversification_2024,liu_evaluation_2022,xie_comparison_2023,cheng_review_2023}}.\\\\
+In \textbf{\hyperref[sec:suppnote3]{Supplementary Note 3}}, I have briefly described and summarized CellChat \textbf{\cite{jin_inference_2021}}, a computational tool, designed to infer CCIs from scRNA-seq data. CellChat is considered as a ‘core’ tool	which established a set of methods and is widely used by the scRNA-seq community. 

@@ -1,0 +1,94 @@
+%!TEX root = ../thesis.tex
+%*******************************************************************************
+%****************************** Fifth Chapter *********************************
+%*******************************************************************************
+
+\chapter{Methods}
+\label{chapter5}
+\newpage
+
+\section{Experimental methods for Chapter 2}
+% Experimental methods compiled by Mariya Chhatriwala, as in \cite{cuomo2020single}.
+
+% \subsection{Cell culture for maintenance and differentiation}
+
+% Human iPSC lines were thawed for differentiation and maintained in Essential 8 (E8) media (LifeTech) on vitronectin (StemCell Technologies, \#07180) coated Corning plates according to the manufacturer's instructions.  
+% Cells were passaged at least twice after thawing and always 3 - 4 days before plating for differentiation to ensure all the cell lines in each experiment were growing at a similar rate prior to differentiation. 
+% Gelatine/MEF coated plates were prepared 24 – 48 hours before plating for differentiation by incubating plates with 0.1\% gelatine for 20 minutes at room temp. 
+% The gelatine was then aspirated and plates were incubated in MEF medium overnight at 37°C.  
+% Immediately prior to plating cells, plates were washed once with D-PBS to remove any residual MEF medium.  
+% To plate for endoderm differentiation, cells were washed once with D-PBS and dissociated using StemPro Accutase (Life Technologies, A1110501) at 37°C for 3 - 5 min. 
+% Colonies were fully dissociated through gentle pipetting. 
+% Cells were resuspended in MEF medium, passed through a 40 µm cell strainer, and pelleted gently by centrifuging at 300 x g for 5 min. Cells were re-suspended in E8 media and plated at a density of 15,000 cells per cm2  on gelatin/MEF coated plates \cite{hannan2013production, yiangou2018human} in the presence of 10 µM Rock inhibitor – Y27632 (Sigma, \#Y0503 - 5 mg). 
+% Media was replaced with fresh E8 free of Rock inhibitor every 24 hours post plating. 
+% Differentiation into definitive endoderm commenced 72 hours post plating.  
+% Cells were washed 1x gently with D-PBS to remove residual E8.  
+% Cells were then incubated in CDM-PVA containing 100 ng/mL ActivinA (made in house), 80 ng/mL FGF2 (made in house), 10 ng/mL BMP4 (R\&D systems, \#314-BP-050), 10 µm Ly294002 (Promega, \#V1201), and 3 µM CHIR99201 (Selleckchem, \#S1263) for 24 hours (day 1).  
+% After 24 hours, the day 1 media was replaced with CDM-PVA containing 100 ng/mL ActivinA, 80 ng/mL FGF2, 10 ng/mL BMP4, and 10 µm Ly294002 for another 24 hours (day 2).  
+% Day 2 media was then replaced with RPMI/B27 containing 100 ng/mL ActivinA and 80 ng/mL FGF2 for another 24 hours (day 3) \cite{hannan2013production}. 
+% The overall efficiency of the differentiation protocol was validated using reference lines with good and poor differentiation capacity, respectively.  
+% All media was filtered through 0.22 µm filters prior to use.
+
+% \subsection{Single cell preparation and sorting for scRNAseq}
+% Cells were dissociated into single cells using Accutase and washed once with MEF medium as described above when plating cells for differentiation. 
+% For all subsequent steps, cells were kept on ice to avoid degradation.  Approximately 1 x 106 cells were re-suspended in PBS + 2\% BSA + 2 mM EDTA (FACS buffer); BSA and PBS were nuclease-free. 
+% For staining of cell surface markers, 1 x 106 cells were re-suspended in 100 µL of ice-cold FACS buffer containing 20 µL anti-Tra-1-60 antibody (BD Pharmingen, BD560380)  and 5 µL of anti-CXCR4 antibody (eBioscience 12-9999-42), and were placed on ice for 30 min. 
+% Cells were protected from light during staining and all subsequent steps. 
+% Cells were washed with 5 mL of FACS buffer, passed through a 35 µm filter to remove clumps, and re-suspended in 300 µL of FACS buffer for live cell sorting on the BD Influx Cell Sorter (BD Biosciences).
+% Live/dead marker 7AAD (eBioscience 00-6993) was added immediately prior to analysis at a concentration of 2 µL/mL and only living cells were considered when determining differentiation capacities. 
+% Living cells stained with 7AAD but not TRA-1-60 or CXCR4 were used as gating controls. Data for TRA-1-60 and CXCR4 staining were available for 31,724 cells, of the total 36,044. 
+% Single-cell transcriptomes of sorted cells were assayed as follows: reverse transcription and cDNA amplification was performed according to the SmartSeq2 protocol \cite{picelli2013smart}, and library preparation was performed using an Illumina Nextera kit. 
+% Samples were sequenced using paired-end 75bp reads on an Illumina HiSeq 2500 machine (one lane of sequencing per 384 well plate).
+
+% \subsection{ChIP-seq experiments and data processing}
+% \label{sec:endodiff_chipseq}
+
+% ChIP-seq was performed using FUCCI-Human Embryonic Stem Cells (FUCCI-hESCs, H9 from WiCell) in a modified endoderm differentiation protocol to that used for the iPSC differentiations (see details below). 
+% Cells were grown in defined culture conditions as described previously \cite{brons2007derivation}. 
+% Pluripotent cells were maintained in Chemically Defined Media with BSA (CDM-BSA) supplemented with 10ng/ml recombinant Activin A and 12ng/ml recombinant FGF2 (both from Dr. Marko Hyvonen, Dept. of Biochemistry, University of Cambridge) on 0.1\% Gelatin and MEF media coated plates. 
+% Cells were passaged every 4-6 days with collagenase IV as clumps of 50-100 cells. 
+% The culture media was replaced 48 hours after the split and then every 24 hours. \\
+
+% The generation of FUCCI-hESC lines has been described in \cite{pauklin2013cell} and are based on the FUCCI system described in \cite{sakaue2008visualizing}. 
+% hESCs were differentiated into endoderm as previously described \cite{vallier2009early}. 
+% Following FACS sorting, Early G1 (EG1) cells were collected and immediately placed into the endoderm differentiation media and time-points were collected every 24h up to 72h.
+% Endoderm specification was performed in CDM with Polyvynilic acid (CDM-PVA) supplemented with 20ng/ml FGF2, 10$\mu$M Ly-294002 (Promega), 100ng/ml Activin A, and 10ng/ml BMP4 (R\&D). \\
+
+% We performed ChIP as described previously \cite{pauklin2016initiation}. 
+% For ChIP-sequencing, ChIP for various histone marks (H3K4me3, H3K27me3, H3K4me1, H3K27ac, H3K36me3) (see \textbf{Table \ref{tab:endodiff_chipseq_antibodies}} for antibodies) was performed on two biological replicates per condition. 
+% At the end of the ChIP protocol, fragments between 100bp and 400bp were used to prepare barcoded sequencing libraries. 
+% 10ng of input material for each condition were also used for library preparation and later used as a control during peak calls. 
+% The libraries were generated by performing 8 PCR cycles for all samples. 
+% Equimolar amounts of each library were pooled and this multiplexed library was diluted to 8pM before sequencing using an Illumina HiSeq 2000 with 75bp paired-end reads. \\
+
+% Reads were mapped to GRCh38 reference assembly using BWA \cite{li2009fast}. 
+% Only reads with mapping quality score $\geq$ 10 and aligned to autosomal and sex chromosomes were kept for further processing. 
+% Peak calling analysis \cite{bailey2013practical} was performed using PeakRanger \cite{feng2011peakranger}, and only the peaks that were reproducible at an FDR of $\leq$ 0.05 in two biological replicates were selected for further processing. 
+% Peak calling was done using appropriate controls with the tool peakranger 1.18 in modes ranger (H3K4me3, H3K27ac; `-l 316 -b 200 -q 0.05'), ccat (H3K27me3; ‘-l 316 --win\_size 1000 --win\_step 100 --min\_count 70 --min\_score 7 -q 0.05’) and bcp (H3K4me1, H3K36me3; ‘-l 316’). 
+% Adjacent peak regions closer than 40 bp were merged using the BEDTools suite \cite{quinlan2010bedtools}, and those overlapping ENCODE blacklisted regions were filtered out (ENCODE Excludable Mappability Regions \cite{encode2012integrated}). 
+% Finally, peaks were converted to GRCh37 coordinates using UCSC LiftOver. 
+
+\section{Experimental methods for Chapter 3}
+%Experimental methods written by Julie Jerber, as in \cite{jerber2020population}.
+
+\subsection{PCA of Non-proliferating β-cells}
+To focus on the downstream analysis of non-proliferating β-cells, we excluded the β-4 Proliferating subset and recomputed the \glspl{pc} for the remaining subsets using the \textit{RunPCA()} function in Seurat. In order to rank the β-cells by the first two prinicipal components (\gls{pc}1 and \gls{pc}2) separateky, we utilized the \textit{rank()} function in base R. Next, we performed \textit{Min-Max} normalization of the \gls{pc}-based ranks to the range of [0,1]. Histogram plots depicting the density of β-cells grouped by subsets across \gls{pc}1 \hl{(Fig. )} and \gls{pc}2 \hl{(Fig. )} ranks were generated using custom plotting scripts. The list of features with the strongest contribution to  \gls{pc}1 and \gls{pc}2 were generated using the \textit{TopFeaturs()} function in Seurat. Heatmaps depicting the scaled expression of the top identified features across β-cells ordered by their \gls{pc}1 \hl{(Fig. )} and \gls{pc}2 \hl{(Fig. )} ranks were generated using Seurat. The top features for \gls{pc}1 and \gls{pc}2 were also used to identify functional categories from the Kyoto Encyclopedia of Genes and Genomes (KEGG) and Reactome categories with Metascape \hl{(Figs. )}.  
+
+
+
+
+
+\subsection{GRN inference and Regulon module analysis}
+To infer \glspl{grn}: (i) for the integrated subset of Alpha-Beta cell-types, and (ii) for non-proliferating β-cells, we utilized pySCENIC v0.11.2 on a high-performance computing cluster. We extracted the raw counts across all the \glspl{hvg} for both subsets into matrices. Alongside a list of 1721 mouse \glspl{tf}, this gene expression matrices served as input for calculating gene co-expression modules via GRNBoost2, using \textit{pyscenic grn}. The \gls{tf}/target associations and their corresponding importance metric (IM) values were used as input for RCisTarget alongside and ranking databases for motifs in the promoter of the genes [up to 500 \gls{bp} upstream of the \gls{tss}], 10 kb (±5 kb) and 20 kb (±10 kb) around the \gls{tss}, using \textit{pyscenic ctx}, in order to remove indirect gene targets lacking \textit{cis}-regulatory motifs associated with the \gls{tf}. The remaining co-expressed TF-target genes are then grouped into regulons. The activity of these regulons was computed with AUCell, using \textit{pyscenic aucell}, which calculates the enrichment of a regulon using \gls{auc} of the genes that define the regulon. These activity data were further binarized (assigned an ON or OFF value, per regulon, per cell) by thresholding on the AUC values of the given regulon, using the \textit{binarize()} function.\\\\
+Regulon modules for the non-proliferating β-cells were identified based on the \gls{csi} (Fuxman Bass et al., 2013), which is a context-dependent measure for identifying specific associating partners. To compute \gls{csi}, first, the \gls{pcc} of activity scores is evaluated for each pair of regulons. Next, for a fixed pair of regulons (A and B), the corresponding \gls{csi} is defined as the fraction of regulons whose \gls{pcc} with A and B is lower than the \gls{pcc} between A and B. Hierarchical clustering with complete linkage was performed based on \gls{csi} matrix to identify five regulon modules.\\
+
+
+Heatmap depicting the binary regulon matrix for Alpha-Beta subset \hl{(Fig.)} were generated using the ComplexHeatmap R package by randomly sampling 30000 cells from the subset. Heatmap depicting the \gls{csi} of the five regulon modules identified for non-proliferating β-cells \hl{(Fig.)} were also generated with ComplexHeatmap.  Network plot \hl{(Fig.)} were created from Cytoscape from top 1\%  of the TF/target associated from coexpression modules based on the reported importance metric for non-proliferating β-cells. The betweenness centrality of the nodes in the network were computed within Cytoscape with the NetworkAnalyzer module. The mean activity of regulons across the subsets and the groups were computed using \textit{aggregate()} function with parameter `FUN=mean' in base R. Dot plots depicting the mean regulon activity were generated with custom plotting scripts.  \hl{<TFs heatmap across PC1 \& PC2>}
+
+
+\subsection{Gene-set scoring}
+To compute scores of: (i) the gene modules identified for pseudobulk β-cells across experimental groups, and (ii) the gene-sets upregulated in human T2D from MIA, we performed gene-set scoring using the \textit{AddModuleScore()} function in Seurat. The scores are the average expression levels of each gene-set on single cell level, subtracted by the aggregated expression of control feature sets. All analyzed genes in a given gene-set are binned based on averaged expression, and the control features are randomly selected from each bin. The gene-set scores were visualized with violin plots using the \textit{VlnPlot()} function from Seurat and with custom plotting scripts.
+
+
+\subsection{Validation analyses via query mapping}
+In order to map the integrated queries onto the integrated non-proliferating β-cell reference subset, we utilized the \textbf{Label Transfer} workflow in Seurat. To perform data transfer, we first find anchors between the reference and query by projecting the \gls{pca} structure of the reference onto the query using the \textit{FindTransferAnchors()} function with parameters, \textit{dims = 1:20} and \textit{reference.reduction = `pca'}. After finding anchors, we used the \textit{TransferData()} function to classify the cells from the query dataset based on the annotations of the reference subset. Following this, the subset composition of the groups in the query was computed as the percentage of cells that were predicted to be a particular subset (the annotations which were transferred from the reference) over all the cells from a particular group. The compositions were depicted in bar plots with custom plotting scripts.

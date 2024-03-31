@@ -1,16 +1,16 @@
 % ******************************************************************************
 % ****************************** Watermark *********************************
 
-\usepackage{draftwatermark} % Package to add watermarks
-\usepackage{xcolor}
+% \usepackage{draftwatermark} % Package to add watermarks
+% \usepackage{xcolor}
 
-% Define a color with transparency
-\definecolor{transparentgray}{gray}{0.5}
-\colorlet{mytranspgray}{transparentgray!30} % 30% of full color
+% % Define a color with transparency
+% \definecolor{transparentgray}{gray}{0.5}
+% \colorlet{mytranspgray}{transparentgray!30} % 30% of full color
 
-% Watermark configuration
-\SetWatermarkText{\textcolor{mytranspgray}{Incomplete Draft}}
-\SetWatermarkScale{0.4}
+% % Watermark configuration
+% \SetWatermarkText{\textcolor{mytranspgray}{Incomplete Draft}}
+% \SetWatermarkScale{0.4}
 
 
 % ******************************************************************************
@@ -69,6 +69,9 @@
 \usepackage{float}
 \usepackage[leftcaption]{sidecap}
 
+% \usepackage{lineno}
+% \linenumbers
+
 
 % define header 
 \usepackage{fancyhdr}
@@ -90,8 +93,7 @@
 % Fancier section header
 \newcommand{\hsp}{\hspace{6pt}}
 \usepackage[explicit]{titlesec}
-\titleformat{\section}[display]{\Large\bfseries}{\color{black}\thesection}{6pt}
-{\begin{tabular}[t]{@{}>{}l}#1\end{tabular}\vspace{3pt}\hrule}
+\titleformat{\section}[display]{\Large\bfseries}{\color{black}\thesection}{6pt}{\begin{tabular}[t]{@{}>{}l}#1\end{tabular}\vspace{3pt}\hrule}
 %{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
 
 \titleformat{\subsection}[hang]{\large\bfseries}{\color{black}\thesubsection}{6pt}{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
@@ -104,7 +106,7 @@
 % **** Captions and Hyperreferencing / URL 
 
 % Captions: This makes captions of figures use a boldfaced small font.
-\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[font=small,labelfont=bf,justification=justified,format=plain]{caption}  %'format=plain' avoids hanging indentation
 \DeclareCaptionLabelFormat{adja-page}{\hrulefill\\#1 #2 \emph{(previous page)}}
 
 %\RequirePackage[labelsep=space,tableposition=top]{caption}
@@ -124,6 +126,9 @@
 %\usepackage{rotating}
 \usepackage{wrapfig}
 \usepackage{sidecap}
+%\usepackage{rotating}
+%\usepackage{showframe}
+%\usepackage{pdflscape}
 
 % Uncomment the following two lines to force Latex to place the figure.
 % Use [H] when including graphics. Note 'H' instead of 'h'
@@ -144,19 +149,25 @@
 %\usepackage{longtable}
 %\usepackage{tabularx}
 
+%% for appendix tables
 \usepackage{tabularx} % For flexible table width
 \usepackage[table]{xcolor} % For cell coloring
 \usepackage{colortbl}
 \usepackage{geometry} % For page margin settings
+%\usepackage[raggedrightboxes]{ragged2e}
 
-% Define the colors used in the table
+%Define the colors used in the table
 \definecolor{headerblue}{RGB}{173,216,230}
 \definecolor{rowgray}{RGB}{220,220,220}
 \definecolor{selectedrow}{RGB}{144,238,144}
 \definecolor{firstcol}{RGB}{144,238,144}
+\definecolor{rowblue}{RGB}{173,216,230}
+\definecolor{mod1green}{RGB}{104,190,102}
 
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{G}{>{\columncolor{firstcol}}l}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{W}[1]{>{\raggedright\arraybackslash}p{#1}} % change \raggedright to \centering if you want text centered
 
 \geometry{
   a4paper, % Paper size
@@ -165,6 +176,13 @@
   top=25mm, % Top margin
   bottom=25mm % Bottom margin
 }
+
+\usepackage{makecell}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 
 % *********************************** SI Units *********************************
@@ -424,7 +442,7 @@ innerbottommargin=5pt]{cBox}
 \newenvironment{Abstract}{\begin{eBox}\begin{abstractT}}{\end{abstractT}\end{eBox}}
 \newenvironment{Comment}{\begin{cBox}\begin{commentT}}{\end{commentT}\end{cBox}}	\newenvironment{Comment2}{\begin{bBox}\begin{boxT}}{\end{boxT}\end{bBox}}
 
-\usepackage{xargs,lipsum,caption,changepage,ifthen}
+\usepackage{xargs,lipsum,changepage,ifthen}
 
 \newcommandx{\mycaptionminipage}[3][3=c,usedefault]{%
     \begin{minipage}[#3]{#1}%

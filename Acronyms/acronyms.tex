@@ -2,63 +2,74 @@
 %******************************
 %	 Acronyms 
 %*****************************
+\newacronym{hfd}{HFD}{high-fat diet}
+\newacronym[plural=GRNs,firstplural=gene regulatory networks (GRNs)]{grn}{GRN}{gene regulatory network}
+\newacronym[plural=HVGs,firstplural=highly variable genes (HVGs)]{hvg}{HVG}{highly variable gene}
+\newacronym[plural=HVFs,firstplural=Highly Variable Features (HVFs)]{hvf}{HVF}{Highly Variable Feature}
+\newacronym{stz}{STZ}{Streptozotocin}
+\newacronym[plural=TFs,firstplural=transcription factors (TFs)]{tf}{TF}{transcription factor}
+\newacronym[]{auc}{AUC}{area under the curve}
+\newacronym[]{csi}{CSI}{connection specificity index}
+\newacronym[]{pcc}{PCC}{pearson correlation coefficient}
+\newacronym[]{dge}{DGE}{differential gene expression}
+\newacronym[]{de}{DE}{differentially  expressed}
+\newacronym[]{go}{GO}{gene ontology}
 
-\newacronym{ase}{ASE}{allele-specific expression}
-\newacronym{bh}{BH}{Benjamini-Hochberg}
-\newacronym{blup}{BLUP}{Best linear unbiased predictor}
-\newacronym{bmi}{BMI}{body mass index}
-\newacronym{bp}{bp}{base pair}
-\newacronym{chipseq}{ChIP-seq}{Chromatin immuno-precipitation sequencing}
-\newacronym{CD/CV}{CD/CV}{Common disease / common variant}
-\newacronym{cpm}{CPM}{counts per million (reads)}
-\newacronym{cv}{CV}{coefficient of variation}
-\newacronym{da}{DA}{dopaminergic neurons}
-\newacronym{defendo}{defendo}{definitive endoderm}
-\newacronym{dna}{DNA}{deoxyribonucleic acid} 
-\newacronym{dof}{dof}{degrees of freedom}
-\newacronym{ebi}{EBI}{European Bioinformatics Institute}
-\newacronym[plural=eQTL, firstplural=expression quantitative trait loci (eQTL)]{eqtl}{eQTL}{expression quantitative trait locus}
-\newacronym{es}{ES}{embryonic stem}
-\newacronym[plural=ESCs, firstplural=embryonic stem cells (ESCs)]{esc}{ESC}{embryonic stem cell}
-\newacronym{facs}{FACS}{fluorescence-activated cell sorting}
-\newacronym{fdr}{FDR}{false discovery rate}
-\newacronym{gxe}{GxE}{genotype-environment}
-\newacronym{glm}{GLM}{generalised linear model}
-\newacronym{gtex}{GTEx}{genotype-tissue expression}
-\newacronym[plural=GWAS, firstplural=genome-wide association studies (GWAS)]{gwas}{GWAS}{genome-wide association study}
-\newacronym[plural=hESCs, firstplural=human embryonic stem cells (hESCs)]{hesc}{hESC}{human embryonic stem cell}
-\newacronym{hgp}{HGP}{Human Genome Project}
-\newacronym{hipsci}{HipSci}{human induced pluripotent stem cell initiative}
-\newacronym{hvgs}{HVGs}{highly variable genes}
-\newacronym{ips}{iPS}{induced pluripotent stem}
-\newacronym[plural=iPSCs, firstplural=induced pluripotent stem cells (iPSCs)]{ipsc}{iPSC}{induced pluripotent stem cell}
-\newacronym{ivf}{IVF}{\textit{in vitro} fertilisation}
-\newacronym{kb}{kb}{kilobase (pair)}
-\newacronym{ld}{LD}{linkage disequilibrium}
-\newacronym[plural=LMMs, firstplural=linear mixed models (LMMs)]{lmm}{LMM}{linear mixed model}
-\newacronym{lrt}{LRT}{likelihood ratio test}
-\newacronym{maf}{MAF}{minor allele frequency}
-\newacronym{mesendo}{mesendo}{mesendoderm}
-\newacronym{ml}{ML}{maximum likelihood}
-\newacronym{mle}{MLE}{maximum likelihood estimator}
-\newacronym{mqtl}{mQTL}{(DNA) methylation QTL}
-\newacronym{mrna}{mRNA}{messenger RNA}
-\newacronym{ngs}{NGS}{next generation sequencing}
-\newacronym{nhgri}{NHGRI}{National Human Genome Research Institute}
-\newacronym{ols}{OLS}{ordinary least squares}
-\newacronym{pbmc}{PBMC}{peripheral blood mononuclear cell}
+
+%
+% \newacronym{bmi}{BMI}{body mass index}
+\newacronym{bp}{bp}{base pairs}
+% \newacronym{chipseq}{ChIP-seq}{Chromatin immuno-precipitation sequencing}
+% \newacronym{CD/CV}{CD/CV}{Common disease / common variant}
+% \newacronym{cpm}{CPM}{counts per million (reads)}
+% \newacronym{cv}{CV}{coefficient of variation}
+% \newacronym{da}{DA}{dopaminergic neurons}
+% \newacronym{defendo}{defendo}{definitive endoderm}
+% \newacronym{dna}{DNA}{deoxyribonucleic acid} 
+% \newacronym{dof}{dof}{degrees of freedom}
+% \newacronym{ebi}{EBI}{European Bioinformatics Institute}
+% \newacronym[plural=eQTL, firstplural=expression quantitative trait loci (eQTL)]{eqtl}{eQTL}{expression quantitative trait locus}
+% \newacronym{es}{ES}{embryonic stem}
+% \newacronym[plural=ESCs, firstplural=embryonic stem cells (ESCs)]{esc}{ESC}{embryonic stem cell}
+% \newacronym{facs}{FACS}{fluorescence-activated cell sorting}
+% \newacronym{fdr}{FDR}{false discovery rate}
+% \newacronym{gxe}{GxE}{genotype-environment}
+% \newacronym{glm}{GLM}{generalised linear model}
+% \newacronym{gtex}{GTEx}{genotype-tissue expression}
+% \newacronym[plural=GWAS, firstplural=genome-wide association studies (GWAS)]{gwas}{GWAS}{genome-wide association study}
+% \newacronym[plural=hESCs, firstplural=human embryonic stem cells (hESCs)]{hesc}{hESC}{human embryonic stem cell}
+% \newacronym{hgp}{HGP}{Human Genome Project}
+% \newacronym{hipsci}{HipSci}{human induced pluripotent stem cell initiative}
+% \newacronym{hvgs}{HVGs}{highly variable genes}
+% \newacronym{ips}{iPS}{induced pluripotent stem}
+% \newacronym[plural=iPSCs, firstplural=induced pluripotent stem cells (iPSCs)]{ipsc}{iPSC}{induced pluripotent stem cell}
+% \newacronym{ivf}{IVF}{\textit{in vitro} fertilisation}
+% \newacronym{kb}{kb}{kilobase (pair)}
+% \newacronym{ld}{LD}{linkage disequilibrium}
+% \newacronym[plural=LMMs, firstplural=linear mixed models (LMMs)]{lmm}{LMM}{linear mixed model}
+% \newacronym{lrt}{LRT}{likelihood ratio test}
+% \newacronym{maf}{MAF}{minor allele frequency}
+% \newacronym{mesendo}{mesendo}{mesendoderm}
+% \newacronym{ml}{ML}{maximum likelihood}
+% \newacronym{mle}{MLE}{maximum likelihood estimator}
+% \newacronym{mqtl}{mQTL}{(DNA) methylation QTL}
+% \newacronym{mrna}{mRNA}{messenger RNA}
+% \newacronym{ngs}{NGS}{next generation sequencing}
+% \newacronym{nhgri}{NHGRI}{National Human Genome Research Institute}
+% \newacronym{ols}{OLS}{ordinary least squares}
+% \newacronym{pbmc}{PBMC}{peripheral blood mononuclear cell}
 \newacronym[plural=PCs, firstplural=principal components (PCs)]{pc}{PC}{principal component}
 \newacronym{pca}{PCA}{principal component analysis}
 \newacronym{qc}{QC}{quality control}
-\newacronym{qq}{QQ}{quantile-quantile}
-\newacronym{qtl}{QTL}{quantitative trait locus}
-\newacronym{qtls}{QTL}{quantitative trait loci}
-\newacronym{scrnaseq}{scRNA-seq}{single-cell RNA sequencing} 
-\newacronym{rna}{RNA}{ribonucleic acid}
-\newacronym{rnaseq}{RNA-seq}{RNA sequencing}
-\newacronym{scnt}{SCNT}{somatic-cell nuclear transfer}
-\newacronym[plural=SNPs, firstplural=single nucleotide polymorphisms (SNPs)]{snp}{SNP}{single nucleotide polymorphism}
-\newacronym{tf}{TF}{transcription factor}
-\newacronym{trna}{tRNA}{transfer RNA}
+% \newacronym{qq}{QQ}{quantile-quantile}
+% \newacronym{qtl}{QTL}{quantitative trait locus}
+% \newacronym{qtls}{QTL}{quantitative trait loci}
+% \newacronym{scrnaseq}{scRNA-seq}{single-cell RNA sequencing} 
+% \newacronym{rna}{RNA}{ribonucleic acid}
+% \newacronym{rnaseq}{RNA-seq}{RNA sequencing}
+% \newacronym{scnt}{SCNT}{somatic-cell nuclear transfer}
+% \newacronym[plural=SNPs, firstplural=single nucleotide polymorphisms (SNPs)]{snp}{SNP}{single nucleotide polymorphism}
+% \newacronym{tf}{TF}{transcription factor}
+% \newacronym{trna}{tRNA}{transfer RNA}
 \newacronym{tss}{TSS}{transcription start site}
-\newacronym[plural=UMIs, firstplural=unique molecular identifiers (UMIs)]{umi}{UMI}{unique molecular identifier}
+% \newacronym[plural=UMIs, firstplural=unique molecular identifiers (UMIs)]{umi}{UMI}{unique molecular identifier}

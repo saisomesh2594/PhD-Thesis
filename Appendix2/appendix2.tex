@@ -4,51 +4,52 @@
 \chapter{Supplementary Figures}
 \clearpage
 
-\section{Additional results for Chapter 2}
+%\section{Additional results for Chapter 2}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A4-01.png}
-    \caption[imc-segmentation]{\textbf{Segmentation Workflow}\\
-    \textbf{(A)} Representative segmentation masks of ablated ROIs in anchor spleen (left) and pancreas (right) sections, zoomed in to 500 µm on each ROI for better visibility. For better orientation, average expression of CD19 (left) and INS (right) of each segmented cell are additionally drawn as dots. Dimensions of each ROI are denoted on both axes (1 pixel per µm resolution). \textbf{(B)} Violin plots depicting the log10-transformed pixel count (indicating cell size) within each segmented cell across all TMAs from all analyzed samples. Cells larger than 10000 px, potentially representing doublets, were highlighted in yellow and removed from downstream analysis.}
-    \label{suppl_fig:imc_segmentation}
-\end{figure}
-
-% \begin{figure}[htbp]
+% \begin{figure}[H]
 %     \centering
-%     \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A4-02.png}
-%     \caption[imc-anchor]{\textbf{Anchor and Batch Correction}}
-%     \label{suppl_fig:imc_anchor}
+%     \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A4-01.png}
+%     \caption[IMC Segmentation Workflow]{\textbf{IMC Segmentation Workflow}\\
+%     \textbf{(A)} Representative segmentation masks of ablated ROIs in anchor spleen (left) and pancreas (right) sections, zoomed in to 500 µm on each ROI for better visibility. For better orientation, average expression of CD19 (left) and INS (right) of each segmented cell are additionally drawn as dots. Dimensions of each ROI are denoted on both axes (1 pixel per µm resolution). \textbf{(B)} Violin plots depicting the log10-transformed pixel count (indicating cell size) within each segmented cell across all TMAs from all analyzed samples. Cells larger than 10000 px, potentially representing doublets, were highlighted in yellow and removed from downstream analysis.}
+%     \label{suppl_fig:imc_segmentation}
+% \end{figure}
+
+% % \begin{figure}[htbp]
+% %     \centering
+% %     \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A4-02.png}
+% %     \caption[imc-anchor]{\textbf{Anchor and Batch Correction}}
+% %     \label{suppl_fig:imc_anchor}
+% % \end{figure}
+
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=14cm]{Appendix2/Fig/F2-A2-01.png}
+%     \captionof{figure}[Exclusion of CD19\textsuperscript{+} B-cells]{\textbf{Exclusion of CD19+ B-cells}\\
+%     \textbf{(A)} Histograms showing raw (top) and normalized (bottom) IMC signal intensity from the CD45 channel across all TMAs. The normalization process involved adjusting every channel across all TMAs relative to its positive peak intensity on the anchor Spleen ROI of the TMA (left column). \textbf{(B)} Representative scatter plots depicting the boolean gating strategy employed to identify pancreatic non-B-cell immune cells (CD19\textsuperscript{-}/CD45\textsuperscript{+}/GLP-1\textsuperscript{-}) within each TMA. \textbf{(C)} Representative ROIs showing two pancreatic lymph nodes (highlighted in blue, top left). Pancreatic lymph node masks were generated based on a composite overlay of signals from  B220, CD19, CD44, and CD45 (top right, see SI), scale bar, 250 µm. Bottom: Bar plot with counts of CD19\textsuperscript{+} B cells within and outside of tje generated lymph node masks.}
+%     %[imc-anchorbcell]{\textbf{Exclusion of CD19+ B-cells}\\
+%     %\textbf{(A)} Histograms showing raw (top) and normalized (bottom) IMC signal intensity from the CD45 channel across all TMAs. The normalization %process involved adjusting every channel across all TMAs relative to its positive peak intensity on the anchor Spleen ROI of the TMA (left column). \textbf{(B)} Representative scatter plots depicting the boolean gating strategy employed to identify pancreatic non-B-cell immune cells (CD19\textsuperscript{-}/CD45\textsuperscript{+}/GLP-1\textsuperscript{-}) within each TMA. \textbf{(C)} Representative ROIs showing two pancreatic lymph nodes (highlighted in blue, top left). Pancreatic lymph node masks were generated based on a composite overlay of signals from  B220, CD19, CD44, and CD45 (top right, see SI), scale bar, 250 µm. Bottom: Bar plot with counts of CD19\textsuperscript{+} B cells within and outside of tje generated lymph node masks.}
+%     \label{suppl_fig:imc_anchorbcell}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A3-01.png}
+%     \caption[Cell count and density of F4/80 macrophages from IMC analysis]{\textbf{Cell count and density of F4/80\textsuperscript{\textit{high}}, F4/80\textsuperscript{\textit{low}} and F4/80\textsuperscript{-} macrophage subtypes}\\
+%     \textbf{(A-C)} Violin plots displaying the absolute counts of F4/80\textsuperscript{\textit{high}} \textbf{(A)}, F4/80\textsuperscript{\textit{low}} \textbf{(B)} and F4/80\textsuperscript{\textit{-}} \textbf{(C)} macrophages in non-lymph node pancreatic regions, presented for each mouse across various experimental conditions.  * p < 0.05, ** p < 0.01. p-values were calculated using the Wilcoxon rank-sum test. \textbf{(D-F)} Violin plots displaying the densities of F4/80\textsuperscript{\textit{high}} \textbf{(D)}, F4/80\textsuperscript{\textit{low}} \textbf{(E)} and F4/80\textsuperscript{\textit{-}} \textbf{(F)} macrophages in non-lymph node pancreatic regions, presented for each mouse across various experimental conditions. * p < 0.05, ** p < 0.01. p values were calculated using the Wilcoxon rank-sum test. }
+%     \label{suppl_fig:imc_peri}
 % \end{figure}
 
 
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=13cm]{Appendix2/Fig/F2-A5-01.png}
+%     \caption[suppl-fig:sc-qc]{\textbf{Quality control of scRNA-seq data}\\
+%     \textbf{(A,B)} Split view of the CD45\textsuperscript{+} Immune cells (A) from \textbf{Fig.\ref{fig2-3} B} and CD45\textsuperscript{-} `Endocrine \& others’ cells (B) from \textbf{Fig.\ref{fig2-3} C} across all the sampled cohorts. The number of cells retained in each cohort post quality checks is indicated in parentheses. Chow-Cohort-3 for 1- and 12-weeks of feeding was dropped from the immune cell analysis prior to re-integration, as we did not perform immune cell enrichment using FACS for this cohort. \textbf{(C)} Violin plots of QC metrics for every annotated cell-type after integration – logarithm of UMI counts per cell (top left); number of unique features per cell (middle left); percentage of reads mapping to mitochondrial genome (bottom left); cell-cycle phase scores (top and middle right) - These metrices did not dictate the clustering and subsequent annotation of the integrated data. In addition to standard QC metrics, we also examined known gene features induced by enzymatic dissociation (bottom-right) \textbf{(D)} UMAP embedding of Endocrine \& Others' from \textbf{Fig.\ref{fig2-3} C} depicting the identified polyhormonal populations (in red). The non-polyhormonal cells are depicted in grey. The \textbf{(E)} Violin plots of the five primary islet hormone markers across the identified polyhormonal populations in \textbf{(A)}}
+%     \label{suppl_fig:sc_qc}
+% \end{figure}
 
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=14cm]{Appendix2/Fig/F2-A2-01.png}
-    \caption[imc-anchorbcell]{\textbf{Exclusion of CD19+ B-cells}\\
-    \textbf{(A)} Histograms showing raw (top) and normalized (bottom) IMC signal intensity from the CD45 channel across all TMAs. The normalization process involved adjusting every channel across all TMAs relative to its positive peak intensity on the anchor Spleen ROI of the TMA (left column). \textbf{(B)} Representative scatter plots depicting the boolean gating strategy employed to identify pancreatic non-B-cell immune cells (CD19\textsuperscript{-}/CD45\textsuperscript{+}/GLP-1\textsuperscript{-}) within each TMA. \textbf{(C)} Representative ROIs showing two pancreatic lymph nodes (highlighted in blue, top left). Pancreatic lymph node masks were generated based on a composite overlay of signals from  B220, CD19, CD44, and CD45 (top right, see SI), scale bar, 250 µm. Bottom: Bar plot with counts of CD19\textsuperscript{+} B cells within and outside of tje generated lymph node masks.}
-    \label{suppl_fig:imc_anchorbcell}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=12cm]{Appendix2/Fig/F2-A3-01.png}
-    \caption[imc-peri]{\textbf{Cell count and density of F4/80\textsuperscript{\textit{high}}, F4/80\textsuperscript{\textit{low}} and F4/80\textsuperscript{-} macrophage subtypes}\\
-    \textbf{(A-C)} Violin plots displaying the absolute counts of F4/80\textsuperscript{\textit{high}} \textbf{(A)}, F4/80\textsuperscript{\textit{low}} \textbf{(B)} and F4/80\textsuperscript{\textit{-}} \textbf{(C)} macrophages in non-lymph node pancreatic regions, presented for each mouse across various experimental conditions.  * p < 0.05, ** p < 0.01. p-values were calculated using the Wilcoxon rank-sum test. \textbf{(D-F)} Violin plots displaying the densities of F4/80\textsuperscript{\textit{high}} \textbf{(D)}, F4/80\textsuperscript{\textit{low}} \textbf{(E)} and F4/80\textsuperscript{\textit{-}} \textbf{(F)} macrophages in non-lymph node pancreatic regions, presented for each mouse across various experimental conditions. * p < 0.05, ** p < 0.01. p values were calculated using the Wilcoxon rank-sum test. }
-    \label{suppl_fig:imc_peri}
-\end{figure}
-
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=13cm]{Appendix2/Fig/F2-A5-01.png}
-    \caption[suppl-fig:sc-qc]{\textbf{Quality control of scRNA-seq data}\\
-    \textbf{(A,B)} Split view of the CD45\textsuperscript{+} Immune cells (A) from \textbf{Fig.\ref{fig2-3} B} and CD45\textsuperscript{-} `Endocrine \& others’ cells (B) from \textbf{Fig.\ref{fig2-3} C} across all the sampled cohorts. The number of cells retained in each cohort post quality checks is indicated in parentheses. Chow-Cohort-3 for 1- and 12-weeks of feeding was dropped from the immune cell analysis prior to re-integration, as we did not perform immune cell enrichment using FACS for this cohort. \textbf{(C)} Violin plots of QC metrics for every annotated cell-type after integration – logarithm of UMI counts per cell (top left); number of unique features per cell (middle left); percentage of reads mapping to mitochondrial genome (bottom left); cell-cycle phase scores (top and middle right) - These metrices did not dictate the clustering and subsequent annotation of the integrated data. In addition to standard QC metrics, we also examined known gene features induced by enzymatic dissociation (bottom-right) \textbf{(D)} UMAP embedding of Endocrine \& Others' from \textbf{Fig.\ref{fig2-3} C} depicting the identified polyhormonal populations (in red). The non-polyhormonal cells are depicted in grey. The \textbf{(E)} Violin plots of the five primary islet hormone markers across the identified polyhormonal populations in \textbf{(A)}}
-    \label{suppl_fig:sc_qc}
-\end{figure}
-
-% \begin{figure}[htbp]
+% \begin{figure}[H]
 %     \centering
 %     \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A6-01.png}
 %     \caption[suppl-fig:sc-endo]{\textbf{Annotating Polyhormonal cells}\\
@@ -56,189 +57,107 @@
 %     \label{suppl_fig:sc_endo}
 % \end{figure}
 
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A1-01.png}
-    \caption[suppl-fig:cell-cell1]{\textbf{Ligand-receptor analysis in islet resident immune cells }\\
-    \textbf{(A)} Scatter plot depicting the outgoing interaction strength (on X-axis) and the incoming interaction strength (on Y-axis) for the indicated cell populations at Week-1 Chow (n=3) and Week-1 WD (n=2) (left), Weeks-12 Chow (n=3) and Weeks-12 WD (n=2) (middle) and Aging (n=2) and Non-Aging (right) time-points. The Non-Aging group is comprised of Week-1 (n=3) and Week-12 (n=3) Chow diet cohorts. \textbf{(B)} Heatmap depicting differential number of interactions in the Aging cohort (n = 2) compared to the Non-Aging (Week-1 Chow (n=3) and Week-12 Chow (n=3)) cohorts between the indicated cell populations. \textbf{(C)}Dot plots depicting ligand-receptor interaction intensity, with signals from Macs-2 to CD8+ cytotoxic, under Chow (n=3) and one-week post-Western diet (n=2) conditions. The plots specifically highlight signals that exhibit an increase in interaction intensity from non-aging to aging condition. The dot color and size represent the calculated communication probability and p-values. p-values are computed from one-sided permutation test directly within CellChat. \textbf{(C)} Dot plots depicting ligand-receptor interaction intensity, with signals from Macs-3 to CD8+ cytotoxic, under Chow (n=3) and one-week post-Western diet (n=2) conditions. The plots specifically highlight signals that exhibit an increase in interaction intensity from non-aging to aging condition. The dot color and size represent the calculated communication probability and p-values. p-values are computed from one-sided permutation test directly within CellChat.}
-    \label{suppl_fig:cell_cell1}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A1-01.png}
+%     \caption[suppl-fig:cell-cell1]{\textbf{Ligand-receptor analysis in islet resident immune cells }\\
+%     \textbf{(A)} Scatter plot depicting the outgoing interaction strength (on X-axis) and the incoming interaction strength (on Y-axis) for the indicated cell populations at Week-1 Chow (n=3) and Week-1 WD (n=2) (left), Weeks-12 Chow (n=3) and Weeks-12 WD (n=2) (middle) and Aging (n=2) and Non-Aging (right) time-points. The Non-Aging group is comprised of Week-1 (n=3) and Week-12 (n=3) Chow diet cohorts. \textbf{(B)} Heatmap depicting differential number of interactions in the Aging cohort (n = 2) compared to the Non-Aging (Week-1 Chow (n=3) and Week-12 Chow (n=3)) cohorts between the indicated cell populations. \textbf{(C)}Dot plots depicting ligand-receptor interaction intensity, with signals from Macs-2 to CD8+ cytotoxic, under Chow (n=3) and one-week post-Western diet (n=2) conditions. The plots specifically highlight signals that exhibit an increase in interaction intensity from non-aging to aging condition. The dot color and size represent the calculated communication probability and p-values. p-values are computed from one-sided permutation test directly within CellChat. \textbf{(C)} Dot plots depicting ligand-receptor interaction intensity, with signals from Macs-3 to CD8+ cytotoxic, under Chow (n=3) and one-week post-Western diet (n=2) conditions. The plots specifically highlight signals that exhibit an increase in interaction intensity from non-aging to aging condition. The dot color and size represent the calculated communication probability and p-values. p-values are computed from one-sided permutation test directly within CellChat.}
+%     \label{suppl_fig:cell_cell1}
+% \end{figure}
+
+% % \begin{figure}[!t]
+% %     \centering
+% %     \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A1-02.png}
+% %     \caption[Differential interaction analysis between chow-fed aging and chow-fed non-aging (Week-1 and Weeks-12) groups]{\textbf{Differential interaction analysis between chow-fed aging and chow-fed non-aging (Week-1 and Weeks-12) groups}\\\\
+% %     \textbf{(A)} Heatmap depicting differential number of interactions in the Aging cohort (n = 2) compared to the Non-Aging (Week-1 Chow (n=3) and Week-12 Chow (n=3)) cohorts between the indicated cell populations. \textbf{(B)}Dot plots depicting ligand-receptor interaction intensity, with signals from Macs-2 to CD8+ cytotoxic, under Chow (n=3) and one-week post-Western diet (n=2) conditions. The plots specifically highlight signals that exhibit an increase in interaction intensity from non-aging to aging condition. The dot color and size represent the calculated communication probability and p-values. p-values are computed from one-sided permutation test directly within CellChat. \textbf{(C)} Dot plots depicting ligand-receptor interaction intensity, with signals from Macs-3 to CD8+ cytotoxic, under Chow (n=3) and one-week post-Western diet (n=2) conditions. The plots specifically highlight signals that exhibit an increase in interaction intensity from non-aging to aging condition. The dot color and size represent the calculated communication probability and p-values. p-values are computed from one-sided permutation test directly within CellChat.}
+% %     \label{suppl_fig:cell_cell2}
+% % \end{figure}
+
+
+\section{Additional results for Chapter 3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Appendix2/Fig/F3-2-v2-02.png}
+\caption[Study distribution within the full integrated data]{\textbf{Study distribution within the full integrated data}}
+\label{suppl_fig:chp3_study}
 \end{figure}
 
-% \begin{figure}[!t]
-%     \centering
-%     \includegraphics[width=\linewidth]{Appendix2/Fig/F2-A1-02.png}
-%     \caption[Differential interaction analysis between chow-fed aging and chow-fed non-aging (Week-1 and Weeks-12) groups]{\textbf{Differential interaction analysis between chow-fed aging and chow-fed non-aging (Week-1 and Weeks-12) groups}\\\\
-%     \textbf{(A)} Heatmap depicting differential number of interactions in the Aging cohort (n = 2) compared to the Non-Aging (Week-1 Chow (n=3) and Week-12 Chow (n=3)) cohorts between the indicated cell populations. \textbf{(B)}Dot plots depicting ligand-receptor interaction intensity, with signals from Macs-2 to CD8+ cytotoxic, under Chow (n=3) and one-week post-Western diet (n=2) conditions. The plots specifically highlight signals that exhibit an increase in interaction intensity from non-aging to aging condition. The dot color and size represent the calculated communication probability and p-values. p-values are computed from one-sided permutation test directly within CellChat. \textbf{(C)} Dot plots depicting ligand-receptor interaction intensity, with signals from Macs-3 to CD8+ cytotoxic, under Chow (n=3) and one-week post-Western diet (n=2) conditions. The plots specifically highlight signals that exhibit an increase in interaction intensity from non-aging to aging condition. The dot color and size represent the calculated communication probability and p-values. p-values are computed from one-sided permutation test directly within CellChat.}
-%     \label{suppl_fig:cell_cell2}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\linewidth]{Appendix2/Fig/F3-5-01.png}
+% \caption[Overlap between gene modules identified in this study and gene programs from MIA]{\textbf{Overlap between gene modules identified in this study and gene programs from MIA}}
+% \label{suppl_fig:chp3_overlap}
 % \end{figure}
 
 
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Appendix2/Fig/F3-4-01.png}
+\caption[β-cell subset across seven studies]{}
+\label{suppl_fig:chp3_betastudy}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Appendix2/Fig/F3-1-v2-01.png}
+\caption[Characterization of β-cell subsets using enriched markers and gene ontology]{}
+\label{suppl_fig:chp3_betasubsets}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Appendix2/Fig/F3-7-02.png}
+\caption[Loss of β-cell maturity across studies along PC1]{}
+\label{suppl_fig:chp3_pc1}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Appendix2/Fig/F3-7-03.png}
+\caption[Increased β-cell workload across studies along PC2]{}
+\label{suppl_fig:chp3_pc2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Appendix2/Fig/F3-7-01.png}
+\caption[β-cell failure across studies along composite PC1 and PC2]{}
+\label{suppl_fig:chp3_pc2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Appendix2/Fig/F3-12-04.png}
+\caption[Mean regulon activity of all regulons in Module-4 and Module-5 of β-cell GRN]{}
+\label{suppl_fig:chp3_GRNmods45}
+\end{figure}
+
+% \mysidecaption{0.4}{%
+% \captionof{figure}[Gene-set scores in Aging/maturation study]{\textbf{Scores of five gene-sets in Aging/maturation study}}%
+% }
+% {%
+% \includegraphics[width=9.5cm]{Appendix2/Fig/F3-14-01.png}%
+% }[t]%
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=11cm]{Appendix2/Fig/F3-14-01.png}
+\caption[]{Gene-set scores in Aging/maturation study}
+\label{suppl_fig:chp3_agingscores}
+\end{figure}
 
 
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=15cm]{Appendix2/Fig/suppl_distribution_10x_ss2.png}
-%     \caption[Distribution of total reads between scRNA-seq technologies]{Distribution of total reads between scRNA-seq technologies, when considering the same 29 lines.
-%     Similar to \textbf{Fig. \ref{fig:sc_bulk_counts}}, but considering SmartSeq2 and 10x data from the same 29 cell lines.}
-%     \label{suppl_fig:counts_sc_technologies}
-% \end{figure}
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=10cm]{Appendix2/Fig/supplement_genotype_pcs.png}
-%     \caption[Population structure of donors included in the study]{\textbf{Population structure of donors included in the study.} \\
-%     Principal component (PC) decomposition of the kinship matrix (calculated using PLINK \cite{purcell2007plink}) across all cell lines included in our study.
-%     The four outlier cell lines were excluded from the analyses described in \textbf{section \ref{sec:best_practice}}.}
-%     \label{suppl_fig:kinship_pcs}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=15cm]{Appendix2/Fig/supp_aggregated_figures_dr.png}
-%     \caption[Comparison of `dr' aggregated measures]{\textbf{Comparison of `dr' aggregated measures.}\\
-%     (a) For a random selection of 4 donors (two of which present in two sequencing runs, resulting in 6 donor-run combinations, or samples), scatter plots between aggregation metrics, across the set of common genes (n=12,720).
-%     First row is dr-mean vs dr-sum, second dr-mean vs dr-median, third dr-median vs dr-sum.
-%     The last column represents, for each of the comparisons a histogram of the distribution of correlations, across donors.
-%     (b) Histograms representing the distribution of correlations across donors, for each genes, for the same three comparisons as in (a).}
-%     \label{suppl_fig:aggregation_comparison_dr}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=15cm]{Appendix2/Fig/supp_aggregated_figures_d.png}
-%     \caption[Comparison of `d' aggregated measures]{\textbf{Comparison of `d' aggregated measures.}\\
-%     (a) Histograms of correlations between `dr' and `d' aggregation measures, for each of mean, sum, median.
-%     (b,c) Similar to \textbf{Fig. \ref{suppl_fig:aggregation_comparison_dr}}, panels a and b, but across `d' aggregation methods (instead of `dr'; the same donors are considered).}
-%     \label{suppl_fig:aggregation_comparison_d}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=16cm]{Appendix2/Fig/supplement_sc_vs_bulk.png}
-%     \caption[Comparison of results between single cell and bulk iPSC eQTL]{\textbf{Comparison of results between single cell and bulk iPSC eQTL.}\\
-%     Scatter plots of eQTL effect sizes obtained when testing association of iPSC eQTL discovered using single cell (SmartSeq2) and bulk RNA-seq.
-%     The bulk eQTL results considered are obtained using all samples available (`a-bulk')
-%     The same set of n=12,720 genes that were assessed in all maps are considered.
-%     First two columns, `dr'-aggregations (dr-mean, dr-sum, dr-median; aggregated at donor and sequencing run). 
-%     Left, top SNP per gene (such that there are exactly as many points as there are genes) from the single cell data (`discovery set'; x axis) in bulk results (`replication set'; y axis). 
-%     Right, vice versa (i.e. top SNP per gene in bulk results (now `discovery set' y axis), in single cell results, now `replication set', x axis).
-%     In blue, for each pair of sets of results are the `replicated' eQTL, i.e. eQTL at FDR<5\% in the discovery set, replicated in the replication set (FDR<10\% and same direction of effect; consistently with the results presented in \textbf{section \ref{sec:best_practice}}).
-%     Third and fourth columns, same as first two but for `d' methods, i.e. d-mean, d-sum, d-median (aggregated at donor level).}
-%     \label{suppl_fig:sc_vs_bulk}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=16cm]{Appendix2/Fig/suppl_scran_vs_baynorm.png}
-%     \caption[Correlation of results between scran and bayNorm normalisation]{\textbf{Correlation of results between scran and bayNorm normalisation.}\\
-%     Related to results from \textbf{Table \ref{tab:egenes}}.
-%     Scatter plots of eQTL effect sizes (left) and p values (right) obtained when testing association of iPSC single cell eQTL discovered using dr-mean as aggregation method and after normalising counts using two alternative methods: scran/scater \cite{mccarthy2017scater} (x axis) and bayNorm \cite{tang2020baynorm} (y axis).}
-%     \label{suppl_fig:scran_vs_baynorm}
-% \end{figure}
-
-% \clearpage
-
-% \section{Additional results for Chapter 4}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=16cm]{Appendix2/Fig/suppl_protocol.png}
-%     \caption[Endoderm differentiation protocol]{\textbf{Endoderm differentiation protocol.}\\
-%     Adapted from Touboul \textit{et al.} \cite{touboul2010generation}.
-%     Related to \textbf{Chapter \ref{chapter4}, section \ref{sec:endodiff_summary}}.
-%     Schematic representation of the chemically defined protocol used to initiate differentiation towards  definitive endoderm. 
-%     Tra-1-60 and CXCR4 are canonical cell surface markers of pluripotent and definitive endoderm stages, respectively, which were used to sort live cells by differentiation stage. }
-%     \label{suppl_fig:endodiff_exp_protocol}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=15cm]{Appendix2/Fig/suppl_diabetes_lines.png}
-%     \caption[PCA of healthy and diseased cell lines]{\textbf{Comparison of expression patterns between healthy and diseased cell lines.}\\
-%     PCA plot (similar to \textbf{Fig. \ref{fig:endodiff_pca}}) of cells from cell lines derived from monogenic diabetes donors (red), cells from healthy donors from the same seven experiments (dark blue), against the background of all cells (grey). }
-%     \label{suppl_fig:pca_diabetes_lines}
-% \end{figure}
-
-% \clearpage
-
-% \section{Additional results for Chapter 5}
-
-% \begin{figure}[htb!]
-%     \includegraphics[width=14.5cm]{Appendix2/Fig/suppl_neuroseq_immunostaining.png}
-%     \caption[Immunostaining of midbrain neural progenitors and dopaminergic neurons]{\textbf{Immunostaining of midbrain neural progenitors and DA neurons (Full legend on next page).}\\}
-%     \label{suppl_fig:immunostaining}
-% \end{figure}
-
-% \newpage
-
-% \captionsetup[figure]{list=no}
-% \addtocounter{figure}{-1}   
-% \captionof{figure}{\textbf{Immunostaining of midbrain neural progenitors and DA neurons (continued).\\}
-%     Figure by Julie Jerber.
-%     (a) Immunostaining for known midbrain progenitor markers LMX1A and FOXA2 at day 11. 
-%     Nuclei were counterstained with Hoechst. 
-%     Scale bar: 25µm. 
-%     (b) Immunostaining of differentiated dopaminergic neurons for  the neuronal marker MAPT2 (white) and the dopaminergic neuronal markers TH and LMX1A. 
-%     Scale bar: 25µm. 
-%     Data is shown for two example individual cell lines (HPSI0155i-hecn\_6 and HPSI0514i-uenn\_3) as well as three entire differentiation pools (Pools 1,2,3).}
-% \captionsetup[figure]{list=yes}
-
-% \vspace{10mm}
-
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=16cm]{Appendix2/Fig/supl_neuroseq_markers.png}
-%     \caption[Neuronal cell type markers]{\textbf{Neuronal cell type markers}.\\
-%     Heat map showing the average expression of the 48 literature-curated neuronal marker genes used to annotate the identified clusters as cell types (columns) by the annotated cell types at different time points (rows, as in \textbf{Fig. \ref{fig:neuroseq_clusters}}).}
-%     \label{fig:suppl_celltype_markers}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=15cm]{Appendix2/Fig/suppl_donor_effects.png}
-%     \caption[Predicted differentiation scores]{\textbf{Predicted differentiation scores}.\\
-%     Results related to \textbf{section \ref{sec:neuro_diff_eff_predictor}}.
-%     (a) Histogram of predicted differentiation scores across all HipSci cell lines. 
-%     The bimodal distribution is especially extreme in this case, and 0.5 was used as the threshold to split bad from good differentiator lines. 
-%     (b) Scatter plot of predicted differentiation scores for donor for which we have data for two different cell lines. Replicate1 (rep1) is chosen as the line with lower predicted score (n=270). 
-%     Colours indicate three categories of donors, according to whether both lines from the same donor are predicted to fail differentiation (blue), both are predicted to succeed (green), the two lines are discordant (one is predicted to successfully differentiate, but not the other, yellow). (c) Bulk RNA-seq expression of \textit{UTF1, TAC3} for the two replicate lines per donor stratified by the categorization described in (b).}
-%     \label{suppl_fig:predicted_scores_donors}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=15cm]{Appendix2/Fig/suppl_ips_cluster2.png}
-%     \caption[An iPSC sub-population is associated with lower differentiation efficiency]{\textbf{Re-analysis of iPSC scRNA-seq data reveals a subpopulation characterised by expression of predictive marker genes associated with lower neuronal differentiation efficiency.}\\
-%      (a) UMAP overview of the dataset. 
-%      iPSC scRNA-seq data from \cite{cuomo2020single} were re-analysed following the same batch correction and clustering steps applied to our neural differentiation data, identifying 5 clusters. 
-%      (b) Violin plots of gene expression for genes related to pluripotency (\textit{NANOG, SOX2, POU5F1}) and two gene markers that are respectively upregulated and downregulated in cluster 2 (\textit{UTF1, TAC3}, from \textbf{Fig. \ref{fig:neuroseq_ips_expression_signature}}). 
-%      (c) Scatter plot showing the proportion of cells assigned to cluster 2 between replicates (n=23). 
-%      (d) Scatter plot between the proportion of cells assigned to cluster 2 (y axis) and differentiation efficiency (x axis) similar to \textbf{Fig \ref{fig:neuroseq_ips_sc_genes}}, panel c, but where we use imputed proportions of cluster 2 cells from bulk RNA-seq available for most cell lines (n=182, out of 199 lines for which we have day 52 data and thus a measure of neuronal differentiation efficiency).}
-%     \label{suppl_fig:ipsc_cluster2}
-% \end{figure}
-
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=15cm]{Appendix2/Fig/suppl_ipsc_cluster2_sarkar.png}
-%     \caption[Analysis of a single cell iPSC dataset from Sarkar \textit{et al.}]{\textbf{Analysis of a single cell iPSC dataset from Sarkar \textit{et al.}}\\
-%     Similar to \textbf{Fig. \ref{suppl_fig:ipsc_cluster2}}.
-%     (a) UMAP overview of the dataset. 
-%     iPSC scRNA-seq data from \cite{sarkar2019discovery} were re-analysed following the same data normalisation and clustering steps applied to our neural differentiation data, identifying 4 clusters. 
-%     (b) Violin plots of gene expression for genes related to pluripotency (\textit{NANOG, SOX2, POU5F1}) and a subset of markers of the cluster 2 population (\textit{UTF1, TAC3}). 
-%     (c) Scatter plot showing the proportion of cells assigned to cluster 2 between replicates (n=59). 
-%     (d) Expression log fold change between cluster 2 and all other clusters from \cite{cuomo2020single} compared to the same between cluster 2 and the rest from \cite{sarkar2019discovery}. 
-%     Shown are all 5,397 DE genes between cluster 2 and all other clusters from Sarkar \textit{et al}. (FDR < 0.05).}
-%     \label{suppl_fig:ipsc_cluster2_sarkar}
-% \end{figure}
-
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=14cm]{Appendix2/Fig/suppl_pop_struct_pc.png}
-%     \caption[Absence of population structure]{\textbf{Absence of population structure}.\\
-%     Principal component (PC) decomposition of the kinship matrix (calculated using PLINK \cite{purcell2007plink}) across all cell lines included in the study described in \textbf{Chapter \ref{chapter5}}, coloured by batch.}
-%     \label{suppl_fig:no_pop_struct}
-% \end{figure}
+% \begin{landscape}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth,height=11cm]{Appendix2/Fig/F3-15-01.png}
+\caption{Intensity measure correlation}
+\label{fig:IMs matrix correlation}
+\end{figure}
+% \end{landscape}
