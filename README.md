@@ -28,6 +28,5 @@ Somesh Sai
 
 ## Acknowledgements
 
-*   Krishna Kumar - [Original CUED PhD thesis template](https://github.com/kks32/phd-thesis-template)
-*   Nils Eling - [Improved formatted template](https://github.com/nilseling/Thesis)
+* 
 *   
