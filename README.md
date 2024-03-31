@@ -13,6 +13,9 @@ Somesh Sai
 
 ## Supervisors
 
+1. Prof. Dr. Sigmar Stricker, Department of Biology, Chemistry, Pharmacy, FU Berlin
+2. Dr. Altuna Akalin, Bioinformatics and Omics Data Science, MDC Berlin
+
 
 
 ## How to cite this thesis
