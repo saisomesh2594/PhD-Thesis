@@ -2,9 +2,7 @@
 % ------- PhD Thesis Somesh Sai -------
 % *************************************
 
-
-
-\documentclass[a4paper,12pt,times,numbered,print]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,times,numbered,oneside,print]{Classes/PhDThesisPSnPDF}
 %\documentclass[draftclassic,12pt,times,numbered,print]{Classes/PhDThesisPSnPDF}
 
 % *************************************
@@ -90,19 +88,19 @@
 % ***** Abstract 
 % *************************************
 
-\ifdefineAbstract
- \pagestyle{empty}
- \includeonly{Declaration/declaration, Abstract/abstract}
-\fi
+% \ifdefineAbstract
+%  \pagestyle{empty}
+%  \includeonly{Declaration/declaration, Abstract/abstract}
+% \fi
 
 % *************************************
 % **** Chapter Mode 
 % *************************************
 % The chapter mode allows user to only print particular chapters with references. Title, Contents, Frontmatter are disabled by default. Useful option to review a particular chapter or to send it to supervisior. To use choose `chapter' option in the document class
 
-\ifdefineChapter
- \includeonly{Introduction/intro}
-\fi
+% \ifdefineChapter
+%  \includeonly{Chapter5/chapter5}
+% \fi
 
 % *************************************
 % **** Front Matter 
@@ -112,35 +110,28 @@
 \begin{document}
 
 \frontmatter
-
-%\maketitle
-
-%\include{Dedication/dedication}
-%\include{Declaration/declaration}
-%\include{Acknowledgement/acknowledgement}
-%\include{Abstract/abstract}
+\maketitle
+% \include{Dedication/dedication}
+% \include{Declaration/declaration}
+% \include{Acknowledgement/acknowledgement}
+% \include{Abstract/abstract}
 
 % *************************************
 % **** Adding Table of Contents and List of Figures 
 % *************************************
 
-% \cleardoublepage
+%\cleardoublepage
 
 \tableofcontents
-
-% \cleardoublepage
-
+%\cleardoublepage
 \listoffigures
-
-% \cleardoublepage
-
-%\listoftables
+%\cleardoublepage
+\listoftables
 
 
-\renewcommand{\glossarypreamble}{\vspace{-2cm}}
+%\renewcommand{\glossarypreamble}{\vspace{-2cm}}
 
-\printglossary[type=\acronymtype, toctitle=Acronyms, title=\textcolor{CadetBlue}{\LARGE{\textbf{\textsc{Acronyms}}}}]
-
+\printglossary[type=\acronymtype, toctitle=Acronyms, title=\textcolor{black}{\LARGE{\textbf{\textsc{Acronyms}}}}]
 \addcontentsline{toc}{chapter}{Acronyms}
 
 % *************************************
@@ -149,36 +140,40 @@
 
 \mainmatter
 
+% {
+% \small
+% \showthe\fontdimen6\font
+% }
+
+\include{Chapter2/chapter2}
 \include{Chapter1/chapter1}
-\include{Chapter4/chapter4}
-%\include{Chapter5/chapter5}
-%\include{Chapter6/chapter6}
-%\include{Chapter7/chapter7}
+% \include{Chapter4/chapter4}
+% \include{Chapter5/chapter5}
+% %\include{Chapter6/chapter6}
+% \include{Chapter7/chapter7}
 
 
 % *************************************
 % **** Appendices 
 % *************************************
 
-\begin{appendices} % Using appendices environment for more functionality
+% \begin{appendices} % Using appendices environment for more functionality
 
-\include{Appendix1/appendix1}
-%\include{Appendix2/appendix2}
-%\include{Appendix3/appendix3}
-%\include{Appendix4/appendix4}
+% \include{Appendix1/appendix1}
+% \include{Appendix2/appendix2}
+% %\include{Appendix3/appendix3}
+% \include{Appendix4/appendix4}
 
-\end{appendices}
+% \end{appendices}
 
 % *************************************
 % **** Bibliography 
 % *************************************
 
 \begin{spacing}{0.9}
-
-\bibliographystyle{unsrt} % Use for unsorted references  
-
-\cleardoublepage
-\bibliography{References/references} 
+\bibliographystyle{unsrtnat} % Use for unsorted references  
+%\cleardoublepage
+\bibliography{References/test-references} 
 \end{spacing}
 
 
@@ -186,6 +181,6 @@
 % **** Index 
 % *************************************
 
-\printthesisindex % If index is present
+%\printthesisindex % If index is present
 
 \end{document}
