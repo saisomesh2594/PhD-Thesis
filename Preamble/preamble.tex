@@ -60,7 +60,8 @@
   
   % Use helvetica
   \renewcommand{\familydefault}{\sfdefault}
-  \usepackage{helvet}
+  %\usepackage{helvet}
+  \usepackage{fontspec}
   \usepackage{sansmathfonts}
 \fi
 
@@ -74,14 +75,42 @@
 
 
 % define header 
+% \usepackage{fancyhdr}
+% \usepackage{adjustbox}
+% \usepackage{etoolbox}
+% \renewcommand{\headrulewidth}{1pt}
+% \newcommand{\headrulecolor}[1]{\patchcmd{\headrule}{\hrule}{\color{#1}\hrule}{}{}}
+% \headrulecolor{CadetBlue}
+% \fancyheadoffset[RE,LO]{0cm}
+% \fancyheadoffset[LE,RO]{1.25cm}
+
+% define header 
 \usepackage{fancyhdr}
 \usepackage{adjustbox}
 \usepackage{etoolbox}
-\renewcommand{\headrulewidth}{1pt}
-\newcommand{\headrulecolor}[1]{\patchcmd{\headrule}{\hrule}{\color{#1}\hrule}{}{}}
-\headrulecolor{CadetBlue}
+\usepackage{xcolor} % Ensure xcolor is included for color names
+\definecolor{CadetBlue}{RGB}{95,158,90} % Define the color if not predefined
+
+\pagestyle{fancy} % Ensures that fancy page style is applied
+\renewcommand{\headrulewidth}{1.2pt}
+\fancyhf{} % Clear out all header and footer text
+
+% Apply your custom head rule color
+\newcommand{\headrulecolor}[1]{%
+  \renewcommand{\headrule}{\hbox to\headwidth{%
+    \color{#1}\leaders\hrule height \headrulewidth\hfill}}
+}
+\headrulecolor{black}
+
+% Set the offsets
 \fancyheadoffset[RE,LO]{0cm}
-\fancyheadoffset[LE,RO]{1.25cm}
+\fancyheadoffset[LE,RO]{0cm}
+
+% Now redefine the headers for even and odd pages
+\fancyhead[LE,RO]{\thepage} % Page numbers on the left on even pages, right on odd pages
+\fancyhead[RE,LO]{} % Clear section titles from headers
+
+
 
 % For recoloring the section header
 \usepackage{sectsty}
@@ -97,8 +126,12 @@
 %{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
 
 \titleformat{\subsection}[hang]{\large\bfseries}{\color{black}\thesubsection}{6pt}{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
+%\titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
+
 
 % **** Algorithms and Pseudocode 
+
+\usepackage[percent]{overpic}
 
 %\usepackage{algpseudocode}
 
@@ -120,6 +153,9 @@
     urlcolor=blue,
 }
 
+
+% \usepackage{booktabs}% http://ctan.org/pkg/booktabs
+% \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 % *************************** Graphics and figures *****************************
 
@@ -153,9 +189,8 @@
 \usepackage{tabularx} % For flexible table width
 \usepackage[table]{xcolor} % For cell coloring
 \usepackage{colortbl}
-\usepackage{geometry} % For page margin settings
+%\usepackage{geometry} % For page margin settings
 %\usepackage[raggedrightboxes]{ragged2e}
-
 %Define the colors used in the table
 \definecolor{headerblue}{RGB}{173,216,230}
 \definecolor{rowgray}{RGB}{220,220,220}
@@ -166,12 +201,13 @@
 
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{G}{>{\columncolor{firstcol}}l}
+
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \newcolumntype{W}[1]{>{\raggedright\arraybackslash}p{#1}} % change \raggedright to \centering if you want text centered
 
 \geometry{
   a4paper, % Paper size
-  left=25mm, % Left margin
+  left=30mm, % Left margin
   right=25mm, % Right margin
   top=25mm, % Top margin
   bottom=25mm % Bottom margin
@@ -224,8 +260,8 @@
 
 % If you would like to use biblatex for your reference management, as opposed to the default `natbibpackage` pass the option `custombib` in the document class. Comment out the previous line to make sure you don't load the natbib package. Uncomment the following lines and specify the location of references.bib file
 
-%\RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
-%\addbibresource{References/Trial} %Location of references.bib only for biblatex, Do not omit the .bib extension from the filename.
+% \RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
+% \addbibresource{References/references.bib} %Location of references.bib only for biblatex, Do not omit the .bib extension from the filename.
 
 \fi
 
@@ -242,9 +278,9 @@
 \setlength\cftaftertoctitleskip{0pt}
 \setlength\cftafterloftitleskip{0pt}
 \setlength\cftafterlottitleskip{0pt}
-\renewcommand\cfttoctitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
-\renewcommand\cftloftitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
-\renewcommand\cftlottitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
+\renewcommand\cfttoctitlefont{\LARGE\bfseries\scshape\color{black}}
+\renewcommand\cftloftitlefont{\LARGE\bfseries\scshape\color{black}}
+\renewcommand\cftlottitlefont{\LARGE\bfseries\scshape\color{black}}
 
 %\renewcommand{\glossarysection}[2][\theglstoctitle]{%
 %  \def\theglstoctitle{#2}%
@@ -282,7 +318,7 @@
 \setlength{\glsdescwidth}{5in}
 
 \makeglossaries
-\glsdisablehyper
+%\glsdisablehyper
 \renewcommand{\glsnamefont}[1]{\textbf{#1}}
 
 % ********************************* Appendix 
