@@ -2,8 +2,19 @@
 % ------- PhD Thesis Somesh Sai -------
 % *************************************
 
-\documentclass[a4paper,12pt,times,numbered,oneside,print]{Classes/PhDThesisPSnPDF}
+\documentclass[a4paper,12pt,times,oneside,custombib,openright]{Classes/PhDThesisPSnPDF}
 %\documentclass[draftclassic,12pt,times,numbered,print]{Classes/PhDThesisPSnPDF}
+
+\usepackage[
+  % set width and height to a4 width and height + 6mm
+  width=21.6truecm, height=30.3truecm,
+  % use any combination of these options to add different cut markings
+  cam, axes, frame, cross,
+  % set the type of TeX renderer you use
+  pdftex,
+  % center the contents
+  center
+]{crop}
 
 % *************************************
 % **** Class Options 
@@ -99,7 +110,7 @@
 % The chapter mode allows user to only print particular chapters with references. Title, Contents, Frontmatter are disabled by default. Useful option to review a particular chapter or to send it to supervisior. To use choose `chapter' option in the document class
 
 % \ifdefineChapter
-%  \includeonly{Chapter5/chapter5}
+%  \includeonly{Chapter4/chapter4}
 % \fi
 
 % *************************************
@@ -109,11 +120,16 @@
 
 \begin{document}
 
-\frontmatter
-\maketitle
+% \frontmatter
+% \maketitle
+
+% \newpage
+% \thispagestyle{empty} % Remove header and footer from this page
+% \include{SupervisorPage/supervisorpage}
 % \include{Dedication/dedication}
-% \include{Declaration/declaration}
 % \include{Acknowledgement/acknowledgement}
+% \include{Declaration/declaration}
+% \include{Chapter2/chapter2}
 % \include{Abstract/abstract}
 
 % *************************************
@@ -129,14 +145,25 @@
 \listoftables
 
 
-%\renewcommand{\glossarypreamble}{\vspace{-2cm}}
+\renewcommand{\glossarypreamble}{\vspace{-2cm}}
 
-\printglossary[type=\acronymtype, toctitle=Acronyms, title=\textcolor{black}{\LARGE{\textbf{\textsc{Acronyms}}}}]
+\begin{footnotesize}
+  \printglossary[type=\acronymtype, toctitle=Acronyms, title=\textcolor{black}{\LARGE{\textbf{\textsc{Acronyms}}}}]  
+\end{footnotesize}
 \addcontentsline{toc}{chapter}{Acronyms}
 
 % *************************************
 % **** Main Matter
 % ************************************* 
+
+\newgeometry{
+  twoside,
+  left=40mm, % Left margin
+  right=25mm, % Right margin
+  top=25mm, % Top margin
+  bottom=25mm % Bottom margin
+}
+
 
 \mainmatter
 
@@ -145,37 +172,43 @@
 % \showthe\fontdimen6\font
 % }
 
-\include{Chapter2/chapter2}
-\include{Chapter1/chapter1}
-% \include{Chapter4/chapter4}
-% \include{Chapter5/chapter5}
-% %\include{Chapter6/chapter6}
-% \include{Chapter7/chapter7}
+%\loadgeometry{twosidegeom}
+
+%\newpage\null\thispagestyle{empty}\newpage
 
 
-% *************************************
-% **** Appendices 
-% *************************************
-
-% \begin{appendices} % Using appendices environment for more functionality
-
-% \include{Appendix1/appendix1}
-% \include{Appendix2/appendix2}
-% %\include{Appendix3/appendix3}
-% \include{Appendix4/appendix4}
-
-% \end{appendices}
+%\include{Chapter1/chapter1}
+%\include{Chapter4/chapter4}
+\include{Chapter5/chapter5}
+%\include{Chapter6/chapter6}
+\include{Chapter7/chapter7}
 
 % *************************************
 % **** Bibliography 
 % *************************************
 
-\begin{spacing}{0.9}
-\bibliographystyle{unsrtnat} % Use for unsorted references  
-%\cleardoublepage
-\bibliography{References/test-references} 
+\begin{spacing}{1}
+% \bibliographystyle{unsrtnat} % Use for unsorted references  
+% %\cleardoublepage
+% \bibliography{References/test-references} 
+%\begin{small}
+\printbibliography[heading=bibintoc]
+%\end{small}
+
 \end{spacing}
 
+% *************************************
+% **** Appendices 
+% *************************************
+
+\begin{appendices} % Using appendices environment for more functionality
+
+\include{Appendix1/appendix1}
+\include{Appendix2/appendix2}
+% \include{Appendix3/appendix3}
+% \include{Appendix4/appendix4}
+
+\end{appendices}
 
 % *************************************
 % **** Index 

@@ -618,10 +618,10 @@ supported!}
     breaklinks=true,
     linktocpage,
     colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    citecolor=blue,
-    anchorcolor=blue
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    anchorcolor=black
   }
   \ifsetCustomMargin
   % Margin to be define in preamble using geometry package
@@ -950,18 +950,16 @@ wish to left align your text}
 %	\vspace{.15\PHD@titlepagespacing}
 %\fi
 
-
-
 % Author
 \vspace*{3em}
 {\usebox{\PHD@author}}
 %\vspace*{1em}
 
 % Supervisor
-%\ifPHD@supervisor%
-%{\usebox{\PHD@supervisor}}
-%\vspace*{0.5em}
-%\fi
+% \ifPHD@supervisor%
+% {\usebox{\PHD@supervisor}}
+% \vspace*{0.5em}
+% \fi
 
 % Advisor
 %\ifPHD@advisor%
@@ -982,6 +980,15 @@ wish to left align your text}
 
 \end{singlespace}
 }
+
+
+\newenvironment{supervisorpage}
+{
+\newpage
+\setsinglecolumn
+\thispagestyle{empty}
+}
+
 
 % **** Dedication 
 % The dedication environment makes sure the dedication gets its
@@ -1005,7 +1012,7 @@ wish to left align your text}
 \newenvironment{declaration}{
 \cleardoublepage
 \setsinglecolumn
-\textcolor{CadetBlue}{\LARGE \textbf{\textsc{Declaration}}}
+\textcolor{black}{\LARGE \textbf{\textsc{Declaration}}}
 \vspace{5mm}
 \thispagestyle{empty}
 }{

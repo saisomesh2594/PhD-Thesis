@@ -1,0 +1,12 @@
+R version 4.0.2 (2020-06-22)
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
+Running under: CentOS Linux 7 (Core)  
+
+other attached packages:
+ [1] enrichR_3.0          Libra_1.0.0          reshape2_1.4.4      
+ [4] circlize_0.4.13      ComplexHeatmap_2.6.2 CellChat_1.1.3      
+ [7] Biobase_2.50.0       BiocGenerics_0.36.1  igraph_1.2.11       
+[10] stringr_1.4.0        ggpubr_0.4.0         RColorBrewer_1.1-3  
+[13] gridExtra_2.3        cowplot_1.1.1        ggplot2_3.4.0       
+[16] data.table_1.14.6    dplyr_1.0.10         SoupX_1.5.2         
+[19] SeuratObject_4.0.4   Seurat_4.1.0
