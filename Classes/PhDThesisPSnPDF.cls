@@ -341,6 +341,8 @@ supported!}
   \nolinenumbers
 }
 \renewcommand{\mainmatter}{%
+%\newpage\null\thispagestyle{empty}\newpage
+
   \cleardoublepage
   \@mainmattertrue
   \pagenumbering{arabic}
@@ -998,7 +1000,7 @@ wish to left align your text}
 {
 \cleardoublepage
 \setsinglecolumn
-\vspace*{0.2\textheight}
+%\vspace*{0.2\textheight}
 \thispagestyle{empty}
 \centering
 }
@@ -1140,6 +1142,27 @@ wish to left align your text}
 }
 
 
+\newenvironment{zusammen} {
+\ifPHD@abstract
+% Separate abstract as per Student Registry guidelines
+  \thispagestyle{empty}
+  \setsinglecolumn
+  \begin{center}
+    { \Large {\bfseries {\@title}} \par}
+    {{\large \vspace*{1em} \@author} \par}
+  \end{center}
+\else
+% Normal abstract in the thesis
+  \cleardoublepage
+  \setsinglecolumn
+  \textcolor{CadetBlue}{\LARGE \textbf{\textsc{Zusammenfassung}}}
+  \vspace{5mm}
+  \thispagestyle{empty}
+\fi
+}
+
+
+
 % ******************** To compute empty space in title page *******************
 % Boxes below are used to space different contents on the title page
 % Based on https://github.com/cambridge/thesis
@@ -1151,7 +1174,7 @@ wish to left align your text}
 \newsavebox{\PHD@Title}
 \begin{lrbox}{\PHD@Title}
   \begin{minipage}[c]{0.98\textwidth}
-    \centering \Huge \bfseries{\@title}
+    \centering \LARGE \bfseries{\@title}
     \ifthenelse{\equal{\@subtitle}{}}{
       % subtitle is not defined
     }{
@@ -1277,4 +1300,5 @@ wish to left align your text}
 			- \totalheightof{\usebox{\PHD@collegedate}}
 }
 }
+
 

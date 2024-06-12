@@ -10,3 +10,15 @@ other attached packages:
 [13] gridExtra_2.3        cowplot_1.1.1        ggplot2_3.4.0       
 [16] data.table_1.14.6    dplyr_1.0.10         SoupX_1.5.2         
 [19] SeuratObject_4.0.4   Seurat_4.1.0
+
+Python 3.6.12 |Anaconda, Inc.| (default, Sep  8 2020, 23:10:56) [GCC 7.3.0]
+Linux-3.10.0-1160.76.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core
+
+-----
+anndata_0.7.5             nbconvert_5.6.1    seaborn_0.11.1   
+cytoolz_0.11.0            numpy_1.19.2       session_info_1.0.0
+jupyter core_4.6.3        pandas_1.1.5
+jupyter-notebook_6.1.1    pyscenic_0.11.2
+jupyter lab_3.2.9         scanpy_1.7.2
+matplotlib_3.3.4          scrublet_0.2.1
+-----

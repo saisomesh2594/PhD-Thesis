@@ -70,10 +70,11 @@
 % ***** Custom Packages
 \usepackage{float}
 \usepackage[leftcaption]{sidecap}
+\usepackage{pdfpages}
 
 % \usepackage{lineno}
 % \linenumbers
-
+% \usepackage{calligra}
 
 % define header 
 % \usepackage{fancyhdr}
@@ -112,6 +113,12 @@
 \fancyhead[LE,RO]{\thepage} % Page numbers on the left on even pages, right on odd pages
 \fancyhead[RE,LO]{} % Clear section titles from headers
 
+% \fancypagestyle{mainmatterstyle}{
+%   \fancyhf{} % clear all header and footer fields
+%   \renewcommand{\headrulewidth}{1.2pt} % maintain the header rule
+%   \fancyhead[LE,RO]{\thepage} % Page numbers on the left on even pages, right on odd pages
+%   \fancyfoot[C]{\hyperlink{toc}{Back to Table of Contents}}
+% }
 
 
 % For recoloring the section header
@@ -134,6 +141,23 @@
 %\titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
 
 % % Keep the subsubsection title but remove its numbering
+\makeatletter
+\renewcommand{\thesubsubsection}{\unskip}
+\makeatother
+
+% Redefine the subsubsection format to align with the paragraph
+% \titleformat{\subsubsection}[runin] % makes the title run-in
+%   {\normalfont\normalsize\bfseries} % bold and normal size
+%   {} % no label
+%   {0pt} % no space between label and title
+%   {} % before code
+%   [:] % punctuation after title
+\titlespacing{\subsubsection}
+  {-12pt} % left margin
+  %{1.5ex plus 0.5ex minus .2ex} % vertical space before
+  {15pt}
+  {1em} % space after
+
 % \titleformat{\subsubsection}
 %   {\normalfont\normalsize\bfseries}{\thesubsubsection}{}{}
 % \titlespacing*{\subsubsection}
@@ -164,6 +188,10 @@
     linkcolor=black,
     filecolor=blue,      
     urlcolor=blue,
+}
+
+\newcommand{\boldlink}[1]{%
+  \textbf{\href{#1}{[here]}}%
 }
 
 % % Setup for handling chapter and appendix figures separately
@@ -205,10 +233,10 @@
 % \renewcommand{\autoref}[1]{[\oldautoref{#1}]}
 
 \renewcommand{\chapterautorefname}{Chapter}
-\renewcommand{\sectionautorefname}{Sec.}
-\renewcommand{\subsectionautorefname}{Sec.}
-\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
 \renewcommand{\tableautorefname}{Table}
+\renewcommand{\figureautorefname}{Fig.}
 
 
 % \usepackage{booktabs}% http://ctan.org/pkg/booktabs
@@ -391,7 +419,6 @@
 
 \DeclareFieldFormat[article, inbook, incollection, inproceedings, misc, thesis, unpublished]{title}{#1}
 
-
 \DeclareFieldFormat{labelnumberwidth}{#1\adddot}
 
 \defbibenvironment{bibliography}
@@ -430,7 +457,7 @@
   \printfield{doi}%
   \usebibmacro{finentry}}
 
-% Customizing the bibliography output for miscellaneous
+%Customizing the bibliography output for miscellaneous
 % \DeclareBibliographyDriver{misc}{%
 %   \usebibmacro{bibindex}%
 %   \usebibmacro{begentry}%
@@ -439,12 +466,92 @@
 %   \printfield{url}%
 %   \usebibmacro{finentry}}
 
+\DeclareBibliographyDriver{misc}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addspace}%
+  \printfield{title}%
+  \newunit\newblock
+  \printfield{url}%
+  \usebibmacro{finentry}}
+
+  % Customizing the bibliography output for book entries
+\DeclareBibliographyDriver{book}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addspace}%
+  \printfield{title}%
+  \newunit\newblock
+  \printfield{edition}%
+  \setunit{\addspace}%
+  \printfield{publisher}%
+  \setunit{\addspace}%
+  \printfield{isbn}%
+  \usebibmacro{finentry}}
+
+% \DeclareBibliographyDriver{*}{
+% \ifentrytype{article}
+%     {\usebibmacro{bibindex}%
+%      \usebibmacro{begentry}%
+%      \printnames{author}%
+%      \setunit{\addspace}%
+%      \printfield{title}%
+%      \newunit\newblock
+%      \printfield{journaltitle}%
+%      \setunit{\addspace}%
+%      \printfield{volume}%
+%      \setunit{\addcomma\space}%
+%      \printfield{pages}%
+%      \setunit{\addspace}%
+%      \printfield{issn}%
+%      \setunit{\addspace}%
+%      \printtext[parens]{\usebibmacro{date}}%
+%      \setunit{\addspace}%
+%      \printfield{doi}%
+%      \usebibmacro{finentry}}
+%     {\usebibmacro{bibindex}%
+%      \usebibmacro{begentry}%
+%      \printnames{author}%
+%      \setunit{\addspace}%
+%      \printfield{title}%
+%      \newunit\newblock
+%      \printfield{url}%
+%      \usebibmacro{finentry}}
+% }
+
+
+
 \fi
 
 % Formatting DOI
 \DeclareFieldFormat{doi}{%
-  \mkbibacro{DOI}\addcolon\space \url{#1}%
+ \mkbibacro{DOI}\addcolon\space \url{#1}%
 }
+
+% Formatting URL
+\DeclareFieldFormat{url}{%
+  \mkbibacro{URL}\addcolon\space \footnotesize \url{#1}%
+}
+
+\DeclareFieldFormat{isbn}{%
+  \mkbibacro{ISBN}\addcolon\space \isbn{#1}%
+}
+
+% Optional: To ensure the field formatting is applied, we may need to adjust bibmacros
+% \renewbibmacro*{doi+eprint+url}{%
+%   \iftoggle{bbx:doi}
+%     {\printfield{doi}}
+%     {}%
+%   \newunit\newblock
+%   \iftoggle{bbx:eprint}
+%     {\usebibmacro{eprint}}
+%     {}%
+%   \newunit\newblock
+%   \iftoggle{bbx:url}
+%     {\printfield{url}}
+%     {}}
 
 \AtBeginBibliography{\footnotesize}
 
@@ -462,9 +569,9 @@
 \setlength\cftaftertoctitleskip{0pt}
 \setlength\cftafterloftitleskip{0pt}
 \setlength\cftafterlottitleskip{0pt}
-\renewcommand\cfttoctitlefont{\LARGE\bfseries\scshape\color{black}}
-\renewcommand\cftloftitlefont{\LARGE\bfseries\scshape\color{black}}
-\renewcommand\cftlottitlefont{\LARGE\bfseries\scshape\color{black}}
+\renewcommand\cfttoctitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
+\renewcommand\cftloftitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
+\renewcommand\cftlottitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
 
 %\renewcommand{\glossarysection}[2][\theglstoctitle]{%
 %  \def\theglstoctitle{#2}%
@@ -489,7 +596,7 @@
 
 % ********************** TOC depth and numbering depth *************************
 
-\setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{2}
 
 % \usepackage{crop}
@@ -500,13 +607,75 @@
 %\usepackage{nomencl}
 %\renewcommand{\nomname}{Symbols}
 %\makenomenclature
-
-\usepackage[acronym, nopostdot, nonumberlist, style=super]{glossaries}
-\setlength{\glsdescwidth}{5in}
-
-\makeglossaries
 %\glsdisablehyper
 
+
+% ******************************* Glossaries 
+% \usepackage[toc, acronym, nopostdot, nonumberlist, style=super]{glossaries}
+% \setlength{\glsdescwidth}{5in}
+% \makeglossaries
+
+\usepackage[toc, acronym, nopostdot, nonumberlist, style=super]{glossaries-extra}
+
+% Initialize glossaries
+\makeglossaries
+
+% Set abbreviation style
+\setabbreviationstyle[acronym]{short-long}
+
+% Enable entry counting for glossary terms
+\GlsXtrEnableEntryCounting
+ {acronym}% list of categories to use entry counting
+ {10}% trigger value (only add to glossary if count > 3)
+
+% Customize glossary formats
+% \renewcommand*{\cglsformat}[2]{%
+%   \ifglshaslong{#1}%
+%   {\glsentrylong{#1}#2 (\glsentryshort{#1})}% abbreviation
+%   {\glsentryfirst{#1}#2}% regular term
+% }
+
+% \renewcommand*{\cGlsformat}[2]{%
+%   \ifglshaslong{#1}%
+%   {\Glsentrylong{#1}#2 (\glsentryshort{#1})}% abbreviation
+%   {\Glsentryfirst{#1}#2}% regular term
+% }
+
+% \renewcommand*{\cglsplformat}[2]{%
+%   \ifglshaslong{#1}%
+%   {\glsentrylongpl{#1}#2 (\glsentryshortpl{#1})}% abbreviation
+%   {\glsentryfirstplural{#1}#2}% regular term
+% }
+
+% \renewcommand*{\cGlsplformat}[2]{%
+%   \ifglshaslong{#1}%
+%   {\Glsentrylongpl{#1}#2 (\glsentryshortpl{#1})}% abbreviation
+%   {\Glsentryfirstplural{#1}#2}% regular term
+% }
+
+\renewcommand*{\cglsformat}[2]{%
+  \ifglsused{#1}%
+    {\glsentryshort{#1}#2}% if already used: short form
+    {\glsentrylong{#1}#2 (\glsentryshort{#1})}% if first use: long form (short form)
+}
+
+\renewcommand*{\cGlsformat}[2]{%
+  \ifglsused{#1}%
+    {\Glsentryshort{#1}#2}% if already used: short form
+    {\Glsentrylong{#1}#2 (\Glsentryshort{#1})}% if first use: long form (short form)
+}
+
+\renewcommand*{\cglsplformat}[2]{%
+  \ifglsused{#1}%
+    {\glsentryshortpl{#1}#2}% if already used: short form
+    {\glsentrylongpl{#1}#2 (\glsentryshortpl{#1})}% if first use: long form (short form)
+}
+
+\renewcommand*{\cGlsplformat}[2]{%
+  \ifglsused{#1}%
+    {\Glsentryshortpl{#1}#2}% if already used: short form
+    {\Glsentrylongpl{#1}#2 (\Glsentryshortpl{#1})}% if first use: long form (short form)
+}
 
 % ********************************* Appendix 
 
@@ -693,3 +862,4 @@ innerbottommargin=5pt]{cBox}
 
 \usepackage{comment}
 \usepackage{verbatim}  % for \verbatiminput
+%\usepackage{floatrow}

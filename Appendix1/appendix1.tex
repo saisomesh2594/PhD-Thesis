@@ -1,100 +1,193 @@
 %!TEX root = ../thesis.tex
 % ******************************* Thesis Appendix A ****************************
-\chapter{Supplementary Tables} 
+\chapter{Supplementary Tables}
+\label{chp:app_tables}
+
 \clearpage
 
-\newpage\null\thispagestyle{empty}\newpage
+% \newpage\null\thispagestyle{empty}\newpage
 
-\begin{comment}
+%\begin{comment}
     
-\section{Additional results Chapter 2}
+\section[\autoref{chp:diet_aging}]{Supplementary tables for \autoref{chp:diet_aging}}
 
+\vspace{-30pt}
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{0.9} % More space between rows
   \centering
-   \caption[\glslink{imc}{IMC} panel]{\gls{imc} panel}
+   \caption[Panel of markers used for the generation of \glsentryshort{imc} data]{Panel of markers used for the generation of \gls{imc} data.}
   \label{tab:app_imc_panel}
-  \begin{tabularx}{\textwidth}{x l C}
+  \begin{tabularx}{\textwidth}{xCC}
     \toprule
     \rowcolor{headerblue}
-    \textbf{Isotopes} & \hspace{2em}\textbf{Marker (\textit{Gene})} & 
-    \RaggedRight{\hspace{4em}\textbf{Cell Type}} \\
+    % \textbf{Isotopes} & \hspace{2em}\textbf{Marker (\textit{Gene})} & 
+    % \RaggedRight{\hspace{4em}\textbf{Cell Type / Cell Function}} \\
+        \textbf{Isotopes} & \textbf{Marker (\textit{Gene})} & 
+    \RaggedRight{\textbf{Cell Type / Cell Function}} \\
     \midrule
-    141Pr & \hspace{2em}INS (\textit{Ins1, Ins2}) & \RaggedRight{\hspace{4em}$\beta$-cells} \\
-    \midrule
-    %\rowcolor{rowgray}
-    142Nd & \hspace{2em}B220 & \RaggedRight{\hspace{4em}B-cells} \\
-    \midrule
-    143Nd & \hspace{2em}CD3 & \RaggedRight{\hspace{4em}T-cells} \\
+    141Pr & INS (\textit{Ins1, Ins2}) & \RaggedRight{$\beta$-cells} \\
     \midrule
     %\rowcolor{rowgray}
-    144Nd & \hspace{2em}CD138 (\textit{Sdc1}) & \RaggedRight{\hspace{4em}Plasma cells} \\
+    142Nd & B220 (\textit{Ptprc}) & \RaggedRight{B-cells / \gls{pdc}} \\
+    \midrule
+    143Nd & CD3 (\textit{Cd3e}) & \RaggedRight{T-cells} \\
+    \midrule
+    %\rowcolor{rowgray}
+    144Nd & CD138 (\textit{Sdc1}) & \RaggedRight{Plasma cells} \\
     \midrule
     %\rowcolor{selectedrow}
-    145Nd & \hspace{2em}CD8 & \RaggedRight{\hspace{4em}CD8\textsuperscript{+} T-cells} \\
+    145Nd & CD8 (\textit{Cd8a}) & \RaggedRight{CD8\textsuperscript{+} T-cells} \\
     \midrule
-    146Nd & \hspace{2em}CD31 (\textit{Pecam1}) & \RaggedRight{\hspace{4em}Endothelial cells} \\
+    146Nd & CD31 (\textit{Pecam1}) & \RaggedRight{Endothelial cells} \\
     \midrule
-    147Sm & \hspace{2em}CD16 (\textit{Fcgr3}) & \RaggedRight{\hspace{4em}Monocytes} \\
+    147Sm & CD16 (\textit{Fcgr3}) & \RaggedRight{Monocytes / \gls{nk} cells} \\
     \midrule
-    149Sm & \hspace{2em}CD19 (\textit{Cd19}) & \RaggedRight{\hspace{4em}B-cells} \\
+    149Sm & CD19 (\textit{Cd19}) & \RaggedRight{B-cells} \\
     \midrule
-    150Nd & \hspace{2em}CD11b &  \\
+    150Nd & CD11b (\textit{Itgam}) & \RaggedRight{Myeloid cells}  \\
     \midrule
-    151Eu & \hspace{2em}CD44 (\textit{Cd44}) & \RaggedRight{\hspace{4em}Activation marker} \\
+    151Eu & CD44 (\textit{Cd44}) & \RaggedRight{Adhesion marker} \\
     \midrule
-    153Eu & \hspace{2em}CD127 (\textit{Il7r}) & \RaggedRight{\hspace{4em}Memory marker}  \\
+    153Eu & CD127 (\textit{Il7r}) & \RaggedRight{Memory marker}  \\
     \midrule
-    154Sm & \hspace{2em}CD69 (\textit{Cd69}) & \RaggedRight{\hspace{4em}Activation marker}  \\
+    154Sm & CD69 (\textit{Cd69}) & \RaggedRight{Activation marker}  \\
     \midrule
-    158Gd & \hspace{2em}CRTH2 (\textit{Ptgdr2}) & \RaggedRight{\hspace{4em}\acrfullpl{ilc}} \\
+    158Gd & CRTH2 (\textit{Ptgdr2}) & \RaggedRight{} \\
     \midrule
   %\rowcolor{rowgray}
-    159Tb & \hspace{2em}Eomes & \RaggedRight{\hspace{4em}CD4\textsuperscript{+} T-cells with cytotoxic activity} \\
+    159Tb & EOMES (\textit{Eomes}) & \RaggedRight{T-cells with cytotoxic activity / \gls{tf}} \\
     \midrule
     %\rowcolor{selectedrow}
-    160Gd & \hspace{2em}Ly6G (\textit{Ly6g}) & \RaggedRight{\hspace{4em}Granulocytes} \\
+    160Gd & Ly6G (\textit{Ly6g}) & \RaggedRight{Granulocytes} \\
     \midrule
-    161Dy & \hspace{2em}CD4 (\textit{Cd4}) & \RaggedRight{\hspace{4em}CD4\textsuperscript{+} T-cells} \\
+    161Dy & CD4 (\textit{Cd4}) & \RaggedRight{CD4\textsuperscript{+} T-cells} \\
     \midrule
-    162Dy & \hspace{2em}F4/80 (\textit{Adgre1}) & \RaggedRight{\hspace{4em}\multirow{2}{*}{Macrophages}} \\
-    \cline{1-2}
-    165Ho & \hspace{2em}\glslink{mhc2}{MHC-II} (\textit{H2-Ab1}) & \\
+    162Dy & F4/80 (\textit{Adgre1}) & \RaggedRight{Macrophages} \\
     \midrule
-    166Er & \hspace{2em}NKX6-1 (\textit{Nkx6-1}) & \RaggedRight{\hspace{4em}$\beta$-cells} \\
+    165Ho & \glsentryshort{mhc2} (\textit{H2-Ab1}) & \RaggedRight{Antigen presentation} \\
     \midrule
-    168Er & \hspace{2em}CD45 (\textit{Ptprc}) & \RaggedRight{\hspace{4em}Immune cells} \\
+    166Er & NKX6-1 (\textit{Nkx6-1}) & \RaggedRight{$\beta$-cells} \\
     \midrule
-    169Tm & \hspace{2em}FOXP3 (\textit{Foxp3}) & \RaggedRight{\hspace{4em}T-regulatory cells (\gls{treg})}  \\
+    168Er & CD45 (\textit{Ptprc}) & \RaggedRight{Leukocytes} \\
     \midrule
-    170Er & \hspace{2em}KI67 (\textit{Mki67}) & \RaggedRight{\hspace{4em}Proliferation} \\
+    169Tm & FOXP3 (\textit{Foxp3}) & \RaggedRight{\gls{treg}}  \\
     \midrule
-    171Yb & \hspace{2em}CD11c (\textit{Itgax}) & \RaggedRight{\hspace{4em}Dendritic cells} \\
+    170Er & KI67 (\textit{Mki67}) & \RaggedRight{Proliferation marker} \\
     \midrule
-    172Yb & \hspace{2em}CD56 (\textit{Ncam1}) & \RaggedRight{\hspace{4em}\acrfull{nk} cells} \\
+    171Yb & CD11c (\textit{Itgax}) & \RaggedRight{Dendritic cells / Adhesion marker} \\
     \midrule
-    174Yb & \hspace{2em}\glslink{glp1}{GLP-1}R (\textit{Glp1r}) & \RaggedRight{\hspace{4em}$\beta$-cells} \\
+    172Yb & CD56 (\textit{Ncam1}) & \RaggedRight{\gls{nk} cells} \\
     \midrule
-    176Yb & \hspace{2em}Histone H3 & \RaggedRight{\hspace{4em}\multirow{3}{*}{\makecell{Nuclei/Cells}}} \\
+    174Yb & \gls{glp1}R (\textit{Glp1r}) & \RaggedRight{$\beta$-cells} \\
+    \midrule
+    176Yb & Histone H3 & \RaggedRight{\multirow{3}{*}{\makecell{Nuclei/Cells}}} \\
     \cline{1-2}
     191Ir & \hspace{2em}\multirow{2}{*}{DNA Intercalator} & \\
     \cline{1-1}
     193Ir &  & \\
     \bottomrule
   \end{tabularx}
+  \vspace{0.1cm}
+  \RaggedRight{\footnotesize \\ 
+  \glsentryshort{pdc}, \glsentrylong{pdc}; \glsentryshort{nk}, \glsentrylong{nk}; \glsentryshort{treg}, \glsentrylong{treg}; \glsentryshort{tf}, \glsentrylong{tf}.
 \end{table}
 
+
+% \vspace{-30pt}
+% \begin{table}[ht!]
+%    % More space between rows
+%   \centering
+%    \caption[Panel of markers used for the generation of \glsentryshort{imc} data]{Panel of markers used for the generation of \gls{imc} data.}
+%   \label{tab:app_imc_panel}
+%   \renewcommand{\arraystretch}{0.1}
+%   \begin{tabularx}{\textwidth}{W{2.5cm} C C}
+%     \toprule
+%     \rowcolor{headerblue}
+%     % \textbf{Isotopes} & \hspace{2em}\textbf{Marker (\textit{Gene})} & \RaggedRight{\hspace{4em}\textbf{Cell Type / Cell Function}} \
+
+%     \thead{Isotopes} & \thead{Marker (\textit{Gene})} & \thead{Cell type / Cell function} \\
+    
+%     \midrule
+%     \makecell{141Pr} & \makecell{INS (\textit{Ins1, Ins2})} & \makecell{$\beta$-cells} \\
+%     \midrule
+%     %\rowcolor{rowgray}
+%     \makecell{142Nd} & \makecell{B220} & \makecell{B-cells / \gls{pdc}} \\
+%     \midrule
+%     \makecell{143Nd} & \makecell{CD3} & \makecell{T-cells} \\
+%     \midrule
+%     %\rowcolor{rowgray}
+%    \makecell{ 144Nd} & \makecell{CD138 (\textit{Sdc1})} & \makecell{Plasma cells} \\
+%     \midrule
+%     %\rowcolor{selectedrow}
+%     \makecell{145Nd} & \makecell{CD8} & \makecell{CD8\textsuperscript{+} T-cells} \\
+%     \midrule
+%     \makecell{146Nd} & \makecell{CD31 (\textit{Pecam1})} & \makecell{Endothelial cells} \\
+%     \midrule
+%     \makecell{147Sm} & \makecell{CD16 (\textit{Fcgr3})} & \makecell{Monocytes / \gls{nk} cells} \\
+%     \midrule
+%     \makecell{149Sm} & \makecell{CD19 (\textit{Cd19})} & \makecell{B-cells} \\
+%     \midrule
+%     \makecell{150Nd} & \makecell{CD11b} & \makecell{Myeloid cells}  \\
+%     \midrule
+%     \makecell{151Eu} & \makecell{CD44 (\textit{Cd44})} & \makecell{Adhesion marker} \\
+%     \midrule
+%     \makecell{153Eu} & \makecell{CD127 (\textit{Il7r})} & \makecell{Memory marker}  \\
+%     \midrule
+%     \makecell{154Sm} & \makecell{CD69 (\textit{Cd69})} & \makecell{Activation marker}  \\
+%     \midrule
+%     \makecell{158Gd} & \makecell{CRTH2 (\textit{Ptgdr2})} & \makecell{} \\
+%     \midrule
+%   %\rowcolor{rowgray}
+%     \makecell{159Tb} & \makecell{EOMES (\textit{Eomes})} & \makecell{T-cells with cytotoxic activity / \gls{tf}} \\
+%     \midrule
+%     %\rowcolor{selectedrow}
+%     \makecell{160Gd} & \makecell{Ly6G (\textit{Ly6g})} & \makecell{Granulocytes} \\
+%     \midrule
+%     \makecell{161Dy} & \makecell{CD4 (\textit{Cd4})} & \makecell{CD4\textsuperscript{+} T-cells} \\
+%     \midrule
+%     \makecell{162Dy} & \makecell{F4/80 (\textit{Adgre1})} & \makecell{Macrophages} \\
+%     \midrule
+%     \makecell{165Ho} & \makecell{\glsentryshort{mhc2} (\textit{H2-Ab1})} &
+%     \makecell{Antigen presentation} \\
+%     \midrule
+%     \makecell{166Er} & \makecell{NKX6-1 (\textit{Nkx6-1})} & \makecell{$\beta$-cells} \\
+%     \midrule
+%     \makecell{168Er} & \makecell{CD45 (\textit{Ptprc})} & \makecell{Leukocytes} \\
+%     \midrule
+%     \makecell{169Tm} & \makecell{FOXP3 (\textit{Foxp3})} & \makecell{\gls{treg}}  \\
+%     \midrule
+%     \makecell{170Er} & \makecell{KI67 (\textit{Mki67})} & \makecell{Proliferation marker} \\
+%     \midrule
+%     \makecell{171Yb} & \makecell{CD11c (\textit{Itgax})} & \makecell{Dendritic cells / Adhesion marker} \\
+%     \midrule
+%     \makecell{172Yb} & \makecell{CD56 (\textit{Ncam1})} & \makecell{\gls{nk} cells} \\
+%     \midrule
+%     \makecell{174Yb} & \makecell{\gls{glp1}R (\textit{Glp1r})} & \makecell{$\beta$-cells} \\
+%     \midrule
+%     \makecell{176Yb} & \makecell{Histone H3} & \makecell{\multirow{3}{*}{\makecell{Nuclei/Cells}}} \\
+%     \cline{1-2}
+%     \makecell{191Ir} & \makecell{\multirow{2}{*}{DNA Intercalator}} & \\
+%     \cline{1-1}
+%     \makecell{193Ir} &  & \\
+%     \bottomrule
+%   \end{tabularx}
+%   \vspace{0.1cm}
+%   \RaggedRight{\footnotesize \\ 
+%   \glsentryshort{pdc}, \glsentrylong{pdc}; \glsentryshort{nk}, \glsentrylong{nk}; \glsentryshort{treg}, \glsentrylong{treg}; \glsentryshort{tf}, \glsentrylong{tf}.}
+% \end{table}
+
 \clearpage
+
 
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{1.2} % More space between rows
   \centering
- \caption[Summary of the generated \glslink{scr}{scRNA-seq} data]{Summary of the generated \gls{scr} data}
+ \caption[\glsentryshort{qc} and preprocessing summary of the \glsentryshort{scr} data]{\gls{qc} and preprocessomg summary of the \gls{scr} data.}
      \label{tab:app_scrna_meta}
   \begin{tabularx}{\textwidth}{x C C C C C C}
     \toprule
     \rowcolor{headerblue}
-    \textbf{Cohort\textsuperscript{*}} & \textbf{Age of mice} & \textbf{Feeding-Time} & \textbf{Diet} & \textbf{Estimated number of cells$\dagger$} & \textbf{Median genes per cell} & \textbf{Median \gls{umi} per cell} \\
+    \textbf{Cohort\textsuperscript{*}} & \textbf{Age of mice} & \textbf{Feeding-Time} & \textbf{Diet} & \textbf{Estimated number of cells\textsuperscript{**}} & \textbf{Median genes per cell} & \textbf{Median \gls{umi} per cell} \\
     
     % \makecell{\\\\Cohort\textsuperscript{*}} & \makecell{Age\\of mice \\ (in weeks)} & \makecell{Feeding\\Time \\ (in weeks)} & \makecell{\\\\Diet} & \makecell{\\\\\\Mean\\reads\\per cell} & \makecell{\\\\\\Median\\genes\\per cell} & \makecell{\\\\\\Median\\\gls{umi}\\per cell} \\
     
@@ -103,7 +196,7 @@
      \cline{1-1} \cline{5-7}
      W1-Chow-2 &  &  &  & 18291 & 1818 & 6826 \\
      \cline{1-1} \cline{5-7}
-     \makecell{W1-Chow-3\textsuperscript{**}} &  &  &  & 8419 & 3297 & 13461 \\
+     \makecell{W1-Chow-3$\dagger$} &  &  &  & 8419 & 3297 & 13461 \\
      \cline{1-1} \cline{4-4} \cline{5-7}
      W1-WD-1 &  &  & \multirow{2}{*}{\makecell{\gls{wd}}}  & 7881 & 3125 & 14433 \\
      \cline{1-1} \cline{5-7}
@@ -113,7 +206,7 @@
      \cline{1-1} \cline{5-7}
      W12-Chow-2 &  &  &  & 11641 & 3308 & 14677 \\
      \cline{1-1} \cline{5-7}
-     \makecell{W12-Chow-3\textsuperscript{**}} &  &  &  & 6832 & 3676 & 15980 \\
+     \makecell{W12-Chow-3$\dagger$} &  &  &  & 6832 & 3676 & 15980 \\
      \cline{1-1} \cline{4-4} \cline{5-7}
      W12-WD-1 &  &  & \multirow{2}{*}{\makecell{\gls{wd}}}  & 7527 & 1790 & 5608 \\
      \cline{1-1} \cline{5-7}
@@ -132,17 +225,18 @@
   $\dagger$\hspace{0.6em}No CD45 enrichment was performed}
 \end{table}
 
+
 \clearpage
 
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{1.2} % More space between rows
   \centering
- \caption[Count statistics of macrophages across metabolic stress and aging]{Count statistics of macrophages across metabolic stress and aging}
+ \caption[Count statistics of \glsentryshort{imc} immune cell sub-populations]{Count statistics of \gls{imc} immune cell sub-populations across metabolic stress and aging.}
      \label{tab:app_imc_macrophages}
-  \begin{tabularx}{\textwidth}{xxCCCC}
+  \begin{tabularx}{\textwidth}{CxCCCC}
     \toprule
     \rowcolor{headerblue}
-    \textbf{Macrophage} & \textbf{Condition} & \textit{\textbf{N \glspl{roi}}} & \textit{\textbf{N \glspl{tma}}} & \textit{\textbf{N cells}} & \textbf{\% of CD45\textsuperscript{+} CD19\textsuperscript{-}} \\
+    \textbf{Immune sub-populations} & \textbf{Condition} & \textit{\textbf{N \glspl{roi}}} & \textit{\textbf{N \glspl{tma}}} & \textit{\textbf{N cells}} & \textbf{\% of CD45\textsuperscript{+} CD19\textsuperscript{-}} \\
     \midrule
     \multirow{7}{*}{\makecell{F4/80\textsuperscript{\textit{high}}}} & W1-Chow & 3 & 3 & 17 & 0.15 \\
     \cline{2-6}
@@ -150,7 +244,7 @@
     \cline{2-6}
     & W24-Chow & 3 & 3 & 28 & 0.25 \\
     \cline{2-6}
-    & W105-Chow & 6 & 3 & 11 & 0.1 \\
+    & Aging-Chow & 6 & 3 & 11 & 0.1 \\
     \cline{2-6}
     & W1-WD & 2 & 2 & 14 & 0.12 \\
     \cline{2-6}
@@ -164,7 +258,7 @@
     \cline{2-6}
     & W24-Chow & 5 & 5 & 42 & 0.37 \\
     \cline{2-6}
-    & W105-Chow & 9 & 3 & 48 & 0.42 \\
+    & Aging-Chow & 9 & 3 & 48 & 0.42 \\
     \cline{2-6}
     & W1-WD & 1 & 1 & 9 & 0.08 \\
     \cline{2-6}
@@ -178,21 +272,87 @@
     \cline{2-6}
     & W24-Chow & 9 & 9 & 161 & 1.43 \\
     \cline{2-6}
-    & W105-Chow & 8 & 3 & 88 & 0.78 \\
+    & Aging-Chow & 8 & 3 & 88 & 0.78 \\
     \cline{2-6}
     & W1-WD & 10 & 10 & 59 & 0.52 \\
     \cline{2-6}
     & W12-WD & 12 & 11 & 134 & 1.19 \\
     \cline{2-6}
     & W24-WD & 12 & 12 & 559 & 4.95 \\
+    \midrule
+    \multirow{7}{*}{\RaggedRight{\makecell{CD8\textsuperscript{+}\\activated\\effector-like\\T-cells }}} & W1-Chow & 11 & 11 & 102 & 0.90\\
+    \cline{2-6}
+    & W12-Chow & 9 & 9 & 40  & 0.35\\
+    \cline{2-6}
+    & W24-Chow & 10 & 10 & 185 & 1.64\\
+    \cline{2-6}
+    & Aging-Chow & 9 & 3 & 116 & 1.03\\
+    \cline{2-6}
+    & W1-WD & 10 & 10 & 43 & 0.38\\
+    \cline{2-6}
+    & W12-WD & 12 & 11 & 99 & 0.88\\
+    \cline{2-6}
+    & W24-WD & 13 & 12 & 414 & 3.66\\
+    \bottomrule
+
+
+    
+    
+  \end{tabularx}
+  \vspace{0.1cm}
+   \RaggedRight{\footnotesize \\
+   \textit{This data was originally generated by Dr. Matthias Barone and reused here with permission.}\\ 
+   \vspace{5pt}
+   \textbf{\textit{N \glspl{roi}}}, Number of \glspl{roi} that contain the immune sub-populations\\ 
+   \textbf{\textit{N \glspl{tma}}}, Number of \glspl{tma} that contain the immune sub-populations\\
+   \textbf{\textit{N cells}}, Number of cells per condition}
+\end{table}
+
+\clearpage
+
+\begin{table}[H]
+  \renewcommand{\arraystretch}{1.2} % More space between rows
+  \centering
+ \caption[]{Total number of cells in the macrophage sub-populations and CD8\textsuperscript{+} cytotoxic T-cell across the five conditions in \gls{scr} data.}
+     \label{tab:app_scrna_cellnumbers}
+  \begin{tabularx}{\textwidth}{x C C C C C C}
+    \toprule
+    \rowcolor{headerblue}
+    & \textbf{W1-Chow} & \textbf{W1-\gls{wd}} & \textbf{W12-Chow} & \textbf{W12-\gls{wd}} & \textbf{Aging-Chow} & \textbf{Total} \\
+    \midrule
+    Macs-1 & 1239 & 3820 & 1122 & 2269 & 615 & 9065 \\
+    \hline                                      
+    Macs-2 & 539 & 1899 & 271 & 793 & 195 & 3697 \\
+    \hline                                        
+    Macs-3 & 108 & 885 & 104 & 590 & 77 & 1764 \\
+    \hline                                         
+    Macs-4 & 187 & 216 & 28 & 140 & 19 & 590  \\
+    \hline                                         
+    Macs-5 & 150 & 287 & 87 & 174 & 38 & 736 \\
+    \hline
+    \makecell{CD8\textsuperscript{+} naive\\T-cell} & 304 & 152 & 34 & 116 & 952 & 1558  \\
+    \hline
+    \makecell{CD8\textsuperscript{+} cytotoxic\\T-cell} & 27 & 35 & 16 & 68 & 1187 & 1333  \\
+    \hline
+    \makecell{CD8\textsuperscript{+} memory\\T-cell} & 1 & 1 & 1 & 0 & 243 & 246  \\
+    \hline
+    \makecell{\gls{ifn}-responsive\\T-cells} & 0 & 6 & 5 & 13 & 39 & 63  \\
+    \hline
+    \makecell{Proliferating\\T-cells} & 36 & 39 & 4 & 37 & 189 & 305  \\
+    
+    
+    
+    % \makecell{\\\\Cohort\textsuperscript{*}} & \makecell{Age\\of mice \\ (in weeks)} & \makecell{Feeding\\Time \\ (in weeks)} & \makecell{\\\\Diet} & \makecell{\\\\\\Mean\\reads\\per cell} & \makecell{\\\\\\Median\\genes\\per cell} & \makecell{\\\\\\Median\\\gls{umi}\\per cell} \\
+    
+    
     \bottomrule
     
   \end{tabularx}
   \vspace{0.1cm}
-   \RaggedRight{\footnotesize \\ 
-   \textbf{\textit{N \glspl{roi}}}, Number of \glspl{roi} that contain the macrophage\\ 
-   \textbf{\textit{N \glspl{tma}}}, Number of \glspl{tma} that contain the macrophage\\
-   \textbf{\textit{N cells}}, Number of cells of the macrophage per condition} 
+  \RaggedRight{\footnotesize \\ 
+  \textit{The cells across replicate cohorts were pooled together. See} \textbf{\autoref{tab:app_scrna_meta}} \textit{and} \textbf{\autoref{fig:app_scrna_qc} A,B}\\
+  \textbf{WD}, western diet
+  }
 \end{table}
 
 \clearpage
@@ -200,7 +360,7 @@
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{1.2} % More space between rows
   \centering
- \caption[Marker genes for islet macrophages from \glslink{scr}{scRNA-seq}]{Marker genes for islet macrophages depicted in \textbf{\autoref{fig:chp2_scrna_macrophages} B}}
+ \caption[Marker genes for islet macrophages from \glsentryshort{scr} data]{Marker genes for islet macrophages depicted in \textbf{\autoref{fig:chp2_scrna_macrophages} B}.}
      \label{tab:app_scrna_macrophages_markers}
   \begin{tabularx}{\textwidth}{xxCCC}
     \toprule
@@ -257,7 +417,7 @@
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{1.2} % More space between rows
   \centering
- \caption[\glslink{de}{DE} genes for Macs-2 sub-population from \glslink{scr}{scRNA-seq}]{\gls{de} genes for Macs-2 noted in \textbf{\autoref{fig:app_scrna_macrophages_macs2_dge}}}
+ \caption[\glsentryshort{de} genes in Macs-2 sub-population from \glsentryshort{scr} data]{\gls{de} genes for Macs-2 noted in \textbf{\autoref{fig:app_scrna_macrophages_macs2_dge}}.}
      \label{tab:app_scrna_macs2_dge}
   \begin{tabularx}{\textwidth}{xxCCC}
     \toprule
@@ -350,7 +510,7 @@
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{1.2} % More space between rows
   \centering
- \caption[\glslink{de}{DE} genes for Macs-3 sub-population from \glslink{scr}{scRNA-seq}]{\gls{de} genes for Macs-3 noted in \textbf{\autoref{fig:chp2_scrna_macrophages_macs3_dge}}}
+ \caption[\glsentryshort{de} genes in Macs-3 sub-population from \glsentryshort{scr} data]{\gls{de} genes for Macs-3 noted in \textbf{\autoref{fig:chp2_scrna_macrophages_macs3_dge}}.}
      \label{tab:app_scrna_macs3_dge}
   \begin{tabularx}{\textwidth}{xxCCC}
     \toprule
@@ -411,6 +571,9 @@
 
 \clearpage
 
+
+\begin{comment}
+
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{1.2} % More space between rows
   \centering
@@ -454,69 +617,80 @@
    \textbf{\textit{Adj. p-value}}, adjusted p-value based on Bonferroni correction using all genes in the dataset} 
 \end{table}
 
+
+\clearpage
+%
 \end{comment}
 
 
 %\begin{comment}
 
-\section{Additional results Chapter 3}
+\section[\autoref{chp:meta_analysis}]{Supplementary tables for \autoref{chp:meta_analysis}}
 
 \begin{table}[h]
 \renewcommand{\arraystretch}{2}
   \centering
-  \caption{Summary of the seven studies}
+  \caption[Summary of all the datasets utilized in meta-analysis]{Summary of all the datasets utilized in meta-analysis.}
   \label{tab:app_chp3_study}
 
-  \begin{tabularx}{\textwidth}{W{2.5cm} X W{1cm} W{1.7cm} W{1.5cm} W{1.3cm}}
+  % \begin{tabularx}{\textwidth}{W{2.7cm} C{0.5cm} C{1.5cm} C{1.3cm} C{1.5cm} C{2cm} C{1.9cm}}
+  \begin{tabularx}{\textwidth}{W{2.7cm} C C C C C C}
     \toprule
     \rowcolor{headerblue}
-    \textbf{Name} & \textbf{Description} & \textbf{\textit{N}} & \textbf{Age} & \textbf{Sex} & \textbf{Source} \\
+    \thead{Name of study} & \thead{\textit{N}} & \thead{Age} & \thead{Sex} & \thead{10x\textsuperscript{*}} & \thead{Used in \\Atlas} &\thead{Source} \\
     \midrule
-    \RaggedRight{Maturation/Aging} &  & 2 & 3 wks \& 2 years & Male & In-house \\
+    \makecell{Maturation/\\aging} & 2 & \makecell{3 wks \&\\2 years} & Male & v3  & Yes & \makecell{In-house} \\
     \hline
     %\rowcolor{rowblue}
-    Meal feeding &  & 2 & 12-14 wks & \RaggedRight{Male \& Female} & In-house \\
+    \makecell{Meal\\feeding} & 2 & \makecell{12-14\\wks} & \makecell{Male \&\\Female}  & v3 & Yes & \makecell{In-house} \\
     \hline
-    Diet-induced obesity &  & 4 & 10 wks \& 21 wks & Male & In-house \\
+    \makecell{Diet-induced\\obesity} & 4 & \makecell{10 wks\\\&\\21 wks} & Male  & v3 & Yes & \makecell{In-house} \\
     \hline
     %\rowcolor{rowblue}
-    Mild genetic obesity (\textit{db/db}) &  & 4 & 6 wks \& 9 wks & Male & In-house \\
+    \makecell{Mild genetic\\obesity (\textit{db/db})} & 4 & \makecell{6 wks \&\\9 wks} & Male  & v3 & Yes & \makecell{In-house} \\
     \hline
-    Severe genetic obesity (\textit{ob/ob}) &  & 2 & ??? & Male & External \textbf{\cite{chung_endocrine-exocrine_2020}} \\
+    \makecell{Severe genetic\\obesity (\textit{ob/ob})} & 2 & 12 wks & Male  & v3 & Yes & \makecell{External\\\textbf{\cite{chung_endocrine-exocrine_2020}}} \\
     \hline
     %\rowcolor{headerblue}
-    Insulin receptor blockade (S961) &  & 2 & ??? & Male & In-house \\
+    \makecell{Insulin receptor\\blockade\\(S961)} & 2 & \makecell{12-15\\wks} & Male  & v2 & Yes & \makecell{In-house} \\
     \hline
-    \RaggedRight{Partial β-cell ablation (STZ)} &  & 2 & 8 wks & Male & External \textbf{\cite{sachs_targeted_2020}} \\
+    \makecell{Partial β-cell\\ablation (\gls{stz})} & 2 & 8 wks & Male  & v3 & Yes & \makecell{External\\\textbf{\cite{sachs_targeted_2020}}} \\
+    \hline
+    \makecell{\gls{hfd} model}  & 2 & 13 wks & Male  & v3 & No & \makecell{External\\\textbf{\cite{fu_single-cell_2023}}} \\
+    \hline
+    \makecell{Unrestrained\\insulin\\secretion model} & 4 & \makecell{6 wks \&\\9 wks} & Male  & v3 & No & \makecell{In-house} \\
     \bottomrule
-   
-  \end{tabularx}
+    \end{tabularx}
+    \vspace{0.1cm}
+   \RaggedRight{\footnotesize \\ 
+   \textsuperscript{*}The 10x Chemistry version used to generate single-cell libraries   \\ 
+   \textbf{STZ}, streptozotocin; \textbf{HFD}, high-fat diet; \textbf{wks}, weeks\\
+   A more detailed description of these studies can be found in \hyperref[subsubsec:met_chp3_data]{\textbf{Methods}}} 
 \end{table}
-\textit{N}, Number of Groups
 
-\clearpage
 
-\begin{table}[h]
-\renewcommand{\arraystretch}{2}
+%\clearpage
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.2}
   \centering
-  \caption{Total number of all cells and $\beta$-cells across all groups within the seven studies}
+  \caption[Total number of non-$\beta$-cells and $\beta$-cells after \glsentryshort{qc}]{Total number of non-$\beta$-cells and $\beta$-cells after \gls{qc}.}
   \label{tab:app_chp3_cellnumbers}
 
-  \begin{tabularx}{\textwidth}{W{2.5cm}  W{2.5cm}  C{4cm}  C{4cm}}
+  % \begin{tabularx}{\textwidth}{W{2.5cm}  C{2.5cm}  C{4cm}  C{4cm}}
+  \begin{tabularx}{\textwidth}{W{2.5cm}  C  C  C}
     \toprule
     \rowcolor{headerblue}
     \thead{Study} & \thead{Samples} & \thead{\textit{N cells}\textsuperscript{*}\\(Total)} & \thead{\textit{N cells}\textsuperscript{**}\\(β-cells)$\dagger$} \\
     \midrule
-    \multirow{2}{*}{\makecell{Maturation/\\Aging}} & 3-wks old & 6361  & 968 (871)  \\
+    \multirow{2}{*}{\makecell{Maturation/\\aging}} & 3-week-old & 6361  & 968 (871)  \\
      \cline{2-4}
-     & 2 years old & 14602 & 6743 (6739) \\
+     & 2-year-old & 14602 & 6743 (6739) \\
      \midrule
-
-    \multirow{2}{}{\makecell{Meal Feeding}} & Fast & 1527  & 419 (419)  \\
+    \multirow{2}{*}{\makecell{Meal feeding}} & Fast & 1527 & 419 (419)  \\
     \cline{2-4}
     & Fed & 1229 & 331 (331) \\
     \midrule
-
     \multirow{4}{*}{\makecell{Diet-induced\\obesity}} & Chow 1wks & 10584  & 2529 (2519)  \\
     \cline{2-4}
     & Chow 12wks & 9154 & 2971 (2970) \\
@@ -543,19 +717,21 @@
     \midrule
     \multirow{2}{*}{\makecell{Partial β-cell\\ablation}} & Vehicle & 8338  & 5816 (5790)  \\
     \cline{2-4}
-    & \gls{stz} & 8791 & 1324 (1307) \\
+    & \gls{stz} & 8791 & 1324 (1307) \\    
+
+
+
     \bottomrule
    \end{tabularx}
    \vspace{0.1cm}
-   \RaggedRight{\footnotesize \\ \textsuperscript{*}After initial preprocessing and quality control\\ \textsuperscript{**}After additional quality control\\ $\dagger$ The number of non-proliferating β-cells are denoted in parentheses.\\\textbf{WD}, Western Diet; \textbf{STZ}, streptozotocin}
+   \RaggedRight{\footnotesize \\ \textsuperscript{*}After initial preprocessing and quality control\\ \textsuperscript{**}After additional quality control\\ $\dagger$ The number of non-proliferating β-cells are denoted in parentheses.\\\textbf{WD}, western Diet; \textbf{STZ}, streptozotocin}
 \end{table}
 
 
-
-\begin{table}[htbp]
+\begin{table}[H]
 \renewcommand{\arraystretch}{2}
   \centering
-  \caption{Regulon Modules}
+  \caption[List of regulons identified in \glsentryshort{grn} analysis.]{Regulon modules for non-proliferating $\beta$-cells in \textbf{\autoref{fig:chp3_scenic_betaonly}}.}
   \label{tab:app_chp3_regulons}
 
   \begin{tabularx}{\textwidth}{W{2.5cm} C}
@@ -564,135 +740,135 @@
     \textbf{Module} & \textbf{Regulons} \\
     \midrule
     %\rowcolor{mod1green}
-    Module-1 & \cellcolor[cmyk]{0.45,0,0.7,0} \RaggedRight{\textit{\textbf{Atf5(+)},
-    Bach1(+),
-    Bhlhe41(+),
-    Creb3l1(+),
-    Dbp(+),
-    Egr1(+),
-    Elk3(+),
-    Fosb(+),
-    Foxp1(+),
-    Hlf(+),
-    Hmgb1(+),
-    Hoxb3(+),
-    \textbf{Isl1(+)},
-    \textbf{Kdm2b(+)},
-    \textbf{Klf5(+)},
-    \textbf{Mafa(+)},
-    Meox1(+),
-    Mlxipl(+),
-    Mnx1(+),
-    \textbf{Neurod1(+)},
-    Nfix(+),
-    \textbf{Nkx6-1(+)},
-    Pbx1(+),
-    \textbf{Pdx1(+)},
-    Pknox1(+),
-    Pou2f1(+),
-    Six4(+),
-    Sox4(+),
-    Tcf4(+),
-    \textbf{Tcf7l2(+)},
-    Tef(+),
-    \textbf{Vdr(+)},
-    Zfhx3(+)}} \\
+    Module-1 & \cellcolor[cmyk]{0.45,0,0.7,0} \RaggedRight{Atf5,
+    Bach1,
+    Bhlhe41,
+    Creb3l1,
+    Dbp,
+    Egr1,
+    Elk3,
+    Fosb,
+    Foxp1,
+    Hlf,
+    Hmgb1,
+    Hoxb3,
+    Isl1,
+    Kdm2b,
+    Klf5,
+    Mafa,
+    Meox1,
+    Mlxipl,
+    Mnx1,
+    Neurod1,
+    Nfix,
+    Nkx6-1,
+    Pbx1,
+    Pdx1,
+    Pknox1,
+    Pou2f1,
+    Six4,
+    Sox4,
+    Tcf4,
+    Tcf7l2,
+    Tef,
+    Vdr,
+    Zfhx3} \\
     %\hline
     \midrule
-    Module-2 & \cellcolor[cmyk]{0.22,0.51,0,0} \RaggedRight{\textit{\textbf{Arx(+)},
-    Ascl1(+),
-    Barx2(+),
-    Bhlhe22(+),
-    Brca1(+),
-    Egr2(+),
-    Ehf(+),
-    \textbf{Fos(+)},
-    Foxp2(+),
-    Gata6(+),
-    Hmgb2(+),
-    \textbf{Jun(+)},
-    Jund(+),
-    Klf6(+),
-    Mafb(+),
-    Mef2c(+),
-    Nr1d1(+),
-    Onecut2(+),
-    Rorc(+),
-    Shox2(+),
-    Taf7(+),
-    Thrb(+),
-    Trps1(+)}} \\
+    Module-2 & \cellcolor[cmyk]{0.22,0.51,0,0} \RaggedRight{Arx,
+    Ascl1,
+    Barx2,
+    Bhlhe22,
+    Brca1,
+    Egr2,
+    Ehf,
+    Fos,
+    Foxp2,
+    Gata6,
+    Hmgb2,
+    Jun,
+    Jund,
+    Klf6,
+    Mafb,
+    Mef2c,
+    Nr1d1,
+    Onecut2,
+    Rorc,
+    Shox2,
+    Taf7,
+    Thrb,
+    Trps1} \\
 \midrule
-    Module-3 & \cellcolor[cmyk]{0,0.52,0.56,0.03} \RaggedRight{\textit{Arid5a(+),
-Atf3(+),
-Bcl3(+),
-Bhlhe40(+),
-Cebpb(+),
-Cebpd(+),
-Ddit3(+),
-Egr3(+),
-Egr4(+),
-Elf3(+),
-Irf1(+),
-Irf7(+),
-Irf8(+),
-Irf9(+),
-Junb(+),
-Klf4(+),
-Lhx1(+),
-Maff(+),
-Nfia(+),
-Nfil3(+),
-Nfkb2(+),
-Pbx4(+),
-Relb(+),
-Stat1(+),
-Stat2(+),
-Stat3(+),
-Tagln2(+),
-Zfp467(+)}} \\
+    Module-3 & \cellcolor[cmyk]{0,0.52,0.56,0.03} \RaggedRight{Arid5a,
+Atf3,
+Bcl3,
+Bhlhe40,
+Cebpb,
+Cebpd,
+Ddit3,
+Egr3,
+Egr4,
+Elf3,
+Irf1,
+Irf7,
+Irf8,
+Irf9,
+Junb,
+Klf4,
+Lhx1,
+Maff,
+Nfia,
+Nfil3,
+Nfkb2,
+Pbx4,
+Relb,
+Stat1,
+Stat2,
+Stat3,
+Tagln2,
+Zfp467} \\
 \midrule
-    Module-4 & \cellcolor[cmyk]{0,0.89,0.67,0.1} \RaggedRight{\textit{Bach2(+),
-Bhlha15(+),
-Crem(+),
-E2f1(+),
-Etv5(+),
-Gtf2b(+),
-Hoxb2(+),
-Mybl1(+),
-Nr1h3(+)}} \\
+    Module-4 & \cellcolor[cmyk]{0,0.89,0.67,0.1} \RaggedRight{Bach2,
+Bhlha15,
+Crem,
+E2f1,
+Etv5,
+Gtf2b,
+Hoxb2,
+Mybl1,
+Nr1h3} \\
 \midrule
-    Module-5 & \cellcolor[cmyk]{0,0.35,1,0.14} \RaggedRight{\textit{Barhl1(+),
-Bcl11a(+),
-Cdx4(+),
-Chd2(+),
-Creb5(+),
-Dab2(+),
-E2f2(+),
-E2f8(+),
-Ebf1(+),
-Epas1(+),
-Ets1(+),
-Ezh2(+),
-Foxs1(+),
-Hes1(+),
-Hmgb3(+),
-Hoxb4(+),
-Irx1(+),
-Myc(+),
-Nfe2l2(+),
-Nfib(+),
-Nkx6-2(+),
-Nkx6-3(+),
-Nr1i2(+),
-Pou3f1(+),
-Pou3f4(+),
-Pou6f2(+),
-Rnaseh2c(+),
-Sox18(+),
-Sox9(+),
-Tbx1(+),
-Tff3(+)}} \\
+    Module-5 & \cellcolor[cmyk]{0,0.35,1,0.14} \RaggedRight{Barhl1,
+Bcl11a,
+Cdx4,
+Chd2,
+Creb5,
+Dab2,
+E2f2,
+E2f8,
+Ebf1,
+Epas1,
+Ets1,
+Ezh2,
+Foxs1,
+Hes1,
+Hmgb3,
+Hoxb4,
+Irx1,
+Myc,
+Nfe2l2,
+Nfib,
+Nkx6-2,
+Nkx6-3,
+Nr1i2,
+Pou3f1,
+Pou3f4,
+Pou6f2,
+Rnaseh2c,
+Sox18,
+Sox9,
+Tbx1,
+Tff3} \\
     
     \bottomrule
    

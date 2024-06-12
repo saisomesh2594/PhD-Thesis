@@ -2,9 +2,6 @@
 %!TEX root = ../thesis.tex
 % ******************************* Thesis Appendix B ********************************
 \begin{comment}
-    
-
-
 
 
 \clearpage
@@ -46,5 +43,7 @@ For the automatic estimation, SoupX makes use of highly-expressed cluster-specif
 To infer CCIs from scRNA-seq data, CellChat makes use of \textbf{CellChatDB}, a database of literature supported LRIs, in both mouse and human. CellChatDB is specific as it contains LRIs involving multimeric receptors, cofactor molecules as well as co-stimulatory or co-inhibitory membrane bound receptors, and is grouped into several signalling pathway families. In addition, CellChatDB allows for updating of the database by adding user-defined ligand-receptor pairs. Next, to infer intercellular communications from scRNA-seq data, CellChat first identifies differential signalling genes across all cell-types in the data using the Wilcoxon rank sum test, and for these differential genes, computes the \textbf{“ensemble average expression”} in the cell-type. Following this, a communication probability value for every LRI pair is modelled based on the \textbf{Law of Mass Action} and a \textbf{Hill function}. By using the expression levels of ligands and receptors as “proxies” for their concentration and modelling interactions with expression-based Hill functions \footnote{In CellChat, the Hill function is used to incorporate the effects of positive and negative effectors into the framework, thereby providing a more nuanced and accurate model of cell-cell communication}. In addition, the frequencies of the cell-types are also accounted for in the probability calculation. Finally, significant interactions between two cell-types are identified on the basis of a random permutation test <add footnote here>   . Using centrality metrics from graph theory, CellChat identifies higher order information from a weighted-directed network, wherein the computed communication probabilities are used as weights. This allows for the identification of dominant signalling sources as well as mediators and influencers within the network. CellChat can also predict key outgoing and incoming signals for specific cell-types as well as coordinated responses amongst different cell-types by pattern recognition approaches based on non-negative matrix factorization. An important application of CellChat is the joint analyses of two or more datasets by constructing a shared manifold space using a shared nearest neighbour (SNN) similarity network. This enables the identification of conserved as well as context-specific interactions between the datasets being compared.    
 \end{comment}
 
-\chapter{Packages}
+\chapter{R packages and Python libraries for \glsentryshort{scr} Analysis}
+\label{chp:app_packages}
+
 \verbatiminput{Appendix3/sessionInfo.txt}
