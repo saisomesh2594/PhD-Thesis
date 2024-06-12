@@ -19,10 +19,11 @@
 % Add `custommargin' in the document class options to use this section
 % Set {innerside margin / outerside margin / topmargin / bottom margin}  and
 % other page dimensions
-\ifsetCustomMargin
-  \RequirePackage[left=37mm,right=30mm,top=35mm,bottom=30mm]{geometry}
-  \setFancyHdr % To apply fancy header after geometry package is loaded
-\fi
+
+% \ifsetCustomMargin
+%   \RequirePackage[left=37mm,right=30mm,top=35mm,bottom=30mm]{geometry}
+%   \setFancyHdr % To apply fancy header after geometry package is loaded
+% \fi
 
 % Add spaces between paragraphs
 %\setlength{\parskip}{0.5em}
@@ -69,10 +70,11 @@
 % ***** Custom Packages
 \usepackage{float}
 \usepackage[leftcaption]{sidecap}
+\usepackage{pdfpages}
 
 % \usepackage{lineno}
 % \linenumbers
-
+% \usepackage{calligra}
 
 % define header 
 % \usepackage{fancyhdr}
@@ -88,8 +90,9 @@
 \usepackage{fancyhdr}
 \usepackage{adjustbox}
 \usepackage{etoolbox}
-\usepackage{xcolor} % Ensure xcolor is included for color names
-\definecolor{CadetBlue}{RGB}{95,158,90} % Define the color if not predefined
+%\usepackage{xcolor} % Ensure xcolor is included for color names
+
+
 
 \pagestyle{fancy} % Ensures that fancy page style is applied
 \renewcommand{\headrulewidth}{1.2pt}
@@ -110,6 +113,12 @@
 \fancyhead[LE,RO]{\thepage} % Page numbers on the left on even pages, right on odd pages
 \fancyhead[RE,LO]{} % Clear section titles from headers
 
+% \fancypagestyle{mainmatterstyle}{
+%   \fancyhf{} % clear all header and footer fields
+%   \renewcommand{\headrulewidth}{1.2pt} % maintain the header rule
+%   \fancyhead[LE,RO]{\thepage} % Page numbers on the left on even pages, right on odd pages
+%   \fancyfoot[C]{\hyperlink{toc}{Back to Table of Contents}}
+% }
 
 
 % For recoloring the section header
@@ -122,11 +131,39 @@
 % Fancier section header
 \newcommand{\hsp}{\hspace{6pt}}
 \usepackage[explicit]{titlesec}
+
 \titleformat{\section}[display]{\Large\bfseries}{\color{black}\thesection}{6pt}{\begin{tabular}[t]{@{}>{}l}#1\end{tabular}\vspace{3pt}\hrule}
+
 %{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
 
 \titleformat{\subsection}[hang]{\large\bfseries}{\color{black}\thesubsection}{6pt}{\begin{tabular}[t]{@{\color{black}\vrule width 2pt}>{\hsp}l}#1\end{tabular}}
+
 %\titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
+
+% % Keep the subsubsection title but remove its numbering
+\makeatletter
+\renewcommand{\thesubsubsection}{\unskip}
+\makeatother
+
+% Redefine the subsubsection format to align with the paragraph
+% \titleformat{\subsubsection}[runin] % makes the title run-in
+%   {\normalfont\normalsize\bfseries} % bold and normal size
+%   {} % no label
+%   {0pt} % no space between label and title
+%   {} % before code
+%   [:] % punctuation after title
+\titlespacing{\subsubsection}
+  {-12pt} % left margin
+  %{1.5ex plus 0.5ex minus .2ex} % vertical space before
+  {15pt}
+  {1em} % space after
+
+% \titleformat{\subsubsection}
+%   {\normalfont\normalsize\bfseries}{\thesubsubsection}{}{}
+% \titlespacing*{\subsubsection}
+%   {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+
 
 
 % **** Algorithms and Pseudocode 
@@ -149,9 +186,57 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
-    filecolor=black,      
+    filecolor=blue,      
     urlcolor=blue,
 }
+
+\newcommand{\boldlink}[1]{%
+  \textbf{\href{#1}{[here]}}%
+}
+
+% % Setup for handling chapter and appendix figures separately
+% \makeatletter
+% \let\oldfigure\figure
+% \let\endoldfigure\endfigure
+% \renewenvironment{figure}{%
+%   \ifnum\value{figure}>0 % Checks if it's not the first figure in the document
+%     \setcounter{figure}{\value{figure}}%
+%   \else
+%     \setcounter{figure}{0}%
+%   \fi
+%   \oldfigure
+% }{%
+%   \endoldfigure
+% }
+% \makeatother
+
+% \newcommand{\myautorefname}{Figure} % Default name
+
+% % Update \autoref to distinguish appendix figures
+% \renewcommand{\figureautorefname}{%
+%     \ifnumgreater{\value{figure}}{\last@chapter@figure}{%
+%         \def\myautorefname{Appendix Figure}% If figure number is greater than last chapter figure
+%     }{%
+%         \def\myautorefname{Figure}% Normal Figure
+%     }%
+%     \myautorefname%
+% }
+
+
+% % Redefine autoref names to include square brackets
+% \renewcommand{\autoref}[1]{[\oldautoref{#1}]}
+
+% % Save the old \autoref as \oldautoref
+% \let\oldautoref\autoref
+
+% % Update \autoref to include brackets
+% \renewcommand{\autoref}[1]{[\oldautoref{#1}]}
+
+\renewcommand{\chapterautorefname}{Chapter}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\tableautorefname}{Table}
+\renewcommand{\figureautorefname}{Fig.}
 
 
 % \usepackage{booktabs}% http://ctan.org/pkg/booktabs
@@ -188,16 +273,21 @@
 %% for appendix tables
 \usepackage{tabularx} % For flexible table width
 \usepackage[table]{xcolor} % For cell coloring
-\usepackage{colortbl}
-%\usepackage{geometry} % For page margin settings
-%\usepackage[raggedrightboxes]{ragged2e}
-%Define the colors used in the table
+%\definecolor{headerblue}{cmyk}{0.25,0.6,0,0.1}
+\definecolor{CadetBlue}{RGB}{95,158,90} % Define the color if not predefined
 \definecolor{headerblue}{RGB}{173,216,230}
 \definecolor{rowgray}{RGB}{220,220,220}
 \definecolor{selectedrow}{RGB}{144,238,144}
 \definecolor{firstcol}{RGB}{144,238,144}
 \definecolor{rowblue}{RGB}{173,216,230}
 \definecolor{mod1green}{RGB}{104,190,102}
+\definecolor{cornflowerblue}{RGB}{114,133,165}
+\definecolor{green}{RGB}{32,157,148}
+%\usepackage{colortbl}
+%\usepackage{geometry} % For page margin settings
+%\usepackage[raggedrightboxes]{ragged2e}
+%Define the colors used in the table
+
 
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{G}{>{\columncolor{firstcol}}l}
@@ -207,11 +297,12 @@
 
 \geometry{
   a4paper, % Paper size
-  left=30mm, % Left margin
+  left=35mm, % Left margin
   right=25mm, % Right margin
   top=25mm, % Top margin
   bottom=25mm % Bottom margin
 }
+
 
 \usepackage{makecell}
 
@@ -224,6 +315,7 @@
 % *********************************** SI Units *********************************
 \usepackage{siunitx} % use this package module for SI units
 \usepackage{textcomp} % for trademark
+\sisetup{output-exponent-marker=\ensuremath{\mathrm{e}}}
 
 
 % ******************************* Line Spacing *********************************
@@ -256,14 +348,213 @@
 
 % Add `custombib' in the document class option to use this section
 \ifuseCustomBib
-  \RequirePackage[square, sort, numbers, authoryear]{natbib} % CustomBib
+%  \RequirePackage[square, sort, numbers, authoryear]{natbib} % CustomBib
 
 % If you would like to use biblatex for your reference management, as opposed to the default `natbibpackage` pass the option `custombib` in the document class. Comment out the previous line to make sure you don't load the natbib package. Uncomment the following lines and specify the location of references.bib file
 
 % \RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
 % \addbibresource{References/references.bib} %Location of references.bib only for biblatex, Do not omit the .bib extension from the filename.
+\RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric-comp, sorting=none,natbib=true,doi=true,isbn=false,url=false,maxbibnames=1]{biblatex}
+% \RequirePackage[backend=biber, style=authoryear, maxbibnames=99, giveninits=true, uniquename=init, dashed=false]{biblatex}
+\addbibresource{References/references.bib} %Location of references.bib only for biblatex, Do not omit the .bib extension from the filename.
+
+% \DeclareBibliographyDriver{article}{%
+%   \printnames{author}%
+%   \setunit{\addspace}%
+%   \printfield{title}%
+%   \finentry
+% }
+
+% % Remove "In:" for article entries
+% \renewbibmacro{in:}{}
+
+% % Omit the month and issn fields
+% \AtEveryBibitem{
+%   \clearfield{month}
+%   \clearfield{issn}
+% }
+
+% % Format the volume of journal articles in bold
+% \DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
+
+% % Format the title of journal articles in quotes
+% \DeclareFieldFormat[article]{title}{\mkbibquote{#1\isdot}}
+
+% % Custom formatting for the article entry type
+% \DeclareBibliographyDriver{article}{%
+%   \usebibmacro{bibindex}%
+%   \usebibmacro{begentry}%
+%   \printnames{author}%
+%   \setunit{\addspace}%
+%   \printfield{title}%
+%   \setunit{\addspace}%
+%   \mkbibitalic{\printfield{journaltitle}}%
+%   \setunit{\addspace}%
+%   \printfield{volume}%
+%   \setunit{\addcomma\space}%
+%   \printfield{pages}%
+%   \setunit{\addspace}%
+%   \mkbibparens{\usebibmacro{date}}%
+%   \usebibmacro{finentry}
+% }
+
+\DefineBibliographyStrings{english}{%
+  andothers = {\mkbibemph{et\addabbrvspace al\adddot}},
+}
+
+% Remove "In:" for article entries
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+
+% Omit the month and issn fields
+\AtEveryBibitem{
+  \clearfield{month}
+  \clearfield{issn}
+}
+
+% Custom formatting for volume and pages
+\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}% Volume in bold
+% \DeclareFieldFormat[article]{issue}{\mkbi{#1}}
+\DeclareFieldFormat[article]{pages}{#1} % Pages without prefix
+
+\DeclareFieldFormat[article, inbook, incollection, inproceedings, misc, thesis, unpublished]{title}{#1}
+
+\DeclareFieldFormat{labelnumberwidth}{#1\adddot}
+
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{%
+        \printfield{prefixnumber}%
+        \printfield{labelnumber}}}
+     {\setlength{\labelwidth}{\labelnumberwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{##1}}
+  {\endlist}
+  {\item}
+
+% Customizing the bibliography output for articles
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addspace}%
+  \printfield{title}%
+  \newunit\newblock
+  \printfield{journaltitle}%
+  \setunit{\addspace}%
+  \printfield{volume}%
+  \setunit{\addcomma\space}%
+  \printfield{pages}%
+  \setunit{\addspace}%
+  \printfield{issn}%
+  \setunit{\addspace}%
+  \printtext[parens]{\usebibmacro{date}}%
+  \setunit{\addspace}%
+  \printfield{doi}%
+  \usebibmacro{finentry}}
+
+%Customizing the bibliography output for miscellaneous
+% \DeclareBibliographyDriver{misc}{%
+%   \usebibmacro{bibindex}%
+%   \usebibmacro{begentry}%
+%   \printfield{title}%
+%   \newunit\newblock
+%   \printfield{url}%
+%   \usebibmacro{finentry}}
+
+\DeclareBibliographyDriver{misc}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addspace}%
+  \printfield{title}%
+  \newunit\newblock
+  \printfield{url}%
+  \usebibmacro{finentry}}
+
+  % Customizing the bibliography output for book entries
+\DeclareBibliographyDriver{book}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addspace}%
+  \printfield{title}%
+  \newunit\newblock
+  \printfield{edition}%
+  \setunit{\addspace}%
+  \printfield{publisher}%
+  \setunit{\addspace}%
+  \printfield{isbn}%
+  \usebibmacro{finentry}}
+
+% \DeclareBibliographyDriver{*}{
+% \ifentrytype{article}
+%     {\usebibmacro{bibindex}%
+%      \usebibmacro{begentry}%
+%      \printnames{author}%
+%      \setunit{\addspace}%
+%      \printfield{title}%
+%      \newunit\newblock
+%      \printfield{journaltitle}%
+%      \setunit{\addspace}%
+%      \printfield{volume}%
+%      \setunit{\addcomma\space}%
+%      \printfield{pages}%
+%      \setunit{\addspace}%
+%      \printfield{issn}%
+%      \setunit{\addspace}%
+%      \printtext[parens]{\usebibmacro{date}}%
+%      \setunit{\addspace}%
+%      \printfield{doi}%
+%      \usebibmacro{finentry}}
+%     {\usebibmacro{bibindex}%
+%      \usebibmacro{begentry}%
+%      \printnames{author}%
+%      \setunit{\addspace}%
+%      \printfield{title}%
+%      \newunit\newblock
+%      \printfield{url}%
+%      \usebibmacro{finentry}}
+% }
+
+
 
 \fi
+
+% Formatting DOI
+\DeclareFieldFormat{doi}{%
+ \mkbibacro{DOI}\addcolon\space \url{#1}%
+}
+
+% Formatting URL
+\DeclareFieldFormat{url}{%
+  \mkbibacro{URL}\addcolon\space \footnotesize \url{#1}%
+}
+
+\DeclareFieldFormat{isbn}{%
+  \mkbibacro{ISBN}\addcolon\space \isbn{#1}%
+}
+
+% Optional: To ensure the field formatting is applied, we may need to adjust bibmacros
+% \renewbibmacro*{doi+eprint+url}{%
+%   \iftoggle{bbx:doi}
+%     {\printfield{doi}}
+%     {}%
+%   \newunit\newblock
+%   \iftoggle{bbx:eprint}
+%     {\usebibmacro{eprint}}
+%     {}%
+%   \newunit\newblock
+%   \iftoggle{bbx:url}
+%     {\printfield{url}}
+%     {}}
+
+\AtBeginBibliography{\footnotesize}
+
 
 % changes the default name `Bibliography` -> `References'
 \renewcommand{\bibname}{Bibliography}
@@ -278,9 +569,9 @@
 \setlength\cftaftertoctitleskip{0pt}
 \setlength\cftafterloftitleskip{0pt}
 \setlength\cftafterlottitleskip{0pt}
-\renewcommand\cfttoctitlefont{\LARGE\bfseries\scshape\color{black}}
-\renewcommand\cftloftitlefont{\LARGE\bfseries\scshape\color{black}}
-\renewcommand\cftlottitlefont{\LARGE\bfseries\scshape\color{black}}
+\renewcommand\cfttoctitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
+\renewcommand\cftloftitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
+\renewcommand\cftlottitlefont{\LARGE\bfseries\scshape\color{CadetBlue}}
 
 %\renewcommand{\glossarysection}[2][\theglstoctitle]{%
 %  \def\theglstoctitle{#2}%
@@ -305,21 +596,86 @@
 
 % ********************** TOC depth and numbering depth *************************
 
-\setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{2}
+
+% \usepackage{crop}
+% \crop[cam]  % This command adds crop marks
 
 
 % ******************************* Nomenclature 
 %\usepackage{nomencl}
 %\renewcommand{\nomname}{Symbols}
 %\makenomenclature
-
-\usepackage[acronym, nopostdot, nonumberlist, style=super]{glossaries}
-\setlength{\glsdescwidth}{5in}
-
-\makeglossaries
 %\glsdisablehyper
-\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+
+
+% ******************************* Glossaries 
+% \usepackage[toc, acronym, nopostdot, nonumberlist, style=super]{glossaries}
+% \setlength{\glsdescwidth}{5in}
+% \makeglossaries
+
+\usepackage[toc, acronym, nopostdot, nonumberlist, style=super]{glossaries-extra}
+
+% Initialize glossaries
+\makeglossaries
+
+% Set abbreviation style
+\setabbreviationstyle[acronym]{short-long}
+
+% Enable entry counting for glossary terms
+\GlsXtrEnableEntryCounting
+ {acronym}% list of categories to use entry counting
+ {10}% trigger value (only add to glossary if count > 3)
+
+% Customize glossary formats
+% \renewcommand*{\cglsformat}[2]{%
+%   \ifglshaslong{#1}%
+%   {\glsentrylong{#1}#2 (\glsentryshort{#1})}% abbreviation
+%   {\glsentryfirst{#1}#2}% regular term
+% }
+
+% \renewcommand*{\cGlsformat}[2]{%
+%   \ifglshaslong{#1}%
+%   {\Glsentrylong{#1}#2 (\glsentryshort{#1})}% abbreviation
+%   {\Glsentryfirst{#1}#2}% regular term
+% }
+
+% \renewcommand*{\cglsplformat}[2]{%
+%   \ifglshaslong{#1}%
+%   {\glsentrylongpl{#1}#2 (\glsentryshortpl{#1})}% abbreviation
+%   {\glsentryfirstplural{#1}#2}% regular term
+% }
+
+% \renewcommand*{\cGlsplformat}[2]{%
+%   \ifglshaslong{#1}%
+%   {\Glsentrylongpl{#1}#2 (\glsentryshortpl{#1})}% abbreviation
+%   {\Glsentryfirstplural{#1}#2}% regular term
+% }
+
+\renewcommand*{\cglsformat}[2]{%
+  \ifglsused{#1}%
+    {\glsentryshort{#1}#2}% if already used: short form
+    {\glsentrylong{#1}#2 (\glsentryshort{#1})}% if first use: long form (short form)
+}
+
+\renewcommand*{\cGlsformat}[2]{%
+  \ifglsused{#1}%
+    {\Glsentryshort{#1}#2}% if already used: short form
+    {\Glsentrylong{#1}#2 (\Glsentryshort{#1})}% if first use: long form (short form)
+}
+
+\renewcommand*{\cglsplformat}[2]{%
+  \ifglsused{#1}%
+    {\glsentryshortpl{#1}#2}% if already used: short form
+    {\glsentrylongpl{#1}#2 (\glsentryshortpl{#1})}% if first use: long form (short form)
+}
+
+\renewcommand*{\cGlsplformat}[2]{%
+  \ifglsused{#1}%
+    {\Glsentryshortpl{#1}#2}% if already used: short form
+    {\Glsentrylongpl{#1}#2 (\Glsentryshortpl{#1})}% if first use: long form (short form)
+}
 
 % ********************************* Appendix 
 
@@ -361,8 +717,8 @@
 
 % **********************************
 % Additional packages
-\usepackage{xcolor}
-\definecolor{green}{RGB}{32,157,148}
+%\usepackage{xcolor}
+
 \usepackage{amsmath,amsfonts,amssymb,amsthm,nccmath,systeme} % For math equations, theorems, symbols, etc
 \DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n} % reset mathcal to normal
 \usepackage{bm} % bold math 
@@ -437,7 +793,7 @@ leftmargin=0cm,
 rightmargin=0cm,
 linewidth=4pt]{eBox}
 
-\definecolor{cornflowerblue}{RGB}{114,133,165}
+
 
 \newmdenv[skipabove=10pt,
 skipbelow=7pt,
@@ -502,3 +858,8 @@ innerbottommargin=5pt]{cBox}
         \mycaptionminipage{\dimexpr\linewidth-#1\linewidth-\intextsep\relax}{#3}[#4]%
     \fi%
 }%
+
+
+\usepackage{comment}
+\usepackage{verbatim}  % for \verbatiminput
+%\usepackage{floatrow}

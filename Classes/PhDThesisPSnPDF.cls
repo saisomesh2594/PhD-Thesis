@@ -341,6 +341,8 @@ supported!}
   \nolinenumbers
 }
 \renewcommand{\mainmatter}{%
+%\newpage\null\thispagestyle{empty}\newpage
+
   \cleardoublepage
   \@mainmattertrue
   \pagenumbering{arabic}
@@ -618,10 +620,10 @@ supported!}
     breaklinks=true,
     linktocpage,
     colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    citecolor=blue,
-    anchorcolor=blue
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    anchorcolor=black
   }
   \ifsetCustomMargin
   % Margin to be define in preamble using geometry package
@@ -950,18 +952,16 @@ wish to left align your text}
 %	\vspace{.15\PHD@titlepagespacing}
 %\fi
 
-
-
 % Author
 \vspace*{3em}
 {\usebox{\PHD@author}}
 %\vspace*{1em}
 
 % Supervisor
-%\ifPHD@supervisor%
-%{\usebox{\PHD@supervisor}}
-%\vspace*{0.5em}
-%\fi
+% \ifPHD@supervisor%
+% {\usebox{\PHD@supervisor}}
+% \vspace*{0.5em}
+% \fi
 
 % Advisor
 %\ifPHD@advisor%
@@ -983,6 +983,15 @@ wish to left align your text}
 \end{singlespace}
 }
 
+
+\newenvironment{supervisorpage}
+{
+\newpage
+\setsinglecolumn
+\thispagestyle{empty}
+}
+
+
 % **** Dedication 
 % The dedication environment makes sure the dedication gets its
 % own page, centered
@@ -991,7 +1000,7 @@ wish to left align your text}
 {
 \cleardoublepage
 \setsinglecolumn
-\vspace*{0.2\textheight}
+%\vspace*{0.2\textheight}
 \thispagestyle{empty}
 \centering
 }
@@ -1005,7 +1014,7 @@ wish to left align your text}
 \newenvironment{declaration}{
 \cleardoublepage
 \setsinglecolumn
-\textcolor{CadetBlue}{\LARGE \textbf{\textsc{Declaration}}}
+\textcolor{black}{\LARGE \textbf{\textsc{Declaration}}}
 \vspace{5mm}
 \thispagestyle{empty}
 }{
@@ -1133,6 +1142,27 @@ wish to left align your text}
 }
 
 
+\newenvironment{zusammen} {
+\ifPHD@abstract
+% Separate abstract as per Student Registry guidelines
+  \thispagestyle{empty}
+  \setsinglecolumn
+  \begin{center}
+    { \Large {\bfseries {\@title}} \par}
+    {{\large \vspace*{1em} \@author} \par}
+  \end{center}
+\else
+% Normal abstract in the thesis
+  \cleardoublepage
+  \setsinglecolumn
+  \textcolor{CadetBlue}{\LARGE \textbf{\textsc{Zusammenfassung}}}
+  \vspace{5mm}
+  \thispagestyle{empty}
+\fi
+}
+
+
+
 % ******************** To compute empty space in title page *******************
 % Boxes below are used to space different contents on the title page
 % Based on https://github.com/cambridge/thesis
@@ -1144,7 +1174,7 @@ wish to left align your text}
 \newsavebox{\PHD@Title}
 \begin{lrbox}{\PHD@Title}
   \begin{minipage}[c]{0.98\textwidth}
-    \centering \Huge \bfseries{\@title}
+    \centering \LARGE \bfseries{\@title}
     \ifthenelse{\equal{\@subtitle}{}}{
       % subtitle is not defined
     }{
@@ -1270,4 +1300,5 @@ wish to left align your text}
 			- \totalheightof{\usebox{\PHD@collegedate}}
 }
 }
+
 
