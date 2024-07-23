@@ -52,7 +52,7 @@
     \midrule
     154Sm & CD69 (\textit{Cd69}) & \RaggedRight{Activation marker}  \\
     \midrule
-    158Gd & CRTH2 (\textit{Ptgdr2}) & \RaggedRight{} \\
+    158Gd & CRTH2 (\textit{Ptgdr2}) & \RaggedRight{\gls{th2} cells} \\
     \midrule
   %\rowcolor{rowgray}
     159Tb & EOMES (\textit{Eomes}) & \RaggedRight{T-cells with cytotoxic activity / \gls{tf}} \\
@@ -82,14 +82,16 @@
     \midrule
     176Yb & Histone H3 & \RaggedRight{\multirow{3}{*}{\makecell{Nuclei/Cells}}} \\
     \cline{1-2}
-    191Ir & \hspace{2em}\multirow{2}{*}{DNA Intercalator} & \\
+    191Ir & \hspace{2em}\multirow{2}{*}{\glsentryshort{dna} Intercalator} & \\
     \cline{1-1}
     193Ir &  & \\
     \bottomrule
   \end{tabularx}
   \vspace{0.1cm}
   \RaggedRight{\footnotesize \\ 
-  \glsentryshort{pdc}, \glsentrylong{pdc}; \glsentryshort{nk}, \glsentrylong{nk}; \glsentryshort{treg}, \glsentrylong{treg}; \glsentryshort{tf}, \glsentrylong{tf}.
+  \textbf{\glsentryshort{pdc}}, \glsentrylong{pdc}; \textbf{\glsentryshort{nk}}, \glsentrylong{nk};
+  \textbf{\glsentryshort{th2}}, \glsentrylong{th2};
+  \textbf{\glsentryshort{treg}}, \glsentrylong{treg}; \textbf{\glsentryshort{tf}}, \glsentrylong{tf}.
 \end{table}
 
 
@@ -182,7 +184,7 @@
 \begin{table}[ht!]
   \renewcommand{\arraystretch}{1.2} % More space between rows
   \centering
- \caption[\glsentryshort{qc} and preprocessing summary of the \glsentryshort{scr} data]{\gls{qc} and preprocessomg summary of the \gls{scr} data.}
+ \caption[\glsentryshort{qc} and preprocessing summary of the \glsentryshort{scr} data]{\gls{qc} and preprocessing summary of the \gls{scr} data.}
      \label{tab:app_scrna_meta}
   \begin{tabularx}{\textwidth}{x C C C C C C}
     \toprule
@@ -192,7 +194,7 @@
     % \makecell{\\\\Cohort\textsuperscript{*}} & \makecell{Age\\of mice \\ (in weeks)} & \makecell{Feeding\\Time \\ (in weeks)} & \makecell{\\\\Diet} & \makecell{\\\\\\Mean\\reads\\per cell} & \makecell{\\\\\\Median\\genes\\per cell} & \makecell{\\\\\\Median\\\gls{umi}\\per cell} \\
     
     \midrule
-     W1-Chow-1 & \multirow{5}{*}{\makecell{10 wks}} & \multirow{5}{*}{\makecell{1 wk}} &  \multirow{3}{*}{\makecell{Chow}} & 3087 & 2987 & 13402 \\
+     W1-Chow-1 & \multirow{5}{*}{\makecell{10 weeks}} & \multirow{5}{*}{\makecell{1 week}} &  \multirow{3}{*}{\makecell{Chow}} & 3087 & 2987 & 13402 \\
      \cline{1-1} \cline{5-7}
      W1-Chow-2 &  &  &  & 18291 & 1818 & 6826 \\
      \cline{1-1} \cline{5-7}
@@ -202,7 +204,7 @@
      \cline{1-1} \cline{5-7}
      W1-WD-2 &  &  &  & 28277 & 2381 & 9430 \\
     \midrule
-    W12-Chow-1 & \multirow{5}{*}{\makecell{21 wks}} & \multirow{5}{*}{\makecell{12 wks}} &  \multirow{3}{*}{\makecell{Chow}} & 2989 & 2574 & 10448 \\
+    W12-Chow-1 & \multirow{5}{*}{\makecell{21 weeks}} & \multirow{5}{*}{\makecell{12 weeks}} &  \multirow{3}{*}{\makecell{Chow}} & 2989 & 2574 & 10448 \\
      \cline{1-1} \cline{5-7}
      W12-Chow-2 &  &  &  & 11641 & 3308 & 14677 \\
      \cline{1-1} \cline{5-7}
@@ -212,7 +214,7 @@
      \cline{1-1} \cline{5-7}
      W12-WD-2 &  &  &  & 29151 & 2185 & 9499 \\
     \midrule
-    Aging-1 & \multirow{2}{*}{\makecell{104 wks}} & \multirow{2}{*}{\makecell{95 wks}} &  \multirow{2}{*}{\makecell{Chow}} & 26170 & 1728 & 5478 \\
+    Aging-1 & \multirow{2}{*}{\makecell{\textasciitilde2 years}} & \multirow{2}{*}{\makecell{95 weeks}} &  \multirow{2}{*}{\makecell{Chow}} & 26170 & 1728 & 5478 \\
      \cline{1-1} \cline{5-7}
      Aging-2 &  &  &  & 26170 & 2532 & 10141 \\
     \bottomrule
@@ -724,7 +726,7 @@
     \bottomrule
    \end{tabularx}
    \vspace{0.1cm}
-   \RaggedRight{\footnotesize \\ \textsuperscript{*}After initial preprocessing and quality control\\ \textsuperscript{**}After additional quality control\\ $\dagger$ The number of non-proliferating β-cells are denoted in parentheses.\\\textbf{WD}, western Diet; \textbf{STZ}, streptozotocin}
+   \RaggedRight{\footnotesize \\ \textsuperscript{*}After initial preprocessing and quality control\\ \textsuperscript{**}After additional quality control\\ $\dagger$ The number of non-proliferating β-cells are denoted in parentheses.\\\textbf{WD}, western Diet; \textbf{STZ}, streptozotocin; \textbf{wks}, weeks}
 \end{table}
 
 

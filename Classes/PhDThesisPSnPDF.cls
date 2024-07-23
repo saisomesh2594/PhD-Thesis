@@ -1011,13 +1011,18 @@ wish to left align your text}
 % The declaration environment puts a large, bold, centered
 % "Declaration" label at the top of the page.
 
+\newcommand{\coloredhrule}[2]{\textcolor{#1}{\hrule width \linewidth height #2}}
+
 \newenvironment{declaration}{
 \cleardoublepage
 \setsinglecolumn
-\textcolor{black}{\LARGE \textbf{\textsc{Declaration}}}
+\textcolor{CadetBlue}{\LARGE \textbf{\textsc{Declaration}}}
 \vspace{5mm}
+% \hrule height 0.05cm 
+%\coloredhrule{CadetBlue}{2pt}
 \thispagestyle{empty}
 }{
+\vspace{10mm}
 \flushright
 \@author{}\\
 \@degreedate{}
@@ -1034,6 +1039,7 @@ wish to left align your text}
 \cleardoublepage
 \setsinglecolumn
 \textcolor{CadetBlue}{\LARGE \textbf{\textsc{Acknowledgements}}}
+
 \vspace{5mm}
 \thispagestyle{empty}
 }
